@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev-codes.net | Codes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="selection:bg-[#5024F4]/30">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] rounded-lg flex items-center justify-center text-white font-bold">D</div>
+                <span class="font-bold text-lg tracking-tight">dev-codes.net</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="codes.html" class="nav-link text-white">Codes</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+        
+        <!-- Header Section -->
+        <header class="mb-20 animate-enter max-w-3xl">
+            <div class="flex gap-3 mb-6">
+                <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Code Collection</span>
+                <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Browse</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white text-glow">
+                Code Showcase
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                Browse our collection of code snippets and templates.
+            </p>
+        </header>
+
+        <!-- Code Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Code Card: Placeholder -->
+            <a href="placeholder.html" class="glass-panel p-6 animate-enter delay-100 hover:scale-105 transition-transform">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] rounded-lg flex items-center justify-center text-white font-bold text-xl">P</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Placeholder</h3>
+                        <p class="text-xs text-gray-500">Code Template</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">
+                    Example code template with syntax highlighting and interactive features.
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-[#5024F4]/10 text-[#7B4FFF] px-2 py-1 rounded border border-[#5024F4]/20">Template</span>
+                    <span class="text-xs bg-[#7B4FFF]/10 text-[#9D7FFF] px-2 py-1 rounded border border-[#7B4FFF]/20">Interactive</span>
+                </div>
+            </a>
+
+            <!-- More code cards can be added here -->
+            <div class="glass-panel p-6 animate-enter delay-200 opacity-50">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#7B4FFF] to-[#9D7FFF] rounded-lg flex items-center justify-center text-white font-bold text-xl">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Coming Soon</h3>
+                        <p class="text-xs text-gray-500">Placeholder</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">
+                    More code templates coming soon...
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-[#5024F4]/10 text-[#7B4FFF] px-2 py-1 rounded border border-[#5024F4]/20">Soon</span>
+                </div>
+            </div>
+
+            <div class="glass-panel p-6 animate-enter delay-300 opacity-50">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-[#6B3FEF] to-[#8B5FFF] rounded-lg flex items-center justify-center text-white font-bold text-xl">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Coming Soon</h3>
+                        <p class="text-xs text-gray-500">Placeholder</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mb-4">
+                    More code templates coming soon...
+                </p>
+                <div class="flex gap-2">
+                    <span class="text-xs bg-[#5024F4]/10 text-[#7B4FFF] px-2 py-1 rounded border border-[#5024F4]/20">Soon</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 bg-black/50 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="year"></span> dev-codes.net. Built for the community.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

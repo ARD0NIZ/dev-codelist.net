@@ -5,8 +5,8 @@
     --border-highlight: rgba(255, 255, 255, 0.12);
     --text-primary: #ffffff;
     --text-secondary: #9ca3af;
-    --accent-primary: #8b5cf6;
-    --accent-secondary: #ec4899;
+    --accent-primary: #5024F4;
+    --accent-secondary: #7B4FFF;
 }
 
 body {
@@ -15,8 +15,8 @@ body {
     color: var(--text-primary);
     overflow-x: hidden;
     background-image: 
-        radial-gradient(circle at 10% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 100%, rgba(236, 72, 153, 0.08) 0%, transparent 40%);
+        radial-gradient(circle at 10% 0%, rgba(80, 36, 244, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 100%, rgba(123, 79, 255, 0.08) 0%, transparent 40%);
     background-attachment: fixed;
 }
 
@@ -121,7 +121,7 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
 
 /* Typography & Utilities */
-.text-glow { text-shadow: 0 0 30px rgba(139, 92, 246, 0.3); }
+.text-glow { text-shadow: 0 0 30px rgba(80, 36, 244, 0.3); }
 .nav-link { position: relative; color: var(--text-secondary); transition: color 0.2s; }
 .nav-link:hover { color: white; }
 .nav-link::after {
