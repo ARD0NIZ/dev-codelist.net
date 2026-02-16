@@ -9,23 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="components.js"></script>
 </head>
 <body class="selection:bg-[#5024F4]/30">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] rounded-lg flex items-center justify-center text-white font-bold">D</div>
-                <span class="font-bold text-lg tracking-tight">dev-codes.net</span>
-            </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="codes.html" class="nav-link text-white">Codes</a>
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#about" class="nav-link">About</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
@@ -99,14 +88,8 @@
 
     </main>
 
-    <footer class="border-t border-white/5 bg-black/50 py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
-            <p>&copy; <span id="year"></span> dev-codes.net. Built for the community.</p>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
