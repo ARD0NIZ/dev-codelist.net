@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBDFD | Ticket System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="selection:bg-purple-500/30">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="https://i.imgur.com/Ij2VtCH.png" alt="Logo" class="w-9 h-9">
+                <span class="font-bold text-lg tracking-tight">StarBDFD</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="../codes.html" class="nav-link text-white">Codes</a>
+                <a href="../index.html#features" class="nav-link">Features</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="https://discord.gg/V85hdZ37Ny" class="bg-white text-black px-5 py-2 rounded-full hover:bg-gray-200 transition-colors font-semibold">
+                    Support Server
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+        
+        <!-- Header Section -->
+        <header class="mb-20 animate-enter max-w-3xl">
+            <div class="flex gap-3 mb-6">
+                <span class="tag bg-purple-500/10 text-purple-400 border border-purple-500/20">Feature Tag 1</span>
+                <span class="tag bg-pink-500/10 text-pink-400 border border-pink-500/20">Feature Tag 2</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white text-glow">
+                Project Title Here
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                Description of your project goes here. This is a placeholder for your project description.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left Column: Codes -->
+            <div class="lg:col-span-8 space-y-12">
+                
+                <!-- Code Block 1 -->
+                <div class="animate-enter delay-100">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">1. Code Section Title</h2>
+                            <p class="text-gray-500 text-sm mt-1">Description of what this code does goes here.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                            <span class="bg-white/5 text-purple-300 px-3 py-1 rounded-md text-sm font-mono border border-white/5">&lt;trigger&gt;</span>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor group">
+                        <div class="editor-header" onclick="toggleCode(this)">
+                            <div class="editor-controls-left">
+                                <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <div class="editor-dots">
+                                    <div class="dot dot-red"></div>
+                                    <div class="dot dot-yellow"></div>
+                                    <div class="dot dot-green"></div>
+                                </div>
+                            </div>
+                            <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-1" onclick="event.stopPropagation()">
+                                <span class="copy-label">Copy Code</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </button>
+                        </div>
+                        <pre id="code-1" class="editor-content bdfd-code">
+// Your code here
+$nomention
+$c[Comment describing code section]
+
+$if[condition]
+    // Placeholder code example
+    $title[Example Title]
+    $description[Example description text]
+$endif
+</pre>
+                    </div>
+                </div>
+
+                <!-- Code Block 2 -->
+                <div class="animate-enter delay-200">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">2. Another Code Section</h2>
+                            <p class="text-gray-500 text-sm mt-1">Description of this code section goes here.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                            <span class="bg-white/5 text-blue-300 px-3 py-1 rounded-md text-sm font-mono border border-white/5">$onInteraction</span>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor group">
+                        <div class="editor-header" onclick="toggleCode(this)">
+                            <div class="editor-controls-left">
+                                <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <div class="editor-dots">
+                                    <div class="dot dot-red"></div>
+                                    <div class="dot dot-yellow"></div>
+                                    <div class="dot dot-green"></div>
+                                </div>
+                            </div>
+                            <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-2" onclick="event.stopPropagation()">
+                                <span class="copy-label">Copy Code</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </button>
+                        </div>
+                        <pre id="code-2" class="editor-content bdfd-code">
+// Your code here
+$nomention
+$c[Placeholder code example]
+
+$var[variableName;value]
+$if[$customID==exampleID]
+    // Code implementation goes here
+    $title[Placeholder Title]
+    $description[Placeholder description]
+$endif
+</pre>
+                    </div>
+                </div>
+
+                <!-- Code Block 3 -->
+                <div class="animate-enter delay-300">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">3. Third Code Section</h2>
+                            <p class="text-gray-500 text-sm mt-1">Description of what this section does.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                            <span class="bg-white/5 text-pink-300 px-3 py-1 rounded-md text-sm font-mono border border-white/5">$alwaysReply</span>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor group">
+                        <div class="editor-header" onclick="toggleCode(this)">
+                            <div class="editor-controls-left">
+                                <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <div class="editor-dots">
+                                    <div class="dot dot-red"></div>
+                                    <div class="dot dot-yellow"></div>
+                                    <div class="dot dot-green"></div>
+                                </div>
+                            </div>
+                            <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-3" onclick="event.stopPropagation()">
+                                <span class="copy-label">Copy Code</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </button>
+                        </div>
+                        <pre id="code-3" class="editor-content bdfd-code">
+// Your code here
+$onlyIf[condition!=0;]
+
+$try
+    // Example code block
+    $var[exampleVar;value]
+$catch
+    // Error handling code
+$endtry
+</pre>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Info & Credits -->
+            <div class="lg:col-span-4 space-y-8">
+                
+                <!-- Variables Widget -->
+                <div class="glass-panel p-6 animate-enter delay-100">
+                    <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        Variables Needed
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                            <code class="text-sm font-mono text-purple-300">variableName1</code>
+                            <code class="text-sm font-mono text-gray-500">defaultValue</code>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                            <code class="text-sm font-mono text-purple-300">variableName2</code>
+                            <code class="text-sm font-mono text-gray-500">defaultValue</code>
+                        </div>
+                        <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                            <code class="text-sm font-mono text-purple-300">variableName3</code>
+                            <code class="text-sm font-mono text-gray-500">defaultValue</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contributors Widget -->
+                <div class="glass-panel p-6 animate-enter delay-200">
+                    <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                        <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Credits
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <img src="../assets/p61s.png" alt="p61s" class="w-10 h-10 rounded-full shadow-lg shadow-purple-500/20 object-cover">
+                            <div>
+                                <div class="font-semibold text-white">@contributor1</div>
+                                <div class="text-xs text-gray-500">Role Description</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img src="../assets/catearo.png" alt="catearo" class="w-10 h-10 rounded-full shadow-lg shadow-pink-500/20 object-cover">
+                            <div>
+                                <div class="font-semibold text-white">@contributor2</div>
+                                <div class="text-xs text-gray-500">Role Description</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img src="../assets/tevq3.png" alt="tevq3" class="w-10 h-10 rounded-full shadow-lg shadow-emerald-500/20 object-cover">
+                            <div>
+                                <div class="font-semibold text-white">@contributor3</div>
+                                <div class="text-xs text-gray-500">Role Description</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <img src="../assets/null_y34r1.png" alt="null_y34r1" class="w-10 h-10 rounded-full shadow-lg shadow-blue-500/20 object-cover">
+                            <div>
+                                <div class="font-semibold text-white">@contributor4</div>
+                                <div class="text-xs text-gray-500">Role Description</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 bg-black/50 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="year"></span> StarBDFD. Built for the community.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Exact hex colors calculated from the provided Integers (ARGB/RGB)
+        // Adjusting slightly for visibility on dark mode where necessary while keeping tone
+        const colors = {
+            text: "#E6BAFF",      // 0xFF9900A9 (Original was dark purple, lightened for readability)
+            fallback: "#7223FF",  // 0xFF7223FF
+            bracket: "#FF5C4C",   // 0xFFFF5C4C
+            semicolon: "#FF584A", // 0xFFFF584A
+            func: "#FF87F9",      // 0xFFFF87F9
+            logic: "#A22FFC"      // 0xFFA22FFC
+        };
+
+        const logicFuncs = ["$if", "$else", "$elseif", "$endif", "$try", "$catch", "$endtry", "$error", "$c"];
+
+        function syntaxHighlight() {
+            const blocks = document.querySelectorAll('.bdfd-code');
+            
+            blocks.forEach(block => {
+                let text = block.innerText;
+                let html = '';
+                
+                // Tokenizer regex
+                const regex = /(\$[a-zA-Z]+)|(\[)|(\])|(\;)|([^$\[\];]+)/g;
+                
+                let match;
+                while ((match = regex.exec(text)) !== null) {
+                    const [full, func, open, close, semi, other] = match;
+                    
+                    if (func) {
+                        let color = colors.func; // Default function color
+                        if (logicFuncs.includes(func)) color = colors.logic;
+                        html += `<span style="color: ${color}">${func}</span>`;
+                    } else if (open || close) {
+                        html += `<span style="color: ${colors.bracket}">${open || close}</span>`;
+                    } else if (semi) {
+                        html += `<span style="color: ${colors.semicolon}">${semi}</span>`;
+                    } else if (other) {
+                        // Fix for entity re-parsing (e.g., &timestamp becoming ×tamp)
+                        const escapedOther = other.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                        html += `<span style="color: ${colors.text}">${escapedOther}</span>`;
+                    }
+                }
+                block.innerHTML = html;
+            });
+        }
+
+        // Copy Handler
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const text = document.getElementById(targetId).innerText;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    const label = btn.querySelector('.copy-label');
+                    const icon = btn.querySelector('svg');
+                    const originalLabel = label.textContent;
+                    const originalIcon = icon.innerHTML;
+
+                    label.textContent = "Copied";
+                    label.classList.add('text-green-400');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>';
+                    icon.classList.add('text-green-400');
+
+                    setTimeout(() => {
+                        label.textContent = originalLabel;
+                        label.classList.remove('text-green-400');
+                        icon.innerHTML = originalIcon;
+                        icon.classList.remove('text-green-400');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Minimize / Collapse Handler
+        function toggleCode(header) {
+            const container = header.parentElement;
+            const content = container.querySelector('.editor-content');
+            
+            container.classList.toggle('is-collapsed');
+            content.classList.toggle('collapsed');
+        }
+
+        syntaxHighlight();
+    </script>
+</body>
+</html>

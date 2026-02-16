@@ -1,0 +1,147 @@
+:root {
+    --bg-deep: #030305;
+    --bg-surface: #0a0a0c;
+    --border-dim: rgba(255, 255, 255, 0.06);
+    --border-highlight: rgba(255, 255, 255, 0.12);
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --accent-primary: #8b5cf6;
+    --accent-secondary: #ec4899;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 0%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 100%, rgba(236, 72, 153, 0.08) 0%, transparent 40%);
+    background-attachment: fixed;
+}
+
+/* Glass Cards */
+.glass-panel {
+    background: rgba(10, 10, 12, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-dim);
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+    border-color: var(--border-highlight);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Syntax Highlighting Window */
+.code-editor {
+    background: #050507;
+    border: 1px solid var(--border-dim);
+    border-radius: 16px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+    transition: border-color 0.3s;
+}
+
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-dim);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.editor-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.editor-controls-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.editor-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot-red { background: #ff5f56; box-shadow: 0 0 10px rgba(255, 95, 86, 0.2); }
+.dot-yellow { background: #ffbd2e; box-shadow: 0 0 10px rgba(255, 189, 46, 0.2); }
+.dot-green { background: #27c93f; box-shadow: 0 0 10px rgba(39, 201, 63, 0.2); }
+
+/* Collapse Animation Logic */
+.editor-content {
+    padding: 24px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    /* Animation Props */
+    max-height: 5000px; /* Large enough to fit content */
+    opacity: 1;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease-in-out, padding 0.3s ease;
+}
+
+.editor-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+/* Chevron Rotation */
+.chevron-icon {
+    transition: transform 0.3s ease;
+    color: var(--text-secondary);
+}
+
+.code-editor.is-collapsed .chevron-icon {
+    transform: rotate(-90deg);
+}
+
+.code-editor.is-collapsed .editor-header {
+    border-bottom-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* Typography & Utilities */
+.text-glow { text-shadow: 0 0 30px rgba(139, 92, 246, 0.3); }
+.nav-link { position: relative; color: var(--text-secondary); transition: color 0.2s; }
+.nav-link:hover { color: white; }
+.nav-link::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+.tag {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+    text-transform: uppercase; padding: 6px 12px; border-radius: 100px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-enter { animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
