@@ -9,12 +9,12 @@ async function loadComponent(elementId, componentPath) {
             
             // If this is the header, customize logo and title if data attributes exist
             if (elementId === 'header-placeholder') {
-                const logoText = element.getAttribute('data-logo');
+                const logoSrc = element.getAttribute('data-logo');
                 const siteTitle = element.getAttribute('data-title');
                 
-                if (logoText) {
-                    const logoElement = document.getElementById('logo-text');
-                    if (logoElement) logoElement.textContent = logoText;
+                if (logoSrc) {
+                    const logoElement = document.getElementById('logo-image');
+                    if (logoElement) logoElement.src = logoSrc;
                 }
                 
                 if (siteTitle) {
