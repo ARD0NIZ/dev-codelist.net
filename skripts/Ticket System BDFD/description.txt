@@ -1,0 +1,50 @@
+# 🎫 Cenzo Ticket System (BDFD - Components V2)
+
+A fully advanced ticket system with interactive config panel, JSON-based settings,
+modal inputs, dynamic placeholders, and full ticket controls.
+
+## 🚀 Features
+
+- Components V2 UI
+- JSON-based config system
+- Modal ticket creation
+- Custom message placeholders
+- Ticket controls (close/reopen/delete)
+- Transcript support
+
+# 🏷️ Custom Tags (Placeholders)
+
+These can be used inside your **custom ticket message**.
+
+## 👤 User Tags
+{username} → User’s username  
+{displayname} → Server nickname / display name  
+{userid} → User ID  
+{usertag} → User discriminator (####)  
+{mention} → Mentions the user  
+
+## 🏠 Server Tags
+{server} → Server name  
+{serverid} → Server ID  
+{servericon} → Server icon URL  
+{membercount} → Total server members  
+
+## 📺 Channel Tags
+{channel} → Current channel mention  
+{channelname} → Channel name  
+
+## ⏰ Time Tags
+{time} → Current time (HH:MM:SS)  
+{date} → Current date (DD/MM/YYYY)  
+
+## 🖼️ Media Tags
+{avatar} → Sets embed thumbnail to user avatar  
+{servericon} → Sets embed image to server icon  
+
+## 🎨 Custom Tag
+{color:#HEX} → Changes embed color  
+Example: {color:#ff0000}
+
+---
+
+These tags are dynamically replaced when the ticket is created.

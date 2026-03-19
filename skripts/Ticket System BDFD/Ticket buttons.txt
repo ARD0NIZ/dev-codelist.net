@@ -1,0 +1,66 @@
+$onlyIf[$guildID!=;]
+ 
+$c[ join my discord server for api support https://discord.gg/acd2sTKHtW]
+ 
+$try
+$jsonParse[$getUserVar[ticketConfig;$botID]]
+$catch
+$jsonParse[{}]
+$endtry
+ 
+$onlyIf[$json[ct]!=;please setup ticket config first!]
+ 
+$async[Making]
+ 
+$if[$message[title]==]
+$var[title;Ticket Panel]
+$else
+$var[title;$message[title]]
+$endif
+ 
+$if[$message[description]==]
+$var[desc;Click below to create a ticket.]
+$else
+$var[desc;$message[description]]
+$endif
+ 
+$var[message.id;$sendEmbedMessage[
+$channelID;
+;
+$var[title];
+;
+$var[desc];
+00eeff;
+;
+;
+;
+;
+;
+;
+no;
+yes
+]]
+ 
+$endasync
+$await[Making]
+ 
+$async[Adding]
+ 
+$addButton[no;ticket panel button 1;$message[button1];secondary;no;;$var[message.id]]
+ 
+$if[$message[button2]!=]
+$addButton[no;ticket panel button 2;$message[button2];secondary;no;;$var[message.id]]
+$endif
+ 
+$if[$message[button3]!=]
+$addButton[no;ticket panel button 3;$message[button3];secondary;no;;$var[message.id]]
+$endif
+ 
+$endasync
+$await[Adding]
+ 
+$ephemeral
+$title[$serverName[$guildID]]
+$description[Successfully created ticket panel embed.
+$addTimestamp]
+$color[00eeff]
