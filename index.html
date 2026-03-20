@@ -104,10 +104,116 @@
             </div>
         </section>
 
+        <!-- Community / Discord Section -->
+        <section id="community" class="py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+                <!-- Left: Copy -->
+                <div class="animate-enter">
+                    <div class="flex gap-3 mb-6">
+                        <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Community</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white text-glow">Join Our Discord</h2>
+                    <p class="text-xl text-gray-400 leading-relaxed">
+                        Be part of our growing community. Add and test your bots, connect with other developers, and stay up-to-date with the latest updates.
+                    </p>
+                </div>
+
+                <!-- Right: Discord Invite Card -->
+                <div class="flex justify-center md:justify-end animate-enter delay-200">
+                    <div class="discord-invite">
+
+                        <!-- Banner -->
+                        <div class="discord-banner">
+                            <div class="discord-server-icon">
+                                <img src="Assets/Logo.png" alt="Dev Central Guild Icon">
+                            </div>
+                        </div>
+
+                        <!-- Body -->
+                        <div class="discord-body">
+
+                            <!-- Server Name -->
+                            <div class="discord-server-name">
+                                Dev Central Guild | dev-codelist.net
+                                <span class="discord-server-badge">🏠</span>
+                            </div>
+
+                            <!-- Stats -->
+                            <div class="discord-stats">
+                                <span class="stat-online">7 Online</span>
+                                <span class="stat-members">23 Members</span>
+                            </div>
+
+                            <!-- Est. -->
+                            <p class="discord-est">Est. Sep 2025</p>
+
+                            <!-- Collapsible details -->
+                            <div class="discord-collapsible" id="discord-details">
+
+                                <!-- Description -->
+                                <p class="discord-desc">This is the place, to add your own Bot and test it! ✦ 🪐</p>
+
+                                <!-- Starfield decoration -->
+                                <div class="discord-stars" aria-hidden="true">
+                                    <!-- stars (dots) -->
+                                    <span class="star" style="width:3px;height:3px;top:18%;left:22%"></span>
+                                    <span class="star" style="width:2px;height:2px;top:55%;left:40%"></span>
+                                    <span class="star" style="width:2px;height:2px;top:30%;left:65%"></span>
+                                    <span class="star" style="width:3px;height:3px;top:70%;left:80%"></span>
+                                    <span class="star" style="width:2px;height:2px;top:15%;left:85%"></span>
+                                    <span class="star" style="width:4px;height:4px;top:60%;left:55%"></span>
+                                    <span class="star" style="width:2px;height:2px;top:40%;left:10%"></span>
+                                    <span class="star" style="width:3px;height:3px;top:80%;left:28%"></span>
+                                    <span class="star" style="width:2px;height:2px;top:25%;left:75%"></span>
+                                    <!-- sparkle shapes -->
+                                    <span class="sparkle" style="top:35%;left:30%">✦</span>
+                                    <span class="sparkle" style="top:58%;left:60%;font-size:11px">✦</span>
+                                    <span class="sparkle" style="top:72%;left:72%;font-size:18px;opacity:.35">◇</span>
+                                    <!-- emoji decorations -->
+                                    <span class="emoji-deco" style="top:5%;left:3%">☄️</span>
+                                    <span class="emoji-deco" style="top:30%;left:5%;font-size:22px">🚀</span>
+                                    <span class="emoji-deco" style="top:65%;left:18%;font-size:20px">🌍</span>
+                                    <span class="emoji-deco" style="top:5%;right:5%;font-size:20px">🛸</span>
+                                </div>
+
+                                <!-- Channel badges -->
+                                <div class="discord-channels">
+                                    <span class="discord-channel-badge">🤖 Add-Bots</span>
+                                    <span class="discord-channel-badge">🧐 Test-Bots</span>
+                                    <span class="discord-channel-badge">🔒 Private-Tests</span>
+                                </div>
+
+                            </div><!-- /collapsible -->
+
+                            <!-- Hide / Show Details toggle -->
+                            <button class="discord-details-toggle" id="discord-toggle">Hide Details</button>
+
+                            <!-- Join Button -->
+                            <a href="https://discord.gg/5dGWwdHa3e" target="_blank" rel="noopener noreferrer" class="discord-join-btn">
+                                Go to Server
+                            </a>
+
+                        </div><!-- /discord-body -->
+                    </div><!-- /discord-invite -->
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer Component -->
     <div id="footer-placeholder"></div>
+
+    <script>
+        document.getElementById('discord-toggle').addEventListener('click', function () {
+            var details = document.getElementById('discord-details');
+            var isOpen = !details.classList.contains('collapsed');
+            details.classList.toggle('collapsed', isOpen);
+            this.textContent = isOpen ? 'Show Details' : 'Hide Details';
+        });
+    </script>
 
 </body>
 </html>
