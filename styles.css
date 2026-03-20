@@ -136,6 +136,201 @@ body {
     text-transform: uppercase; padding: 6px 12px; border-radius: 100px;
 }
 
+/* ─── Discord Invite Card ─────────────────────────────────────── */
+.discord-invite {
+    background: #1e1f22;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 440px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.discord-banner {
+    height: 100px;
+    background: linear-gradient(135deg, #5024F4 0%, #7B4FFF 60%, #9a6fff 100%);
+    position: relative;
+}
+
+.discord-server-icon {
+    position: absolute;
+    bottom: -36px;
+    left: 20px;
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    border: 5px solid #1e1f22;
+    background: #2b2d31;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.discord-server-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discord-body {
+    padding: 48px 20px 20px;
+}
+
+.discord-server-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f2f3f5;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.discord-server-badge {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.discord-stats {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.82rem;
+    color: #b5bac1;
+    margin-bottom: 4px;
+}
+
+.discord-stats .stat-online::before {
+    content: '●';
+    color: #23a55a;
+    margin-right: 5px;
+}
+
+.discord-stats .stat-members::before {
+    content: '●';
+    color: #80848e;
+    margin-right: 5px;
+}
+
+.discord-est {
+    font-size: 0.82rem;
+    color: #b5bac1;
+    margin-bottom: 12px;
+}
+
+.discord-desc {
+    font-size: 0.9rem;
+    color: #b5bac1;
+    line-height: 1.45;
+    margin-bottom: 4px;
+}
+
+/* Starfield decoration */
+.discord-stars {
+    position: relative;
+    height: 90px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.discord-stars .star {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.discord-stars .sparkle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 1;
+    user-select: none;
+}
+
+.discord-stars .emoji-deco {
+    position: absolute;
+    font-size: 18px;
+    line-height: 1;
+    user-select: none;
+}
+
+.discord-channels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.discord-channel-badge {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    color: #e3e5e8;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.discord-channel-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.discord-details-toggle {
+    background: none;
+    border: none;
+    color: #b5bac1;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 4px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+    font-family: inherit;
+}
+
+.discord-details-toggle:hover {
+    color: #e3e5e8;
+}
+
+.discord-collapsible {
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.3s ease;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.discord-collapsible.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+.discord-join-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    background: #248046;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 4px;
+}
+
+.discord-join-btn:hover {
+    background: #1a6b3b;
+    transform: translateY(-1px);
+}
+/* ─────────────────────────────────────────────────────────────── */
+
 /* Animations */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
