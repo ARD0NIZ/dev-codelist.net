@@ -1,12 +1,16 @@
 <style>
+  .footer-logo-video { display: block; }
+  .footer-logo-static { display: none; }
   @media (prefers-reduced-motion: reduce) {
-    .footer-logo { content: url('Assets/Logo.png'); }
+    .footer-logo-video { display: none; }
+    .footer-logo-static { display: block; }
   }
 </style>
 <footer class="border-t border-white/5 bg-black/50 py-12">
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex flex-col items-center gap-4 mb-6">
-            <img src="Assets/ShineLogoWithoutBG.gif" alt="dev-codelist.net Logo" class="footer-logo w-12 h-12 rounded-lg object-cover">
+            <video src="Assets/Neues Projekt [CB7AF3B].mp4" autoplay loop muted playsinline class="footer-logo-video w-12 h-12 rounded-lg object-cover" aria-label="dev-codelist.net Logo"></video>
+            <img src="Assets/Logo.png" alt="dev-codelist.net Logo" class="footer-logo-static w-12 h-12 rounded-lg object-cover">
             <span class="font-bold text-lg text-white">dev-codelist.net</span>
         </div>
         <p class="text-center text-gray-500 text-sm">&copy; <span id="year"></span> dev-codelist.net. Built for the community.</p>
