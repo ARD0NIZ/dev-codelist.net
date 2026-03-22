@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev-codelist.net | Contact</title>
+
+    <!-- Open Graph / Discord / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="dev-codelist.net | Contact">
+    <meta property="og:description" content="Contact the dev-codelist.net team through a simple prefilled email form.">
+    <meta property="og:image" content="./Assets/Logo.png">
+    <meta property="og:site_name" content="dev-codelist.net">
+    <meta name="theme-color" content="#5024F4">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="dev-codelist.net | Contact">
+    <meta name="twitter:description" content="Contact the dev-codelist.net team through a simple prefilled email form.">
+    <meta name="twitter:image" content="./Assets/Logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Assets/Logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="components.js"></script>
+</head>
+<body class="selection:bg-[#5024F4]/30">
+
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Layout -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+
+        <!-- Header Section -->
+        <header class="mb-12 animate-enter max-w-3xl">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Contact</span>
+                <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Mail App</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white text-glow">
+                Get in Touch
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                Fill in the form below and your mail app opens with your subject and message already prepared.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <section class="lg:col-span-2 glass-panel p-6 md:p-8 animate-enter delay-100">
+                <h2 class="text-2xl font-bold text-white mb-2">Contact Form</h2>
+                <p class="text-sm text-gray-500 mb-6">The subject will always end with " - Dev Codelist Contact".</p>
+
+                <form id="contact-form" class="space-y-5">
+                    <div>
+                        <label for="contact-name" class="block text-sm font-medium text-gray-300 mb-2">Name (optional)</label>
+                        <input id="contact-name" type="text" placeholder="Your name" class="w-full rounded-xl bg-black/20 border border-white/10 text-white px-4 py-3 outline-none focus:border-[#7B4FFF] transition-colors" />
+                    </div>
+
+                    <div>
+                        <label for="contact-email" class="block text-sm font-medium text-gray-300 mb-2">Email (optional)</label>
+                        <input id="contact-email" type="email" placeholder="your@email.com" class="w-full rounded-xl bg-black/20 border border-white/10 text-white px-4 py-3 outline-none focus:border-[#7B4FFF] transition-colors" />
+                    </div>
+
+                    <div>
+                        <label for="contact-subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                        <input id="contact-subject" type="text" required placeholder="What is this about?" class="w-full rounded-xl bg-black/20 border border-white/10 text-white px-4 py-3 outline-none focus:border-[#7B4FFF] transition-colors" />
+                    </div>
+
+                    <div>
+                        <label for="contact-message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="contact-message" required rows="8" placeholder="Write your message..." class="w-full rounded-xl bg-black/20 border border-white/10 text-white px-4 py-3 outline-none focus:border-[#7B4FFF] transition-colors resize-y"></textarea>
+                    </div>
+
+                    <button type="submit" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#5024F4] to-[#7B4FFF] text-white font-semibold hover:brightness-110 transition-all">
+                        Send
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </button>
+                </form>
+            </section>
+
+            <aside class="glass-panel p-6 animate-enter delay-200">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#9D7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 4H8m8-8H8m12 10a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h8l6 6v8z"></path></svg>
+                    Info
+                </h3>
+                <div class="space-y-3 text-sm">
+                    <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                        <p class="text-gray-400">Receiver</p>
+                        <p class="font-mono text-[#9D7FFF] break-all">ardonizdevelopment@gmail.com</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                        <p class="text-gray-400">Subject format</p>
+                        <p class="font-mono text-[#9D7FFF]">[Your Subject] - Dev Codelist Contact</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const subjectInput = document.getElementById('contact-subject').value.trim();
+            const messageInput = document.getElementById('contact-message').value.trim();
+
+            const suffix = ' - Dev Codelist Contact';
+            const baseSubject = subjectInput || 'Contact Request';
+            const finalSubject = `${baseSubject}${suffix}`;
+
+            const bodyLines = [];
+            if (name) bodyLines.push(`Name: ${name}`);
+            if (email) bodyLines.push(`Email: ${email}`);
+            if (bodyLines.length > 0) bodyLines.push('');
+            bodyLines.push(messageInput);
+
+            const body = bodyLines.join('\n');
+            const mailto = `mailto:ardonizdevelopment@gmail.com?subject=${encodeURIComponent(finalSubject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailto;
+        });
+    </script>
+</body>
+</html>
