@@ -38,8 +38,8 @@
     <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
         
         <!-- Header Section -->
-        <header class="mb-20 animate-enter max-w-3xl">
-            <div class="flex gap-3 mb-6">
+        <header class="mb-12 animate-enter max-w-3xl">
+            <div class="flex flex-wrap gap-3 mb-6">
                 <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Feature Tag 1</span>
                 <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Feature Tag 2</span>
             </div>
@@ -50,6 +50,21 @@
                 Description of your project goes here. This is a placeholder for your project description.
             </p>
         </header>
+
+        <!-- Features Banner -->
+        <div class="mb-16 animate-enter delay-100">
+            <div class="glass-panel p-6">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    Features
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Feature Tag 1</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Feature Tag 2</span>
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Feature Tag 3</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Code Blocks Section -->
         <div class="space-y-12 mb-16">
@@ -181,6 +196,114 @@ $endtry
                     </div>
                 </div>
 
+                <!-- Code Block 4 -->
+                <div class="animate-enter delay-300">
+                    <div class="flex items-center justify-between mb-4 px-2">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">4. Fourth Code Section</h2>
+                            <p class="text-gray-500 text-sm mt-1">Description of what this section does.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                            <span class="bg-white/5 text-[#9D7FFF] px-3 py-1 rounded-md text-sm font-mono border border-white/5">$onInteraction</span>
+                        </div>
+                    </div>
+                    
+                    <div class="code-editor group">
+                        <div class="editor-header" onclick="toggleCode(this)">
+                            <div class="editor-controls-left">
+                                <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <div class="editor-dots">
+                                    <div class="dot dot-red"></div>
+                                    <div class="dot dot-yellow"></div>
+                                    <div class="dot dot-green"></div>
+                                </div>
+                            </div>
+                            <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-4" onclick="event.stopPropagation()">
+                                <span class="copy-label">Copy Code</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                            </button>
+                        </div>
+                        <pre id="code-4" class="editor-content bdfd-code">
+// Your code here
+$nomention
+
+$if[$customID==exampleInteraction]
+    // Handle interaction
+    $title[Example Title]
+    $description[Example description]
+$endif
+</pre>
+                    </div>
+                </div>
+
+        </div>
+
+        <!-- Custom Placeholders Section -->
+        <div class="mb-16 animate-enter delay-100">
+            <div class="glass-panel p-6">
+                <h3 class="font-bold text-lg mb-2 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"></path></svg>
+                    Custom Placeholders
+                </h3>
+                <p class="text-gray-500 text-sm mb-5">These tags can be used inside your custom message and are dynamically replaced at runtime.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <!-- Placeholder Category 1 -->
+                    <div>
+                        <p class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Category 1</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#7B4FFF]">{placeholder1}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#7B4FFF]">{placeholder2}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#7B4FFF]">{placeholder3}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Placeholder Category 2 -->
+                    <div>
+                        <p class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Category 2</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#9D7FFF]">{placeholder4}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#9D7FFF]">{placeholder5}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#9D7FFF]">{placeholder6}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Placeholder Category 3 -->
+                    <div>
+                        <p class="text-xs font-mono text-gray-500 mb-2 uppercase tracking-wider">Category 3</p>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#7B4FFF]">{placeholder7}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#7B4FFF]">{placeholder8}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                                <code class="text-sm font-mono text-[#7B4FFF]">{placeholder9}</code>
+                                <span class="text-xs text-gray-500">Description</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Info & Credits Section -->
@@ -208,41 +331,36 @@ $endtry
                     </div>
                 </div>
 
-                <!-- Contributors Widget -->
+                <!-- Credits Widget -->
                 <div class="glass-panel p-6 animate-enter delay-200">
                     <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
                         <svg class="w-5 h-5 text-[#9D7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         Credits
                     </h3>
                     <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#5024F4]/20">C1</div>
-                            <div>
-                                <div class="font-semibold text-white">@contributor1</div>
+                        <a href="https://discord.com/users/USERID" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg bg-black/20 border border-white/5 hover:border-[#5024F4]/40 hover:bg-[#5024F4]/5 transition-all duration-200 group">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#5024F4]/20 shrink-0">C1</div>
+                            <div class="flex-1 min-w-0">
+                                <div class="font-semibold text-white group-hover:text-[#9D7FFF] transition-colors">@contributor1</div>
                                 <div class="text-xs text-gray-500">Role Description</div>
                             </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#7B4FFF] to-[#9D7FFF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#7B4FFF]/20">C2</div>
-                            <div>
-                                <div class="font-semibold text-white">@contributor2</div>
+                            <svg class="w-4 h-4 text-gray-600 group-hover:text-[#7B4FFF] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                        <a href="https://discord.com/users/USERID" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg bg-black/20 border border-white/5 hover:border-[#5024F4]/40 hover:bg-[#5024F4]/5 transition-all duration-200 group">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#7B4FFF] to-[#9D7FFF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#7B4FFF]/20 shrink-0">C2</div>
+                            <div class="flex-1 min-w-0">
+                                <div class="font-semibold text-white group-hover:text-[#9D7FFF] transition-colors">@contributor2</div>
                                 <div class="text-xs text-gray-500">Role Description</div>
                             </div>
+                            <svg class="w-4 h-4 text-gray-600 group-hover:text-[#7B4FFF] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                        <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                            <p class="text-xs text-gray-500 mb-2">Support Server</p>
+                            <a href="https://discord.gg/INVITECODE" target="_blank" rel="noopener noreferrer" class="text-sm font-mono text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">discord.gg/INVITECODE</a>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#6B3FEF] to-[#8B5FFF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#6B3FEF]/20">C3</div>
-                            <div>
-                                <div class="font-semibold text-white">@contributor3</div>
-                                <div class="text-xs text-gray-500">Role Description</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5024F4] to-[#6B3FEF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#5024F4]/20">C4</div>
-                            <div>
-                                <div class="font-semibold text-white">@contributor4</div>
-                                <div class="text-xs text-gray-500">Role Description</div>
-                            </div>
-                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            If you repost or redistribute this, please give proper credits to the original creator.
+                        </p>
                     </div>
                 </div>
 

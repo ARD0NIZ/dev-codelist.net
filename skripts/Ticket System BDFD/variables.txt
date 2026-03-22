@@ -1,4 +1,0 @@
-ticketConfig =
-BotToken = YOUR BOT TOKEN
-ticketc = 0
-untitled = 0

@@ -1,0 +1,109 @@
+**Trigger:**
+/moderation-panel
+**Command Options:**
+```
+Name: user | Type: user | Status: required
+```
+**Variables:**
+```
+Name: Mod-Panel-Active | Value:
+Name: Moderation-Panel-Message | Value:
+Name: Moderation-Panel-Information | Value:
+```
+**Code:**
+```
+$if[$checkUserPerms[$authorID;admin]==false]
+$title[$serverName[$guildID]]
+$description[Sorry, you dont have permission to use this command.
+$addTimestamp]
+$color[000000]
+$elseif[$checkUserPerms[$authorID;admin]==true]
+$title[$serverName[$guildID]]
+$description[**Moderation Panel**
+User: <@$message[user]>
+ID: $message[user]
+
+Please select a option below.
+`Will auto-delete in 15 minutes.`
+$addTimestamp]
+$thumbnail[$userAvatar[$message[user]]]
+$color[$getServerVar[Embed-Color]]
+$footer[Code made by @$username[$botOwnerID]]
+$setUserVar[Mod-Panel-Active;$message[user];$authorID]
+$setUserVar[Moderation-Panel-Message;$messageID;$authorID]
+$setUserVar[Moderation-Panel-Information;**Moderation Panel**
+User: <@$message[user]>
+ID: $message[user]
+
+Please select a option below.;$authorID]
+$newSelectMenu[$authorID≈Moderation Actions;1;1;Moderation Actions;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Ban;Ban;Ban $username[$getUserVar[Mod-Panel-Active]] from the server.;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Unban;Unban;Unban $username[$getUserVar[Mod-Panel-Active]] from the server.;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Check Ban;Check Ban;Check $username[$getUserVar[Mod-Panel-Active]]'s ban status/details.;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Mute;Mute;Mute $username[$getUserVar[Mod-Panel-Active]].;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Unmute;Unmute;Unmute $username[$getUserVar[Mod-Panel-Active]].;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Kick;Kick;Kick $username[$getUserVar[Mod-Panel-Active]] from the server.;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Add Warning;Warn;Add a warning to $username[$getUserVar[Mod-Panel-Active]].;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Remove Warning;Unwarn;Remove a warning from $username[$getUserVar[Mod-Panel-Active]].;false;;]
+$addSelectMenuOption[$authorID≈Moderation Actions;Check Warnings;Check Warning;Check $username[$getUserVar[Mod-Panel-Active]]'s warnings.;false;;]
+$endif
+```
+**Trigger:**
+$onInteraction
+**Code:**
+```
+$suppressErrors
+$onlyIf[$customID==$authorID≈Moderation Actions;]
+$if[$message==Ban]
+$banID[script.moderation~panel~ban~$username[$authorID]~$date;$getUserVar[Mod-Panel-Active]]
+$title[$serverName[$guildID]]
+$description[Successfully banned <@$getUserVar[Mod-Panel-Active]>.]
+$color[000000]
+$elseif[$message==Unban]
+$unbanID[$getUserVar[Mod-Panel-Active]]
+$title[$serverName[$guildID]]
+$description[Successfully unbanned <@$getUserVar[Mod-Panel-Active]>.]
+$color[000000]
+$elseif[$message==Check Ban]
+$if[$isBanned[$getUserVar[Mod-Panel-Active]]==false]
+$title[$serverName[$guildID]]
+$description[Sorry, <@$getUserVar[Mod-Panel-Active]> isn't banned from the server.]
+$color[000000]
+$elseif[$isBanned[$getUserVar[Mod-Panel-Active]]==true]
+$title[$serverName[$guildID]]
+$description[<@$getUserVar[Mod-Panel-Active]>'s ban details are listed below.
+Details: $getBanReason[$getUserVar[Mod-Panel-Active];$guildID]
+$addTimestamp]
+$color[000000]
+$endif
+$elseif[$message==Mute]
+$timeout[1440;$getUserVar[Mod-Panel-Active]]
+$title[$serverName[$guildID]]
+$description[Successfully muted <@$getUserVar[Mod-Panel-Active]> for 24 hours.]
+$color[000000]
+$elseif[$message==Unmute]
+$untimeout[$getUserVar[Mod-Panel-Active]]
+$title[$serverName[$guildID]]
+$description[Successfully unmuted <@$getUserVar[Mod-Panel-Active]>.]
+$color[000000]
+$elseif[$message==Kick]
+$kick[$getUserVar[Mod-Panel-Active];moderation.panel.kick]
+$title[$serverName[$guildID]]
+$description[Successfully kicked <@$getUserVar[Mod-Panel-Active]>.]
+$color[000000]
+$elseif[$message==Warn]
+$setUserVar[Warnings;$sum[$getUserVar[Warnings;$getUserVar[Mod-Panel-Active]];1];$getUserVar[Mod-Panel-Active]]
+$title[$serverName[$guildID]]
+$description[Successfully added 1 warning to <@$getUserVar[Mod-Panel-Active]>]
+$color[000000]
+$elseif[$message==Unwarn]
+$setUserVar[Warnings;$sub[$getUserVar[Warnings;$getUserVar[Mod-Panel-Active]];1];$getUserVar[Mod-Panel-Active]]
+$title[$serverName[$guildID]]
+$description[Successfully removed 1 warning from <@$getUserVar[Mod-Panel-Active]>.]
+$color[000000]
+$elseif[$message==Check Warning]
+$title[$serverName[$guildID]]
+$description[<@$getUserVar[Mod-Panel-Active]> has $getUserVar[Warnings;$getUserVar[Mod-Panel-Active]] warnings.]
+$color[000000]
+$endif
+```
