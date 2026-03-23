@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     const isInViews = window.location.pathname.includes('/Views/');
     const componentBasePath = isInViews ? '../' : '';
 
-    await loadComponent('header-placeholder', `${componentBasePath}header.html`);
-    await loadComponent('footer-placeholder', `${componentBasePath}footer.html`);
+    await loadComponent('header-placeholder', `${componentBasePath}Components/header.html`);
+    await loadComponent('footer-placeholder', `${componentBasePath}Components/footer.html`);
     
     // Update year in footer after it's loaded
     const yearElement = document.getElementById('year');
