@@ -1,0 +1,58 @@
+<!-- Site Navigation -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+            <img src="/assets/media/Logo.png" alt="dev-codelist.net Logo" class="w-9 h-9 rounded-lg object-cover transition-transform group-hover:scale-110">
+            <span class="font-bold text-lg tracking-tight text-white">dev-codelist.net</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} nav-active{% endif %}">Home</a>
+            <a href="/codes/" class="nav-link{% if page.url contains '/codes/' %} nav-active{% endif %}">Codes</a>
+            <a href="/contact/" class="nav-link{% if page.url contains '/contact/' %} nav-active{% endif %}">Contact</a>
+            <a href="/views/bdfd-eval/" class="nav-link{% if page.url contains '/views/bdfd-eval/' %} nav-active{% endif %}">BDFD Eval</a>
+            <a href="/views/mod-panel/" class="nav-link{% if page.url contains '/views/mod-panel/' %} nav-active{% endif %}">Mod Panel</a>
+            <a href="/views/ticket-system/" class="nav-link{% if page.url contains '/views/ticket-system/' %} nav-active{% endif %}">Ticket System</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="nav-toggle" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Toggle navigation" aria-expanded="false">
+            <svg id="nav-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="nav-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="nav-menu" class="hidden md:hidden bg-black/90 backdrop-blur-xl border-t border-white/5 px-6 pb-6 pt-4 flex-col gap-4 text-sm font-medium">
+        <a href="/" class="nav-link block py-1{% if page.url == '/' or page.url == '/index.html' %} nav-active{% endif %}">Home</a>
+        <a href="/codes/" class="nav-link block py-1{% if page.url contains '/codes/' %} nav-active{% endif %}">Codes</a>
+        <a href="/contact/" class="nav-link block py-1{% if page.url contains '/contact/' %} nav-active{% endif %}">Contact</a>
+        <a href="/views/bdfd-eval/" class="nav-link block py-1{% if page.url contains '/views/bdfd-eval/' %} nav-active{% endif %}">BDFD Eval</a>
+        <a href="/views/mod-panel/" class="nav-link block py-1{% if page.url contains '/views/mod-panel/' %} nav-active{% endif %}">Mod Panel</a>
+        <a href="/views/ticket-system/" class="nav-link block py-1{% if page.url contains '/views/ticket-system/' %} nav-active{% endif %}">Ticket System</a>
+    </div>
+</nav>
+
+<script>
+    (function () {
+        var toggle = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-menu');
+        var iconOpen = document.getElementById('nav-icon-open');
+        var iconClose = document.getElementById('nav-icon-close');
+        if (toggle && menu) {
+            toggle.addEventListener('click', function () {
+                var isHidden = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden', !isHidden);
+                menu.classList.toggle('flex', isHidden);
+                iconOpen.classList.toggle('hidden', isHidden);
+                iconClose.classList.toggle('hidden', !isHidden);
+                toggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+            });
+        }
+    })();
+</script>

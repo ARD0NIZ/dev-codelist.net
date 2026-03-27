@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -9,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="dev-codelist.net | Codes">
     <meta property="og:description" content="Browse our collection of code snippets with beautiful syntax highlighting.">
-    <meta property="og:image" content="/Assets/Media/Logo.png">
+    <meta property="og:image" content="/assets/media/Logo.png">
     <meta property="og:site_name" content="dev-codelist.net">
     <meta name="theme-color" content="#5024F4">
     
@@ -17,22 +19,22 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="dev-codelist.net | Codes">
     <meta name="twitter:description" content="Browse our collection of code snippets with beautiful syntax highlighting.">
-    <meta name="twitter:image" content="/Assets/Media/Logo.png">
+    <meta name="twitter:image" content="/assets/media/Logo.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/Assets/Media/Logo.png">
+    <link rel="icon" type="image/png" href="/assets/media/Logo.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Assets/Style/style.css">
-    <script src="/JS/components.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
 </head>
 <body class="selection:bg-[#5024F4]/30">
 
-    <!-- Header Component -->
-    <div id="header-placeholder"></div>
+    <!-- Header -->
+    {% include header.html %}
 
     <!-- Main Layout -->
     <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
@@ -55,7 +57,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Code Card: BDFD Eval -->
-            <a href="Views/bdfd-eval.html" class="glass-panel p-6 animate-enter delay-100 hover:scale-105 transition-transform">
+            <a href="/views/bdfd-eval/" class="glass-panel p-6 animate-enter delay-100 hover:scale-105 transition-transform">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] rounded-lg flex items-center justify-center text-white font-bold text-xl">E</div>
                     <div>
@@ -73,7 +75,7 @@
             </a>
 
             <!-- Code Card: BDFD Cenzo.tz Ticket System -->
-            <a href="Views/ticket-system.html" class="glass-panel p-6 animate-enter delay-200 hover:scale-105 transition-transform">
+            <a href="/views/ticket-system/" class="glass-panel p-6 animate-enter delay-200 hover:scale-105 transition-transform">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#7B4FFF] to-[#9D7FFF] rounded-lg flex items-center justify-center text-white font-bold text-xl">T</div>
                     <div>
@@ -92,7 +94,7 @@
             </a>
 
             <!-- Code Card: BDFD Zombie.clanx Mod Panel -->
-            <a href="Views/mod-panel.html" class="glass-panel p-6 animate-enter delay-300 hover:scale-105 transition-transform">
+            <a href="/views/mod-panel/" class="glass-panel p-6 animate-enter delay-300 hover:scale-105 transition-transform">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#6B3FEF] to-[#8B5FFF] rounded-lg flex items-center justify-center text-white font-bold text-xl">M</div>
                     <div>
@@ -113,8 +115,8 @@
         </div>
     </main>
 
-    <!-- Footer Component -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    {% include footer.html %}
 
 </body>
 </html>

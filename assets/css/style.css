@@ -130,6 +130,8 @@ body {
     transition: width 0.3s ease;
 }
 .nav-link:hover::after { width: 100%; }
+.nav-active { color: white; }
+.nav-active::after { width: 100%; }
 
 .tag {
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;

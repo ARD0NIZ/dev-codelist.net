@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -9,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="dev-codelist.net | BDFD Cenzo.tz Ticket System">
     <meta property="og:description" content="A fully advanced BDFD ticket system with interactive config panel, JSON-based settings, modal inputs, dynamic placeholders, and full ticket controls.">
-    <meta property="og:image" content="/Assets/Media/Logo.png">
+    <meta property="og:image" content="/assets/media/Logo.png">
     <meta property="og:site_name" content="dev-codelist.net">
     <meta name="theme-color" content="#5024F4">
     
@@ -17,22 +19,22 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="dev-codelist.net | BDFD Cenzo.tz Ticket System">
     <meta name="twitter:description" content="A fully advanced BDFD ticket system with interactive config panel, JSON-based settings, modal inputs, dynamic placeholders, and full ticket controls.">
-    <meta name="twitter:image" content="/Assets/Media/Logo.png">
+    <meta name="twitter:image" content="/assets/media/Logo.png">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/Assets/Media/Logo.png">
+    <link rel="icon" type="image/png" href="/assets/media/Logo.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Assets/Style/style.css">
-    <script src="/JS/components.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
 </head>
 <body class="selection:bg-[#5024F4]/30">
 
-    <!-- Header Component -->
-    <div id="header-placeholder"></div>
+    <!-- Header -->
+    {% include header.html %}
 
     <!-- Main Layout -->
     <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
@@ -735,8 +737,8 @@ $endif</pre>
         </div>
     </main>
 
-    <!-- Footer Component -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    {% include footer.html %}
 
     <script>
         const colors = {
