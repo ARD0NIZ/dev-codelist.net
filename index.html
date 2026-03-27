@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -9,7 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="dev-codelist.net | Welcome">
     <meta property="og:description" content="A modern code showcase platform with beautiful syntax highlighting and interactive features.">
-    <meta property="og:image" content="/Assets/Media/Logo.png">
+    <meta property="og:image" content="/assets/media/Logo.png">
     <meta property="og:site_name" content="dev-codelist.net">
     <meta name="theme-color" content="#5024F4">
     
@@ -17,22 +19,21 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="dev-codelist.net | Welcome">
     <meta name="twitter:description" content="A modern code showcase platform with beautiful syntax highlighting and interactive features.">
-    <meta name="twitter:image" content="/Assets/Media/Logo.png">
-    
+    <meta name="twitter:image" content="/assets/media/Logo.png">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/Assets/Media/Logo.png">
+    <link rel="icon" type="image/png" href="/assets/media/Logo.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Assets/Style/style.css">
-    <script src="/JS/components.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="selection:bg-[#5024F4]/30">
 
-    <!-- Header Component -->
-    <div id="header-placeholder"></div>
+    <!-- Header -->
+    {% include header.html %}
 
     <!-- Hero Section -->
     <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
@@ -53,7 +54,7 @@
             </p>
             
             <div class="flex gap-4">
-                <a href="codes.html" class="bg-gradient-to-r from-[#5024F4] to-[#7B4FFF] text-white px-8 py-4 rounded-full hover:shadow-lg hover:shadow-[#5024F4]/50 transition-all font-semibold text-lg">
+                <a href="/codes/" class="bg-gradient-to-r from-[#5024F4] to-[#7B4FFF] text-white px-8 py-4 rounded-full hover:shadow-lg hover:shadow-[#5024F4]/50 transition-all font-semibold text-lg">
                     Browse Codes
                 </a>
                 <a href="#features" class="bg-white/5 text-white px-8 py-4 rounded-full hover:bg-white/10 transition-colors font-semibold text-lg border border-white/10">
@@ -126,7 +127,7 @@
                         <!-- Banner -->
                         <div class="discord-banner">
                             <div class="discord-server-icon">
-                                <img src="/Assets/Media/Logo.png" alt="Dev Central Guild Icon">
+                            <img src="/assets/media/Logo.png" alt="Dev Central Guild Icon">
                             </div>
                         </div>
 
@@ -203,8 +204,8 @@
 
     </main>
 
-    <!-- Footer Component -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    {% include footer.html %}
 
     <script>
         document.getElementById('discord-toggle').addEventListener('click', function () {
