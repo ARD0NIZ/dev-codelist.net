@@ -1,2 +1,7 @@
 title: Dev CodeList
 permalink: pretty
+
+plugins:
+  - jekyll-sitemap
+
+url: "https://dev-codelist.net"
