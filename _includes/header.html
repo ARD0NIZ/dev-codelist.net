@@ -10,6 +10,7 @@
         <div class="hidden md:flex items-center gap-6 text-sm font-medium">
             <a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} nav-active{% endif %}">Home</a>
             <a href="/codes/" class="nav-link{% if page.url contains '/codes/' %} nav-active{% endif %}">Codes</a>
+            <a href="/changelog/" class="nav-link{% if page.url contains '/changelog/' %} nav-active{% endif %}">Changelog</a>
             <a href="/contact/" class="nav-link{% if page.url contains '/contact/' %} nav-active{% endif %}">Contact</a>
         </div>
 
@@ -28,6 +29,7 @@
     <div id="nav-menu" class="hidden md:hidden bg-black/90 backdrop-blur-xl border-t border-white/5 px-6 pb-6 pt-4 flex-col gap-4 text-sm font-medium">
         <a href="/" class="nav-link block py-1{% if page.url == '/' or page.url == '/index.html' %} nav-active{% endif %}">Home</a>
         <a href="/codes/" class="nav-link block py-1{% if page.url contains '/codes/' %} nav-active{% endif %}">Codes</a>
+        <a href="/changelog/" class="nav-link block py-1{% if page.url contains '/changelog/' %} nav-active{% endif %}">Changelog</a>
         <a href="/contact/" class="nav-link block py-1{% if page.url contains '/contact/' %} nav-active{% endif %}">Contact</a>
     </div>
 </nav>
@@ -50,3 +52,21 @@
         }
     })();
 </script>
+
+<!-- Reading Progress Bar (only on /views/ pages) -->
+{% if page.url contains '/views/' %}
+<div id="read-progress" style="position:fixed;top:0;left:0;z-index:60;height:3px;width:0%;background:linear-gradient(90deg,#5024F4,#7B4FFF,#9D7FFF);transition:width 0.1s linear;pointer-events:none;"></div>
+<script>
+    (function () {
+        var bar = document.getElementById('read-progress');
+        if (!bar) return;
+        function update() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) + '%' : '0%';
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    })();
+</script>
+{% endif %}
