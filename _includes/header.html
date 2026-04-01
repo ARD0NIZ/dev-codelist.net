@@ -1,3 +1,23 @@
+<!-- Page Load Bar -->
+<div id="page-load-bar" style="position:fixed;top:0;left:0;z-index:9999;height:3px;width:0%;background:linear-gradient(90deg,#5024F4,#7B4FFF,#9D7FFF);pointer-events:none;transition:width 0.3s ease,opacity 0.4s ease;"></div>
+<script>
+    (function () {
+        var bar = document.getElementById('page-load-bar');
+        if (!bar) return;
+        var w = 0;
+        var interval = setInterval(function () {
+            w = w < 70 ? w + (Math.random() * 12) : w < 90 ? w + (Math.random() * 2) : w;
+            bar.style.width = Math.min(w, 90) + '%';
+        }, 120);
+        window.addEventListener('load', function () {
+            clearInterval(interval);
+            bar.style.transition = 'width 0.2s ease, opacity 0.5s ease 0.2s';
+            bar.style.width = '100%';
+            setTimeout(function () { bar.style.opacity = '0'; }, 300);
+        });
+    })();
+</script>
+
 <!-- Site Navigation -->
 <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-xl">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
