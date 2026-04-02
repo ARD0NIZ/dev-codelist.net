@@ -1,0 +1,584 @@
+/* ============================================================
+   Editor Layout — /test/
+   Passt zum Design von dev-codelist.net
+   ============================================================ */
+
+/* ── Ensure .hidden always works (overrides flex/block rules) */
+.hidden {
+    display: none !important;
+}
+
+/* ── Shell: Full-height below the nav (80px) ─────────────── */
+.editor-shell {
+    display: flex;
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+    overflow: hidden;
+    background: #030305;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.editor-sidebar {
+    width: 220px;
+    min-width: 140px;
+    max-width: 480px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background: #07070a;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    user-select: none;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #07070a;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+}
+
+.sidebar-actions {
+    display: flex;
+    gap: 2px;
+}
+
+.sidebar-icon-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.35);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1;
+}
+
+.sidebar-icon-btn:hover {
+    color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.07);
+}
+
+/* ── File Tree ───────────────────────────────────────────── */
+.file-tree {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 4px 0;
+}
+
+.tree-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 26px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-left: 2px solid transparent;
+    transition: background 0.12s, color 0.12s, border-color 0.12s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tree-row:hover {
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.85);
+}
+
+.tree-row-active {
+    background: rgba(80, 36, 244, 0.12) !important;
+    border-left-color: #5024F4 !important;
+    color: #fff !important;
+}
+
+.tree-chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    flex-shrink: 0;
+    color: rgba(255,255,255,0.3);
+    transition: transform 0.2s ease;
+}
+
+.tree-chevron.expanded {
+    transform: rotate(90deg);
+}
+
+.tree-folder-icon,
+.tree-file-icon {
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.tree-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+}
+
+/* ── Sidebar footer ──────────────────────────────────────── */
+.sidebar-footer {
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+}
+
+.sidebar-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    background: rgba(80, 36, 244, 0.15);
+    border: 1px solid rgba(80, 36, 244, 0.3);
+    color: #9D7FFF;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 7px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.sidebar-download-btn:hover {
+    background: rgba(80, 36, 244, 0.28);
+    border-color: rgba(123, 79, 255, 0.5);
+    color: #fff;
+}
+
+/* ── Sidebar resize handle ───────────────────────────────── */
+.sidebar-resize {
+    width: 4px;
+    flex-shrink: 0;
+    cursor: col-resize;
+    background: transparent;
+    transition: background 0.15s;
+    z-index: 10;
+}
+
+.sidebar-resize:hover,
+.sidebar-resize:active {
+    background: rgba(80, 36, 244, 0.4);
+}
+
+/* ── Main editor area ────────────────────────────────────── */
+.editor-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ── Tab bar ─────────────────────────────────────────────── */
+.editor-tabbar {
+    display: flex;
+    align-items: center;
+    background: #030305;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    height: 38px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.tab-list {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    scrollbar-width: none;
+}
+
+.tab-list::-webkit-scrollbar { display: none; }
+
+.editor-tab {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 10px;
+    height: 100%;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: rgba(255,255,255,0.4);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.12s, color 0.12s;
+    position: relative;
+}
+
+.editor-tab:hover {
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.75);
+}
+
+.tab-active-left {
+    background: #0a0a12 !important;
+    color: #fff !important;
+    border-top: 2px solid #5024F4;
+}
+
+.tab-active-right {
+    background: #0a0a12 !important;
+    color: #fff !important;
+    border-top: 2px solid #7B4FFF;
+}
+
+.tab-icon {
+    font-size: 11px;
+}
+
+.tab-name {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tab-close {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.25);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.12s, background 0.12s;
+    line-height: 1;
+    margin-left: 2px;
+}
+
+.tab-close:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.tabbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0 8px;
+    border-left: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+}
+
+.tabbar-icon-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.3);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1;
+}
+
+.tabbar-icon-btn:hover {
+    color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.07);
+}
+
+/* ── Monaco split container ──────────────────────────────── */
+.editor-split-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.monaco-pane {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.split-divider {
+    width: 4px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.06);
+    cursor: col-resize;
+    transition: background 0.15s;
+    z-index: 5;
+}
+
+.split-divider:hover,
+.split-divider:active {
+    background: rgba(80, 36, 244, 0.5);
+}
+
+/* ── Status bar ──────────────────────────────────────────── */
+.editor-statusbar {
+    height: 24px;
+    background: #030305;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.status-left,
+.status-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-item {
+    color: rgba(255,255,255,0.35);
+    white-space: nowrap;
+}
+
+.status-notice {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: rgba(80, 36, 244, 0.7);
+}
+
+.status-sep {
+    color: rgba(255,255,255,0.1);
+}
+
+/* ── Context menu ────────────────────────────────────────── */
+.ctx-menu {
+    position: fixed;
+    z-index: 9000;
+    background: #0e0e14;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 6px;
+    min-width: 170px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.7), 0 0 0 1px rgba(80,36,244,0.15);
+    backdrop-filter: blur(8px);
+}
+
+.ctx-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.82rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.12s, color 0.12s;
+}
+
+.ctx-item:hover {
+    background: rgba(255,255,255,0.07);
+    color: #fff;
+}
+
+.ctx-danger {
+    color: #f87171;
+}
+
+.ctx-danger:hover {
+    background: rgba(248, 113, 113, 0.1);
+    color: #fca5a5;
+}
+
+.ctx-sep {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 4px 6px;
+}
+
+/* ── Inline rename input ─────────────────────────────────── */
+.inline-rename {
+    position: fixed;
+    z-index: 8000;
+    background: #0a0a12;
+    border: 1px solid #5024F4;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 2px 6px;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(80,36,244,0.2);
+}
+
+/* ── Modal ───────────────────────────────────────────────── */
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: #0a0a10;
+    border: 1px solid rgba(80,36,244,0.35);
+    border-radius: 14px;
+    padding: 24px;
+    width: 320px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(80,36,244,0.1);
+}
+
+.modal-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.modal-btn-x {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.3);
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, background 0.15s;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.modal-btn-x:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+.modal-input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 9px 12px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    margin-bottom: 16px;
+}
+
+.modal-input:focus {
+    border-color: #5024F4;
+    box-shadow: 0 0 0 3px rgba(80,36,244,0.2);
+}
+
+.modal-input.modal-input-error {
+    border-color: #f87171;
+    box-shadow: 0 0 0 3px rgba(248,113,113,0.2);
+    animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.modal-btn-cancel {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.55);
+    font-size: 0.82rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.modal-btn-cancel:hover {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.85);
+}
+
+.modal-btn-ok {
+    background: linear-gradient(135deg, #5024F4, #7B4FFF);
+    border: none;
+    color: #fff;
+    font-size: 0.82rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    padding: 7px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: opacity 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 14px rgba(80,36,244,0.35);
+}
+
+.modal-btn-ok:hover {
+    opacity: 0.88;
+    box-shadow: 0 4px 20px rgba(80,36,244,0.5);
+}
+
+/* ── Hide footer on editor page ──────────────────────────── */
+body > footer {
+    display: none;
+}
+
+/* ── Hide scroll-to-top on editor page ───────────────────── */
+#scroll-top {
+    display: none !important;
+}
+
+/* ── Suppress body overflow (editor is full-height) ─────── */
+body {
+    overflow: hidden !important;
+}
