@@ -534,10 +534,22 @@
     }
 
     // ─── Download all as ZIP ─────────────────────────────────────────────────────
-    EditorApp.downloadAll = function () {
+    EditorApp.downloadAll = function (triggerBtn) {
         // Minimal ZIP builder (no external lib needed for text files)
         var files = state.files.filter(function (f) { return f.type === 'file'; });
         if (!files.length) return;
+
+        // Visual feedback on whichever button triggered the call
+        var label = document.getElementById('sidebar-dl-label');
+        if (label) {
+            label.textContent = 'Preparing ZIP…';
+            setTimeout(function () { label.textContent = 'Download all (.zip)'; }, 1800);
+        }
+        if (triggerBtn && triggerBtn.classList.contains('sidebar-icon-btn--zip')) {
+            var origColor = triggerBtn.style.color;
+            triggerBtn.style.color = '#7B4FFF';
+            setTimeout(function () { triggerBtn.style.color = origColor; }, 1800);
+        }
 
         // Build path
         function getPath(f) {
