@@ -8,11 +8,14 @@
     display: none !important;
 }
 
-/* ── Shell: Full-height below the nav (80px) ─────────────── */
+/* ── Shell: pinned below the nav, fills remaining viewport ─ */
 .editor-shell {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
-    height: calc(100vh - 80px);
-    margin-top: 80px;
     overflow: hidden;
     background: #030305;
 }
@@ -151,6 +154,7 @@
 /* ── Sidebar footer ──────────────────────────────────────── */
 .sidebar-footer {
     padding: 10px;
+    padding-bottom: max(10px, calc(8px + env(safe-area-inset-bottom, 0px)));
     border-top: 1px solid rgba(255,255,255,0.06);
     flex-shrink: 0;
 }
@@ -347,13 +351,15 @@
 
 /* ── Status bar ──────────────────────────────────────────── */
 .editor-statusbar {
-    height: 24px;
+    min-height: 24px;
+    height: calc(24px + env(safe-area-inset-bottom, 0px));
     background: #030305;
     border-top: 1px solid rgba(255,255,255,0.06);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 12px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
     flex-shrink: 0;
     font-size: 0.72rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -590,4 +596,12 @@ body > footer {
 /* ── Suppress body overflow (editor is full-height) ─────── */
 body {
     overflow: hidden !important;
+}
+
+/* ── Responsive: Tablet landscape (≤ 1280px, min-height 500px) ── */
+@media (max-width: 1280px) and (min-height: 500px) {
+    .editor-sidebar {
+        width: 180px;
+        min-width: 120px;
+    }
 }

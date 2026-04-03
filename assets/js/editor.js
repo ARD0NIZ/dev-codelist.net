@@ -484,6 +484,7 @@
 
     // ─── Split view ─────────────────────────────────────────────────────────────
     window.EditorApp = window.EditorApp || {};
+
     EditorApp.toggleSplit = function () {
         state.splitMode = !state.splitMode;
         var right = document.getElementById('monaco-container-right');
