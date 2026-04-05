@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="/assets/css/editor.css">
     <script src="/assets/js/live-dev.js"></script>
 
+    <!-- JSZip (ZIP extraction on upload) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <!-- Monaco Editor (CDN) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
 </head>
@@ -33,15 +35,39 @@
     {% include header.html %}
 
     <!-- Leave Editor Button (fixed, always on top of nav) -->
-    <a href="/" id="leave-editor-btn"
-       style="position:fixed;top:0;right:0;z-index:200;height:80px;display:flex;align-items:center;padding:0 24px;gap:8px;color:#9D7FFF;font-size:0.8rem;font-weight:600;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif;transition:color 0.15s;"
-       onmouseenter="this.querySelector('span').style.background='rgba(80,36,244,0.28)';this.querySelector('span').style.borderColor='rgba(123,79,255,0.55)';this.querySelector('span').style.color='#fff';"
-       onmouseleave="this.querySelector('span').style.background='rgba(80,36,244,0.12)';this.querySelector('span').style.borderColor='rgba(80,36,244,0.3)';this.querySelector('span').style.color='#9D7FFF';">
-        <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;background:rgba(80,36,244,0.12);border:1px solid rgba(80,36,244,0.3);transition:background 0.15s,border-color 0.15s,color 0.15s;">
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-            Leave editor
-        </span>
-    </a>
+    <div style="position:fixed;top:0;right:0;z-index:200;height:80px;display:flex;align-items:center;padding:0 24px;gap:4px;">
+        <!-- Explorer action icons -->
+        <button class="sidebar-icon-btn" title="New File" onclick="EditorApp.newFile()" style="width:32px;height:32px;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+        </button>
+        <button class="sidebar-icon-btn" title="New Folder" onclick="EditorApp.newFolder()" style="width:32px;height:32px;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+        </button>
+        <button class="sidebar-icon-btn" title="Upload Files" onclick="EditorApp.triggerUploadFiles()" style="width:32px;height:32px;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </button>
+        <button class="sidebar-icon-btn" title="Upload Folder" onclick="EditorApp.triggerUploadFolder()" style="width:32px;height:32px;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/></svg>
+        </button>
+        <button class="sidebar-icon-btn" title="Reset to defaults" onclick="EditorApp.resetAll()" style="width:32px;height:32px;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.59"/></svg>
+        </button>
+        <div style="width:1px;height:20px;background:rgba(255,255,255,0.1);margin:0 8px;"></div>
+        <!-- Leave Editor -->
+        <a href="/" id="leave-editor-btn"
+           style="display:flex;align-items:center;gap:8px;color:#9D7FFF;font-size:0.8rem;font-weight:600;text-decoration:none;font-family:'Plus Jakarta Sans',sans-serif;transition:color 0.15s;"
+           onmouseenter="this.querySelector('span').style.background='rgba(80,36,244,0.28)';this.querySelector('span').style.borderColor='rgba(123,79,255,0.55)';this.querySelector('span').style.color='#fff';"
+           onmouseleave="this.querySelector('span').style.background='rgba(80,36,244,0.12)';this.querySelector('span').style.borderColor='rgba(80,36,244,0.3)';this.querySelector('span').style.color='#9D7FFF';">
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:8px;background:rgba(80,36,244,0.12);border:1px solid rgba(80,36,244,0.3);transition:background 0.15s,border-color 0.15s,color 0.15s;">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                Leave editor
+            </span>
+        </a>
+    </div>
+
+    <!-- Hidden upload inputs -->
+    <input type="file" id="upload-files-input" multiple style="display:none;">
+    <input type="file" id="upload-folder-input" webkitdirectory multiple style="display:none;">
 
     <!-- Editor Shell -->
     <div id="editor-shell" class="editor-shell">
@@ -55,17 +81,6 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M3 3h6l2 4H3V3zM3 11h18v10H3z"/></svg>
                     EXPLORER
                 </span>
-                <div class="sidebar-actions">
-                    <button class="sidebar-icon-btn" title="New File" onclick="EditorApp.newFile()">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
-                    </button>
-                    <button class="sidebar-icon-btn" title="New Folder" onclick="EditorApp.newFolder()">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
-                    </button>
-                    <button class="sidebar-icon-btn" title="Reset to defaults" onclick="EditorApp.resetAll()">
-                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.59"/></svg>
-                    </button>
-                </div>
             </div>
 
             <!-- File Tree -->
@@ -145,6 +160,10 @@
             New Folder here
         </button>
         <div class="ctx-sep" id="ctx-sep-folder" style="display:none;"></div>
+        <button class="ctx-item" id="ctx-download-folder" style="display:none;">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Folder (.zip)
+        </button>
         <button class="ctx-item" id="ctx-rename">
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
             Rename
@@ -182,6 +201,13 @@
                 <button class="modal-btn-ok" id="modal-ok-btn" onclick="EditorApp.confirmModal()">Create</button>
             </div>
         </div>
+    </div>
+
+    <!-- Drag & Drop overlay -->
+    <div id="drag-overlay" style="display:none;position:fixed;inset:0;z-index:400;background:rgba(80,36,244,0.1);border:3px dashed rgba(123,79,255,0.55);pointer-events:none;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+        <svg width="52" height="52" fill="none" stroke="#7B4FFF" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <span style="color:#9D7FFF;font-size:1rem;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;">Drop files or folders here</span>
+        <span style="color:#5a6274;font-size:0.75rem;font-family:'Plus Jakarta Sans',sans-serif;">.zip files will be extracted automatically</span>
     </div>
 
     {% include footer.html %}

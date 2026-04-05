@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    height: 26px;
+    height: 28px;
     cursor: pointer;
     font-size: 0.8rem;
     color: rgba(255,255,255,0.55);
@@ -108,8 +108,7 @@
     border-left: 2px solid transparent;
     transition: background 0.12s, color 0.12s, border-color 0.12s;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
 }
 
 .tree-row:hover {
@@ -139,8 +138,9 @@
 
 .tree-folder-icon,
 .tree-file-icon {
-    font-size: 12px;
+    font-size: 14px;
     flex-shrink: 0;
+    line-height: 1;
 }
 
 .tree-label {
@@ -190,6 +190,7 @@
     background: transparent;
     transition: background 0.15s;
     z-index: 10;
+    touch-action: none;
 }
 
 .sidebar-resize:hover,

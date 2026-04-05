@@ -659,6 +659,256 @@
          .concat([0x00, 0x00]));
     }
 
+    // ─── Download folder as ZIP ──────────────────────────────────────────────────
+    EditorApp.downloadFolder = function (id) {
+        var folder = getFile(id);
+        if (!folder || folder.type !== 'folder') return;
+
+        function collectFiles(folderId) {
+            var result = [];
+            state.files.filter(function (f) { return f.parentId === folderId; }).forEach(function (item) {
+                if (item.type === 'file') result.push(item);
+                else result = result.concat(collectFiles(item.id));
+            });
+            return result;
+        }
+
+        function getPathInFolder(file) {
+            if (file.parentId === id) return folder.name + '/' + file.name;
+            var parent = getFile(file.parentId);
+            return parent ? getPathInFolder(parent) + '/' + file.name : folder.name + '/' + file.name;
+        }
+
+        var files = collectFiles(id);
+        if (!files.length) return;
+
+        var enc = new TextEncoder();
+        var parts = [], centralDir = [], offset = 0;
+
+        files.forEach(function (f) {
+            var path = getPathInFolder(f);
+            var data = enc.encode(f.content);
+            var pathBytes = enc.encode(path);
+            var local = buildLocalFileHeader(pathBytes, data);
+            parts.push(local, data);
+            centralDir.push(buildCentralDirEntry(pathBytes, data, offset));
+            offset += local.length + data.length;
+        });
+
+        var cdSize = centralDir.reduce(function (a, b) { return a + b.length; }, 0);
+        var eocd = buildEOCD(files.length, cdSize, offset);
+        var all = [];
+        parts.forEach(function (p) { all.push(p); });
+        centralDir.forEach(function (p) { all.push(p); });
+        all.push(eocd);
+        var total = all.reduce(function (a, b) { return a + b.length; }, 0);
+        var buf = new Uint8Array(total);
+        var pos = 0;
+        all.forEach(function (part) { buf.set(part, pos); pos += part.length; });
+
+        var blob = new Blob([buf], { type: 'application/zip' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = folder.name + '.zip';
+        a.click();
+        URL.revokeObjectURL(a.href);
+    };
+
+    // ─── Upload ───────────────────────────────────────────────────────────────────
+    EditorApp.triggerUploadFiles = function () {
+        document.getElementById('upload-files-input').value = '';
+        document.getElementById('upload-files-input').click();
+    };
+
+    EditorApp.triggerUploadFolder = function () {
+        document.getElementById('upload-folder-input').value = '';
+        document.getElementById('upload-folder-input').click();
+    };
+
+    function readFileAsText(file) {
+        return new Promise(function (resolve) {
+            var reader = new FileReader();
+            reader.onload = function (e) { resolve(e.target.result || ''); };
+            reader.onerror = function () { resolve(''); };
+            reader.readAsText(file);
+        });
+    }
+
+    function addFileFromPath(relativePath, content, forceParentId) {
+        var parts = relativePath.replace(/\\/g, '/').split('/').filter(Boolean);
+        if (!parts.length) return;
+
+        var currentParentId = (forceParentId !== undefined) ? forceParentId : null;
+        for (var i = 0; i < parts.length - 1; i++) {
+            var folderName = parts[i];
+            (function (fn, pid) {
+                var existing = state.files.find(function (f) {
+                    return f.type === 'folder' && f.name === fn && f.parentId === pid;
+                });
+                if (!existing) {
+                    existing = { id: genId(), type: 'folder', name: fn, parentId: pid, expanded: true };
+                    state.files.push(existing);
+                }
+                currentParentId = existing.id;
+            })(folderName, currentParentId);
+        }
+
+        var fileName = parts[parts.length - 1];
+        var existingFile = state.files.find(function (f) {
+            return f.type === 'file' && f.name === fileName && f.parentId === currentParentId;
+        });
+        if (existingFile) {
+            existingFile.content = content;
+            if (state.monacoReady) {
+                var model = monaco.editor.getModels().find(function (m) {
+                    return m._associatedResource && m._associatedResource.path === '/' + existingFile.id;
+                });
+                if (model) model.setValue(content);
+            }
+        } else {
+            state.files.push({ id: genId(), type: 'file', name: fileName, parentId: currentParentId, content: content });
+        }
+    }
+
+    function extractZip(file) {
+        if (!window.JSZip) {
+            alert('ZIP support not available. Please upload individual files.');
+            return Promise.resolve();
+        }
+        return new Promise(function (resolve) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                JSZip.loadAsync(e.target.result).then(function (zip) {
+                    var promises = [];
+                    zip.forEach(function (relativePath, zipEntry) {
+                        if (!zipEntry.dir) {
+                            promises.push(
+                                zipEntry.async('string').then(function (content) {
+                                    addFileFromPath(relativePath, content, null);
+                                })
+                            );
+                        }
+                    });
+                    Promise.all(promises).then(resolve);
+                }).catch(function () {
+                    alert('Could not read ZIP file.');
+                    resolve();
+                });
+            };
+            reader.onerror = function () { resolve(); };
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    function handleFileUpload(files) {
+        var promises = [];
+        Array.from(files).forEach(function (file) {
+            var relativePath = file.webkitRelativePath || file.name;
+            if (file.name.toLowerCase().endsWith('.zip')) {
+                promises.push(extractZip(file));
+            } else {
+                promises.push(
+                    readFileAsText(file).then(function (content) {
+                        addFileFromPath(relativePath, content, null);
+                    })
+                );
+            }
+        });
+        Promise.all(promises).then(function () {
+            renderTree();
+            updateStatusBar();
+        });
+    }
+
+    // ─── Drag & Drop ──────────────────────────────────────────────────────────────
+    function bindDragDrop() {
+        var overlay = document.getElementById('drag-overlay');
+        var dragCounter = 0;
+
+        function hasFiles(dt) {
+            return dt && dt.types && Array.from(dt.types).indexOf('Files') !== -1;
+        }
+
+        document.addEventListener('dragenter', function (e) {
+            if (!hasFiles(e.dataTransfer)) return;
+            e.preventDefault();
+            dragCounter++;
+            overlay.style.display = 'flex';
+        });
+
+        document.addEventListener('dragleave', function (e) {
+            dragCounter--;
+            if (dragCounter <= 0) {
+                dragCounter = 0;
+                overlay.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('dragover', function (e) {
+            if (hasFiles(e.dataTransfer)) e.preventDefault();
+        });
+
+        document.addEventListener('drop', function (e) {
+            if (!hasFiles(e.dataTransfer)) return;
+            e.preventDefault();
+            dragCounter = 0;
+            overlay.style.display = 'none';
+            handleDropItems(e.dataTransfer.items);
+        });
+    }
+
+    function readAllEntries(reader) {
+        return new Promise(function (resolve) {
+            var all = [];
+            function batch() {
+                reader.readEntries(function (entries) {
+                    if (!entries.length) { resolve(all); return; }
+                    all = all.concat(Array.from(entries));
+                    batch();
+                }, function () { resolve(all); });
+            }
+            batch();
+        });
+    }
+
+    function processDropEntry(entry, pathPrefix) {
+        var fullPath = pathPrefix ? pathPrefix + '/' + entry.name : entry.name;
+        if (entry.isFile) {
+            return new Promise(function (resolve) {
+                entry.file(function (file) {
+                    if (file.name.toLowerCase().endsWith('.zip')) {
+                        extractZip(file).then(function () { renderTree(); resolve(); });
+                    } else {
+                        readFileAsText(file).then(function (content) {
+                            addFileFromPath(fullPath, content, null);
+                            resolve();
+                        });
+                    }
+                }, resolve);
+            });
+        } else if (entry.isDirectory) {
+            return readAllEntries(entry.createReader()).then(function (entries) {
+                return Promise.all(entries.map(function (e) {
+                    return processDropEntry(e, fullPath);
+                }));
+            });
+        }
+        return Promise.resolve();
+    }
+
+    function handleDropItems(items) {
+        if (!items || !items.length) return;
+        var promises = [];
+        Array.from(items).forEach(function (item) {
+            var entry = item.webkitGetAsEntry ? item.webkitGetAsEntry() : null;
+            if (entry) promises.push(processDropEntry(entry, null));
+        });
+        Promise.all(promises).then(function () {
+            renderTree();
+            updateStatusBar();
+        });
+    }
+
     // ─── New file/folder ─────────────────────────────────────────────────────────
     var _modalMode = 'file';
     var _modalParent = null;
@@ -741,13 +991,14 @@
         document.getElementById('ctx-new-folder-here').style.display = isFolder ? '' : 'none';
         document.getElementById('ctx-sep-folder').style.display      = isFolder ? '' : 'none';
         // Duplicate & Download don't make sense on folders
-        document.getElementById('ctx-duplicate').style.display = isFolder ? 'none' : '';
-        document.getElementById('ctx-download').style.display  = isFolder ? 'none' : '';
+        document.getElementById('ctx-duplicate').style.display      = isFolder ? 'none' : '';
+        document.getElementById('ctx-download').style.display       = isFolder ? 'none' : '';
+        document.getElementById('ctx-download-folder').style.display = isFolder ? '' : 'none';
 
         var menu = document.getElementById('ctx-menu');
         menu.classList.remove('hidden');
         var W = window.innerWidth, H = window.innerHeight;
-        var mw = 190, mh = isFolder ? 200 : 160;
+        var mw = 190, mh = isFolder ? 232 : 160;
         menu.style.left = Math.min(x, W - mw - 8) + 'px';
         menu.style.top  = Math.min(y, H - mh - 8) + 'px';
     }
@@ -789,6 +1040,11 @@
             var f = getFile(state.ctxTargetId);
             if (f && f.type === 'file') downloadFile(f.name, f.content);
             hideContextMenu();
+        });
+        document.getElementById('ctx-download-folder').addEventListener('click', function () {
+            var id = state.ctxTargetId;
+            hideContextMenu();
+            EditorApp.downloadFolder(id);
         });
         document.getElementById('ctx-delete').addEventListener('click', function () {
             var id = state.ctxTargetId;
@@ -868,30 +1124,43 @@
     function bindSidebarResize() {
         var handle = document.getElementById('sidebar-resize');
         var sidebar = document.getElementById('editor-sidebar');
+        var editorMain = document.querySelector('.editor-main');
         var dragging = false;
-        var startX, startW;
+        var startX = 0, startW = 0;
 
-        handle.addEventListener('mousedown', function (e) {
+        function startDrag(clientX) {
             dragging = true;
-            startX = e.clientX;
-            startW = sidebar.offsetWidth;
+            startX = clientX;
+            startW = sidebar.getBoundingClientRect().width;
+            editorMain.style.pointerEvents = 'none';
             document.body.style.cursor = 'col-resize';
             document.body.style.userSelect = 'none';
-        });
+        }
 
-        document.addEventListener('mousemove', function (e) {
+        function moveDrag(clientX) {
             if (!dragging) return;
-            var w = Math.min(Math.max(startW + (e.clientX - startX), 140), 480);
+            var w = Math.max(140, Math.min(480, startW + (clientX - startX)));
             sidebar.style.width = w + 'px';
-        });
+            sidebar.style.minWidth = w + 'px';
+        }
 
-        document.addEventListener('mouseup', function () {
-            if (dragging) {
-                dragging = false;
-                document.body.style.cursor = '';
-                document.body.style.userSelect = '';
-            }
-        });
+        function endDrag() {
+            if (!dragging) return;
+            dragging = false;
+            editorMain.style.pointerEvents = '';
+            document.body.style.cursor = '';
+            document.body.style.userSelect = '';
+        }
+
+        // Mouse
+        handle.addEventListener('mousedown', function (e) { e.preventDefault(); startDrag(e.clientX); });
+        document.addEventListener('mousemove', function (e) { moveDrag(e.clientX); });
+        document.addEventListener('mouseup', endDrag);
+
+        // Touch & Stylus
+        handle.addEventListener('touchstart', function (e) { e.preventDefault(); startDrag(e.touches[0].clientX); }, { passive: false });
+        document.addEventListener('touchmove', function (e) { if (dragging) { e.preventDefault(); moveDrag(e.touches[0].clientX); } }, { passive: false });
+        document.addEventListener('touchend', endDrag);
     }
 
     // ─── Split pane drag-to-resize ───────────────────────────────────────────────
@@ -930,23 +1199,26 @@
     // ─── Global events ───────────────────────────────────────────────────────────
     function bindGlobalEvents() {
         // Close context menu on outside click
-        document.addEventListener('click', function (e) {
+        function closeMenuIfOutside(e) {
             var menu = document.getElementById('ctx-menu');
             if (!menu.classList.contains('hidden') && !menu.contains(e.target)) {
                 hideContextMenu();
             }
-        });
+        }
+        document.addEventListener('click', closeMenuIfOutside);
 
         // Modal: Enter to confirm
         document.getElementById('modal-input').addEventListener('keydown', function (e) {
             if (e.key === 'Enter') EditorApp.confirmModal();
         });
 
-        // Escape on document level always closes modal
+        // Escape on document level closes modal OR context menu
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 var modal = document.getElementById('new-item-modal');
-                if (!modal.classList.contains('hidden')) EditorApp.closeModal();
+                if (!modal.classList.contains('hidden')) { EditorApp.closeModal(); return; }
+                var menu = document.getElementById('ctx-menu');
+                if (!menu.classList.contains('hidden')) { hideContextMenu(); return; }
             }
         });
 
@@ -955,9 +1227,22 @@
             if (e.target === this) EditorApp.closeModal();
         });
 
+        // Upload input handlers
+        document.getElementById('upload-files-input').addEventListener('change', function () {
+            if (!this.files.length) return;
+            handleFileUpload(this.files);
+            this.value = '';
+        });
+        document.getElementById('upload-folder-input').addEventListener('change', function () {
+            if (!this.files.length) return;
+            handleFileUpload(this.files);
+            this.value = '';
+        });
+
         bindContextMenu();
         bindSidebarResize();
         bindSplitResize();
+        bindDragDrop();
     }
 
     // ─── Helpers ─────────────────────────────────────────────────────────────────
