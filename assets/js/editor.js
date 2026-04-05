@@ -963,6 +963,22 @@
         }
     };
 
+    // ─── Clear all ───────────────────────────────────────────────────────────────
+    EditorApp.clearAll = function () {
+        if (!confirm('Delete all files? This cannot be undone.')) return;
+        monaco.editor.getModels().forEach(function (m) { m.dispose(); });
+        state.files = [];
+        state.openTabs = [];
+        state.activeTabLeft = null;
+        state.activeTabRight = null;
+        state.splitMode = false;
+        document.getElementById('monaco-container-right').classList.add('hidden');
+        document.getElementById('split-divider').classList.add('hidden');
+        renderTree();
+        renderTabs();
+        if (state.editorLeft) state.editorLeft.setValue('');
+    };
+
     // ─── Reset ──────────────────────────────────────────────────────────────────
     EditorApp.resetAll = function () {
         if (!confirm('Reset all files to defaults? All unsaved changes will be lost.')) return;
