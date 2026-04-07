@@ -1,0 +1,328 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev-codelist.net | BDFD Verify System</title>
+    
+    <!-- Open Graph / Discord / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="dev-codelist.net | BDFD Verify System">
+    <meta property="og:description" content="A DM-based 2-step verification system for BDFD. Sends a 6-digit code via DM and grants a role upon correct input.">
+    <meta property="og:image" content="/assets/media/Logo.png">
+    <meta property="og:site_name" content="dev-codelist.net">
+    <meta name="theme-color" content="#5024F4">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="dev-codelist.net | BDFD Verify System">
+    <meta name="twitter:description" content="A DM-based 2-step verification system for BDFD. Sends a 6-digit code via DM and grants a role upon correct input.">
+    <meta name="twitter:image" content="/assets/media/Logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/media/Logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/live-dev.js"></script>
+    
+</head>
+<body class="selection:bg-[#5024F4]/30">
+
+    <!-- Header -->
+    {% include header.html %}
+
+    <!-- Main Layout -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+        
+        <!-- Header Section -->
+        <header class="mb-12 animate-enter max-w-3xl">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">BDFD</span>
+                <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Verification</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white text-glow">
+                BDFD Verify System
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                A DM-based 2-step verification system for BDFD. Generates a random 6-digit code, sends it via DM and grants a role once the user enters the correct code in the server.
+            </p>
+        </header>
+
+        <!-- Features Banner -->
+        <div class="mb-16 animate-enter delay-100">
+            <div class="glass-panel p-6">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    Features
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">DM Verification</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">6-Digit Random Code</span>
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Role Assignment</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Auto-Delete Messages</span>
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Staff Log</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Code Expiry on Use</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Blocks Section -->
+        <div class="space-y-12 mb-16">
+
+            <!-- Code Block 1: !verify -->
+            <div class="animate-enter delay-100">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">1. Verify — Request Code</h2>
+                        <p class="text-gray-500 text-sm mt-1">Generates a random 6-digit code, saves it to the user variable and sends it to the user via DM.</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                        <span class="bg-white/5 text-[#7B4FFF] px-3 py-1 rounded-md text-sm font-mono border border-white/5">&lt;prefix&gt;verify</span>
+                    </div>
+                </div>
+                
+                <div class="code-editor group">
+                    <div class="editor-header" onclick="toggleCode(this)">
+                        <div class="editor-controls-left">
+                            <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <div class="editor-dots">
+                                <div class="dot dot-red"></div>
+                                <div class="dot dot-yellow"></div>
+                                <div class="dot dot-green"></div>
+                            </div>
+                        </div>
+                        <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-1" onclick="event.stopPropagation()">
+                            <span class="copy-label">Copy Code</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        </button>
+                    </div>
+                    <pre id="code-1" class="editor-content bdfd-code">$nomention
+$c[--- Generate 6-Digit Code ---]
+$var[code;$random[100000;999999]]
+$setUserVar[verify_code;$var[code]]
+
+$c[--- DM the User ---]
+$dm[$authorID]
+$title[🛡️ Verification Code]
+$description[Your unique verification code is: **$var[code]**
+
+Go back to &lt;#1479083988034261035&gt; and type:
+`!code $var[code]`]
+$color[#2ecc71]
+
+📬 &lt;@$authorID&gt;, this is your code don't share it!
+$deletecommand
+$deleteIn[10s]</pre>
+                </div>
+            </div>
+
+            <!-- Code Block 2: !code -->
+            <div class="animate-enter delay-200">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">2. Submit Code</h2>
+                        <p class="text-gray-500 text-sm mt-1">Compares the entered code to the saved user variable. Grants the role on success, resets the code and logs to a staff channel.</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                        <span class="bg-white/5 text-[#5024F4] px-3 py-1 rounded-md text-sm font-mono border border-white/5">&lt;prefix&gt;code</span>
+                    </div>
+                </div>
+                
+                <div class="code-editor group">
+                    <div class="editor-header" onclick="toggleCode(this)">
+                        <div class="editor-controls-left">
+                            <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <div class="editor-dots">
+                                <div class="dot dot-red"></div>
+                                <div class="dot dot-yellow"></div>
+                                <div class="dot dot-green"></div>
+                            </div>
+                        </div>
+                        <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-2" onclick="event.stopPropagation()">
+                            <span class="copy-label">Copy Code</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        </button>
+                    </div>
+                    <pre id="code-2" class="editor-content bdfd-code">$nomention
+
+$c[--- Check if they have a code assigned ---]
+$onlyIf[$getUserVar[verify_code]!=0;❌ You haven't requested a code yet. Type `!verify` first!]
+
+$c[--- Compare Input ($message) to Saved Code ---]
+$if[$message==$getUserVar[verify_code]]
+  $giveRole[$authorID;ROLE_ID]
+  $setUserVar[verify_code;0]
+  
+  ✅ Verification successful! Access granted.
+  $deletecommand
+  $deleteIn[5s]
+  
+  $c[--- Staff Log ---]
+  $channelSendMessage[CHANNEL_ID;📥 **Verification Log** | &lt;@$authorID&gt; has successfully verified using the DM code.]
+$else
+  ❌ Incorrect code. Please check your DMs and use `!code [numbers]`.
+  $deletecommand
+  $deleteIn[3s]
+$endif</pre>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Info Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                
+            <!-- Variables Widget -->
+            <div class="glass-panel p-6 animate-enter delay-100">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    Variables Needed
+                </h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center p-3 rounded-lg bg-black/20 border border-white/5">
+                        <code class="text-sm font-mono text-[#7B4FFF]">verify_code</code>
+                        <code class="text-sm font-mono text-gray-500">0</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credits Widget -->
+            <div class="glass-panel p-6 animate-enter delay-200">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#9D7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    Credits
+                </h3>
+                <div class="space-y-4">
+                    <a href="https://discord.com/users/1489562044062634014" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg bg-black/20 border border-white/5 hover:border-[#5024F4]/40 hover:bg-[#5024F4]/5 transition-all duration-200 group">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] flex items-center justify-center text-white font-bold shadow-lg shadow-[#5024F4]/20 shrink-0">JX</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="font-semibold text-white group-hover:text-[#9D7FFF] transition-colors">@jxy_y</div>
+                            <div class="text-xs text-gray-500">Script Creator</div>
+                        </div>
+                        <svg class="w-4 h-4 text-gray-600 group-hover:text-[#7B4FFF] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        If you repost or redistribute this, please give proper credits to the original creator.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Setup Notes -->
+        <div class="glass-panel p-6 animate-enter delay-300">
+            <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#9D7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Setup Notes
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                    <p class="text-xs text-gray-500 mb-1 font-mono">ROLE_ID</p>
+                    <p class="text-sm text-gray-400">Replace <code class="text-[#7B4FFF]">ROLE_ID</code> in <code class="text-gray-300">&lt;prefix&gt;code</code> with the ID of the role that should be granted after verification.</p>
+                </div>
+                <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                    <p class="text-xs text-gray-500 mb-1 font-mono">CHANNEL_ID</p>
+                    <p class="text-sm text-gray-400">Replace <code class="text-[#7B4FFF]">CHANNEL_ID</code> in <code class="text-gray-300">&lt;prefix&gt;code</code> with your staff log channel ID.</p>
+                </div>
+                <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                    <p class="text-xs text-gray-500 mb-1 font-mono">Verify Channel</p>
+                    <p class="text-sm text-gray-400">Replace <code class="text-[#7B4FFF]">1479083988034261035</code> in <code class="text-gray-300">&lt;prefix&gt;verify</code> with your verification channel ID.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <script>
+        const colors = {
+            text: "#E6BAFF",
+            fallback: "#7223FF",
+            bracket: "#FF5C4C",
+            semicolon: "#FF584A",
+            func: "#FF87F9",
+            logic: "#A22FFC"
+        };
+
+        const logicFuncs = ["$if", "$else", "$elseif", "$endif", "$try", "$catch", "$endtry", "$error", "$c"];
+
+        function syntaxHighlight() {
+            const blocks = document.querySelectorAll('.bdfd-code');
+            
+            blocks.forEach(block => {
+                let text = block.innerText;
+                let html = '';
+                
+                const regex = /(\$[a-zA-Z]+)|(\[)|(\])|(\;)|([^$\[\];]+)/g;
+                
+                let match;
+                while ((match = regex.exec(text)) !== null) {
+                    const [full, func, open, close, semi, other] = match;
+                    
+                    if (func) {
+                        let color = colors.func;
+                        if (logicFuncs.includes(func)) color = colors.logic;
+                        html += `<span style="color: ${color}">${func}</span>`;
+                    } else if (open || close) {
+                        html += `<span style="color: ${colors.bracket}">${open || close}</span>`;
+                    } else if (semi) {
+                        html += `<span style="color: ${colors.semicolon}">${semi}</span>`;
+                    } else if (other) {
+                        const escapedOther = other.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                        html += `<span style="color: ${colors.text}">${escapedOther}</span>`;
+                    }
+                }
+                block.innerHTML = html;
+            });
+        }
+
+        // Copy Handler
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const text = document.getElementById(targetId).innerText;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    const label = btn.querySelector('.copy-label');
+                    const icon = btn.querySelector('svg');
+                    const originalLabel = label.textContent;
+                    const originalIcon = icon.innerHTML;
+
+                    label.textContent = "Copied";
+                    label.classList.add('text-green-400');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>';
+                    icon.classList.add('text-green-400');
+
+                    setTimeout(() => {
+                        label.textContent = originalLabel;
+                        label.classList.remove('text-green-400');
+                        icon.innerHTML = originalIcon;
+                        icon.classList.remove('text-green-400');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Minimize / Collapse Handler
+        function toggleCode(header) {
+            const container = header.parentElement;
+            const content = container.querySelector('.editor-content');
+            
+            container.classList.toggle('is-collapsed');
+            content.classList.toggle('collapsed');
+        }
+
+        syntaxHighlight();
+    </script>
+</body>
+</html>
