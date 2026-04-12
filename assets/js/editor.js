@@ -225,6 +225,8 @@
                     'statusBar.background': '#030305',
                     'tab.activeBackground': '#0a0a12',
                     'tab.inactiveBackground': '#030305',
+                    'editorBracketMatch.background': '#5024F425',
+                    'editorBracketMatch.border': '#9D7FFF',
                 }
             });
             monaco.editor.setTheme('dev-codelist');
@@ -246,6 +248,7 @@
                 padding: { top: 16, bottom: 16 },
                 bracketPairColorization: { enabled: true },
                 guides: { bracketPairs: true },
+                matchBrackets: 'never',
                 wordWrap: 'off',
                 suggest: { showStatusBar: true },
             };
@@ -271,6 +274,10 @@
             state.editorLeft.onDidFocusEditorText(function () { state.activePane = 'left'; });
             state.editorRight.onDidFocusEditorText(function () { state.activePane = 'right'; });
 
+            // Custom bracket matching (works inside strings/template literals too)
+            setupBracketHighlight(state.editorLeft);
+            setupBracketHighlight(state.editorRight);
+
             if (cb) cb();
         });
     }
@@ -278,6 +285,77 @@
     function updateStatusPos(pos) {
         var el = document.getElementById('status-pos');
         if (el) el.textContent = 'Ln ' + pos.lineNumber + ', Col ' + pos.column;
+    }
+
+    // ─── Custom bracket highlighting (works in strings & template literals) ────
+    function setupBracketHighlight(editor) {
+        var PAIRS = { '(': ')', '[': ']', '{': '}', ')': '(', ']': '[', '}': '{' };
+        var OPEN  = { '(': true, '[': true, '{': true };
+        var CLOSE = { ')': true, ']': true, '}': true };
+        var decorIds = [];
+
+        editor.onDidChangeCursorPosition(function () {
+            var model = editor.getModel();
+            if (!model) { decorIds = editor.deltaDecorations(decorIds, []); return; }
+
+            var pos     = editor.getPosition();
+            var line    = model.getLineContent(pos.lineNumber);
+            var col     = pos.column - 1; // 0-based
+
+            var bChar = null, bCol = -1;
+            var before = col > 0 ? line[col - 1] : null;
+            var after  = col < line.length ? line[col] : null;
+
+            if (before && (OPEN[before] || CLOSE[before])) { bChar = before; bCol = col - 1; }
+            else if (after && (OPEN[after]  || CLOSE[after]))  { bChar = after;  bCol = col; }
+
+            if (!bChar) { decorIds = editor.deltaDecorations(decorIds, []); return; }
+
+            var match = findBracketMatch(model, pos.lineNumber, bCol, bChar, PAIRS, OPEN, CLOSE);
+            if (!match) { decorIds = editor.deltaDecorations(decorIds, []); return; }
+
+            decorIds = editor.deltaDecorations(decorIds, [
+                {
+                    range: new monaco.Range(pos.lineNumber, bCol + 1, pos.lineNumber, bCol + 2),
+                    options: { inlineClassName: 'bracket-match-hl' }
+                },
+                {
+                    range: new monaco.Range(match.line, match.col + 1, match.line, match.col + 2),
+                    options: { inlineClassName: 'bracket-match-hl' }
+                }
+            ]);
+        });
+    }
+
+    function findBracketMatch(model, startLine, startCol, bChar, PAIRS, OPEN, CLOSE) {
+        var target = PAIRS[bChar];
+        var forward = !!OPEN[bChar];
+        var depth = 1;
+        var totalLines = model.getLineCount();
+        var line, c, content, start, ch;
+
+        if (forward) {
+            for (line = startLine; line <= totalLines; line++) {
+                content = model.getLineContent(line);
+                start = (line === startLine) ? startCol + 1 : 0;
+                for (c = start; c < content.length; c++) {
+                    ch = content[c];
+                    if (ch === bChar)  depth++;
+                    else if (ch === target) { depth--; if (depth === 0) return { line: line, col: c }; }
+                }
+            }
+        } else {
+            for (line = startLine; line >= 1; line--) {
+                content = model.getLineContent(line);
+                start = (line === startLine) ? startCol - 1 : content.length - 1;
+                for (c = start; c >= 0; c--) {
+                    ch = content[c];
+                    if (ch === bChar)  depth++;
+                    else if (ch === target) { depth--; if (depth === 0) return { line: line, col: c }; }
+                }
+            }
+        }
+        return null;
     }
 
     // ─── File tree rendering ────────────────────────────────────────────────────

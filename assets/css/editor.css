@@ -8,6 +8,13 @@
     display: none !important;
 }
 
+/* ── Custom bracket match highlight (works in strings too) ── */
+.bracket-match-hl {
+    background: rgba(80, 36, 244, 0.25);
+    outline: 1px solid #9D7FFF;
+    border-radius: 2px;
+}
+
 /* ── Shell: pinned below the nav, fills remaining viewport ─ */
 .editor-shell {
     position: fixed;
