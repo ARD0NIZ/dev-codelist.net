@@ -297,6 +297,13 @@ $endif</pre>
 
         const logicFuncs = ["$if", "$else", "$elseif", "$endif", "$try", "$catch", "$endtry", "$error", "$c"];
 
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
         function syntaxHighlight() {
             const blocks = document.querySelectorAll('.bdfd-code');
             
@@ -313,14 +320,13 @@ $endif</pre>
                     if (func) {
                         let color = colors.func;
                         if (logicFuncs.includes(func)) color = colors.logic;
-                        html += `<span style="color: ${color}">${func}</span>`;
+                        html += `<span style="color: ${color}">${escapeHtml(func)}</span>`;
                     } else if (open || close) {
-                        html += `<span style="color: ${colors.bracket}">${open || close}</span>`;
+                        html += `<span style="color: ${colors.bracket}">${escapeHtml(open || close)}</span>`;
                     } else if (semi) {
-                        html += `<span style="color: ${colors.semicolon}">${semi}</span>`;
+                        html += `<span style="color: ${colors.semicolon}">${escapeHtml(semi)}</span>`;
                     } else if (other) {
-                        const escapedOther = other.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-                        html += `<span style="color: ${colors.text}">${escapedOther}</span>`;
+                        html += `<span style="color: ${colors.text}">${escapeHtml(other)}</span>`;
                     }
                 }
                 block.innerHTML = html;
