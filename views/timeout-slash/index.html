@@ -1,0 +1,328 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev-codelist.net | BDFD Timeout Slash</title>
+    
+    <!-- Open Graph / Discord / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="dev-codelist.net | BDFD Timeout Slash">
+    <meta property="og:description" content="A slash command for timing out members in BDFD with optional DM notification, duration control, and a detailed moderation embed.">
+    <meta property="og:image" content="/assets/media/Logo.png">
+    <meta property="og:site_name" content="dev-codelist.net">
+    <meta name="theme-color" content="#5024F4">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="dev-codelist.net | BDFD Timeout Slash">
+    <meta name="twitter:description" content="A slash command for timing out members in BDFD with optional DM notification, duration control, and a detailed moderation embed.">
+    <meta name="twitter:image" content="/assets/media/Logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/media/Logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/live-dev.js"></script>
+    
+</head>
+<body class="selection:bg-[#5024F4]/30">
+
+    <!-- Header -->
+    {% include header.html %}
+
+    <!-- Main Layout -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-24">
+        
+        <!-- Header Section -->
+        <header class="mb-12 animate-enter max-w-3xl">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">BDFD</span>
+                <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Moderation</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white text-glow">
+                BDFD Timeout Slash
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                A slash command to time out (mute) members in BDFD. Includes duration control, optional DM notification, admin &amp; owner protection, and a detailed moderation embed with proof support.
+            </p>
+        </header>
+
+        <!-- Features Banner -->
+        <div class="mb-16 animate-enter delay-100">
+            <div class="glass-panel p-6">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    Features
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Permission Check</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Optional DM Notification</span>
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Duration Control</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Admin Protection</span>
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Owner Protection</span>
+                    <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">Already Muted Check</span>
+                    <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Proof Image Support</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code Blocks Section -->
+        <div class="space-y-12 mb-16">
+
+            <!-- Code Block 1: /timeout -->
+            <div class="animate-enter delay-100">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">1. Timeout — Slash Command</h2>
+                        <p class="text-gray-500 text-sm mt-1">Times out a member for a specified duration. Supports optional DM notification and proof image. Requires Moderate Members permission.</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs font-mono text-gray-500 block mb-1">TRIGGER</span>
+                        <span class="bg-white/5 text-[#7B4FFF] px-3 py-1 rounded-md text-sm font-mono border border-white/5">/timeout</span>
+                    </div>
+                </div>
+                
+                <div class="code-editor group">
+                    <div class="editor-header" onclick="toggleCode(this)">
+                        <div class="editor-controls-left">
+                            <svg class="chevron-icon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <div class="editor-dots">
+                                <div class="dot dot-red"></div>
+                                <div class="dot dot-yellow"></div>
+                                <div class="dot dot-green"></div>
+                            </div>
+                        </div>
+                        <button class="copy-btn flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-white transition-colors" data-target="code-1" onclick="event.stopPropagation()">
+                            <span class="copy-label">Copy Code</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        </button>
+                    </div>
+                    <pre id="code-1" class="editor-content bdfd-code">$nomention
+$reply
+$allowUserMentions[]
+$defer
+$onlyIf[$guildID!=;you cant use any commands in dms!]
+$embedSuppressErrors[; Invaild duration! please use "h" for hours "m" for mins "d" for days;00eeff;]
+$var[cross;&lt;a:arivory_cross:1328466593776275587&gt;]
+$var[dot;&lt;a:Ulquiorradot:1353719374069895219&gt;]
+$var[mod;&lt;:Moderator:1327778832387670067&gt;]
+$var[victim;&lt;:user:1327788834246627379&gt;]
+$var[Reason;&lt;a:areason:1346268566252552213&gt;]
+$var[time;&lt;a:aatimer:1327788139087003658&gt;]
+$var[dm;&lt;:dm:1372322149439766588&gt;]
+$var[user;$message[user]]
+$var[reason;$message[reason]]
+$var[duration;$message[duration]]
+$var[me;$authorID]
+$var[proof;$message[proof]]
+$async[goon]
+$onlyPerms[moderatemembers; $var[cross] | You don't have **__Moderate members__** permission!]
+$onlyBotPerms[moderatemembers; $var[cross] | I don't have **__Moderate Members__** Permission]
+
+$onlyIf[$userExists[$findUser[$var[user]]]!=; User is not in this server]
+
+$onlyIf[$var[user]!=$authorID; $var[cross] | You can't mute yourself]
+$onlyIf[$var[user]!=$serverOwner; $var[cross] | You can't mute server owner!]
+$onlyIf[$var[user]!=$botID; $var[cross] I don't wanna mute my self...]
+$onlyIf[$isAdmin[$var[user]]==false; $var[cross] | I can't mute admins]
+$onlyIf[$isTimedOut[$var[user]]==false; $var[cross] | &lt;@$var[user]&gt; is already muted!]
+
+$if[$message[dm]!=]
+    $if[$message[dm]==true]
+        $if[$isUserDMEnabled[$var[user]]==true]
+            $try
+                $sendEmbedMessage[$dmChannelID[$var[user]];;You got muted in **__$serverName[$guildID]__**;;
+                 $var[victim] **__Victim__** - [$nickname[$var[user]]\](https://discord.com/users/$var[user])
+$var[mod] **__Moderator__** - [$nickname[$authorID]\](https://discord.com/users/$authorID)
+$var[Reason] **__Reason__** - $if[$var[reason]==] no reason $else $var[reason] $endif
+$var[time] **__Duration__** - $message[duration];00eeff;$username;$authorAvatar;$username[$var[user]];$userAvatar[$var[user]];$var[proof];;true;false]
+                $var[dm.sent?;Successfully DMed the user!]
+            $catch
+                $var[dm.sent?;Couldn't DM the user!]
+            $endtry
+        $else
+            $var[dm.sent?; User's DMs are disabled so i couldn't DM them]
+        $endif
+    $endif
+$endif
+$endasync
+$await[goon]
+$async[goon2]
+$endasync
+$await[goon2]
+$authorIcon[$userAvatar[$var[user]]]
+$author[SuccessFully muted!]
+$description[
+$var[victim] **__Victim__** - [$nickname[$var[user]]\](https://discord.com/users/$var[user])
+$var[mod] **__Moderator__** - [$nickname[$var[me]]\](https://discord.com/users/$var[me])
+$var[Reason] **__Reason__** - $if[$var[reason]==] no reason $else $var[reason] $endif
+$var[time] **__Duration__** - $var[duration]
+$var[dm]   **__DM?__**  - $var[dm.sent?]
+$footerIcon[$authorAvatar]]
+$color[#00eeff]
+$timeout[$var[duration];$var[user]]
+$footer[Executed by $displayName $addTimestamp]</pre>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Info Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+
+            <!-- No Variables Widget -->
+            <div class="glass-panel p-6 animate-enter delay-100">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    Variables Needed
+                </h3>
+                <div class="p-4 rounded-lg bg-black/20 border border-white/5 text-center">
+                    <p class="text-sm text-gray-500">No stored variables required.<br>All values are handled at runtime via <code class="text-[#7B4FFF]">$var[]</code>.</p>
+                </div>
+            </div>
+
+            <!-- Credits Widget -->
+            <div class="glass-panel p-6 animate-enter delay-200">
+                <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                    <svg class="w-5 h-5 text-[#9D7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    Credits
+                </h3>
+                <div class="space-y-4">
+                    <a href="https://discord.com/users/830747048386494490" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg bg-black/20 border border-white/5 hover:border-[#5024F4]/40 hover:bg-[#5024F4]/5 transition-all duration-200 group">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5024F4] to-[#00eeff] flex items-center justify-center text-white font-bold shadow-lg shadow-[#5024F4]/20 shrink-0">CT</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="font-semibold text-white group-hover:text-[#9D7FFF] transition-colors">@cenzo.tz</div>
+                            <div class="text-xs text-gray-500">Script Creator</div>
+                        </div>
+                        <svg class="w-4 h-4 text-gray-600 group-hover:text-[#7B4FFF] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        If you repost or redistribute this, please give proper credits to the original creator.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Setup Notes -->
+        <div class="glass-panel p-6 animate-enter delay-300">
+            <h3 class="font-bold text-lg mb-4 text-white flex items-center gap-2">
+                <svg class="w-5 h-5 text-[#9D7FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Setup Notes
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                    <p class="text-xs text-gray-500 mb-1 font-mono">Duration Format</p>
+                    <p class="text-sm text-gray-400">Use <code class="text-[#7B4FFF]">h</code> for hours, <code class="text-[#7B4FFF]">m</code> for minutes, <code class="text-[#7B4FFF]">d</code> for days — e.g. <code class="text-gray-300">1h</code>, <code class="text-gray-300">30m</code>, <code class="text-gray-300">7d</code>.</p>
+                </div>
+                <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                    <p class="text-xs text-gray-500 mb-1 font-mono">Custom Emojis</p>
+                    <p class="text-sm text-gray-400">Replace the emoji IDs in the <code class="text-[#7B4FFF]">$var[cross]</code>, <code class="text-[#7B4FFF]">$var[mod]</code>, etc. lines with emojis from your own server.</p>
+                </div>
+                <div class="p-3 rounded-lg bg-black/20 border border-white/5">
+                    <p class="text-xs text-gray-500 mb-1 font-mono">DM Option</p>
+                    <p class="text-sm text-gray-400">The <code class="text-[#7B4FFF]">dm</code> slash option is optional. Pass <code class="text-gray-300">true</code> to send a DM to the timed-out user.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <script>
+        const colors = {
+            text: "#E6BAFF",
+            fallback: "#7223FF",
+            bracket: "#FF5C4C",
+            semicolon: "#FF584A",
+            func: "#FF87F9",
+            logic: "#A22FFC"
+        };
+
+        const logicFuncs = ["$if", "$else", "$elseif", "$endif", "$try", "$catch", "$endtry", "$error", "$c"];
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        function syntaxHighlight() {
+            const blocks = document.querySelectorAll('.bdfd-code');
+            
+            blocks.forEach(block => {
+                let text = block.innerText;
+                let html = '';
+                
+                const regex = /(\$[a-zA-Z]+)|(\[)|(\])|(\;)|([^$\[\];]+)/g;
+                
+                let match;
+                while ((match = regex.exec(text)) !== null) {
+                    const [full, func, open, close, semi, other] = match;
+                    
+                    if (func) {
+                        let color = colors.func;
+                        if (logicFuncs.includes(func)) color = colors.logic;
+                        html += `<span style="color: ${color}">${escapeHtml(func)}</span>`;
+                    } else if (open || close) {
+                        html += `<span style="color: ${colors.bracket}">${escapeHtml(open || close)}</span>`;
+                    } else if (semi) {
+                        html += `<span style="color: ${colors.semicolon}">${escapeHtml(semi)}</span>`;
+                    } else if (other) {
+                        html += `<span style="color: ${colors.text}">${escapeHtml(other)}</span>`;
+                    }
+                }
+                block.innerHTML = html;
+            });
+        }
+
+        // Copy Handler
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const text = document.getElementById(targetId).innerText;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    const label = btn.querySelector('.copy-label');
+                    const icon = btn.querySelector('svg');
+                    const originalLabel = label.textContent;
+                    const originalIcon = icon.innerHTML;
+
+                    label.textContent = "Copied";
+                    label.classList.add('text-green-400');
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>';
+                    icon.classList.add('text-green-400');
+
+                    setTimeout(() => {
+                        label.textContent = originalLabel;
+                        label.classList.remove('text-green-400');
+                        icon.innerHTML = originalIcon;
+                        icon.classList.remove('text-green-400');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Minimize / Collapse Handler
+        function toggleCode(header) {
+            const container = header.parentElement;
+            const content = container.querySelector('.editor-content');
+            
+            container.classList.toggle('is-collapsed');
+            content.classList.toggle('collapsed');
+        }
+
+        syntaxHighlight();
+    </script>
+</body>
+</html>
