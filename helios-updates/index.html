@@ -300,8 +300,8 @@
             }
 
             function translate(text) {
-                // Only translate if text contains German-specific characters
-                if (!/[äöüÄÖÜß]/.test(text)) return Promise.resolve(text);
+                // Skip translation for purely ASCII text that looks like English already
+                if (!/[äöüÄÖÜß]/.test(text) && /^[a-zA-Z0-9\s\-_.:,;!?()\[\]{}'"/\\#@%&*+=|~`<>]+$/.test(text)) return Promise.resolve(text);
                 var cache = getCache();
                 if (cache[text] !== undefined) return Promise.resolve(cache[text]);
                 return fetch('https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) + '&langpair=de|en')
