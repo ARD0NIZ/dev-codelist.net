@@ -169,6 +169,7 @@
             go: '🦫',
             rs: '🦀',
             sql: '🗃️',
+            db: '🗄️',
             txt: '📃',
         };
         return icons[ext] || '📄';
@@ -521,10 +522,22 @@
     // ─── Monaco model sync ──────────────────────────────────────────────────────
     function syncEditor() {
         if (!state.monacoReady) return;
-        // Left pane
         var fileL = state.activeTabLeft ? getFile(state.activeTabLeft) : null;
-        setEditorFile(state.editorLeft, fileL, 'left');
-        // Right pane
+        var isDb = fileL && fileL.name.toLowerCase().endsWith('.db');
+        var monacoLeft = document.getElementById('monaco-container-left');
+        var dbViewer = document.getElementById('db-viewer');
+        if (isDb) {
+            monacoLeft.style.display = 'none';
+            dbViewer.classList.remove('hidden');
+            state.editorLeft.setModel(null);
+            renderDbViewer(fileL);
+        } else {
+            closeActiveDb();
+            monacoLeft.style.display = '';
+            dbViewer.classList.add('hidden');
+            setEditorFile(state.editorLeft, fileL, 'left');
+        }
+        // Right pane (always Monaco)
         var fileR = state.splitMode && state.activeTabRight ? getFile(state.activeTabRight) : null;
         setEditorFile(state.editorRight, fileR, 'right');
     }
@@ -551,13 +564,20 @@
     }
 
     // ─── Status bar ─────────────────────────────────────────────────────────────
+    function formatBytes(bytes) {
+        if (bytes < 1024) return bytes + ' B';
+        if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+        return (bytes / 1048576).toFixed(1) + ' MB';
+    }
+
     function updateStatusBar() {
         var activeId = state.activePane === 'right' ? state.activeTabRight : state.activeTabLeft;
         var file = activeId ? getFile(activeId) : null;
         var langEl = document.getElementById('status-lang');
         var linesEl = document.getElementById('status-lines');
-        if (langEl) langEl.textContent = file ? getLangLabel(getLang(file.name)) : 'No file';
-        if (linesEl) linesEl.textContent = file ? (file.content.split('\n').length + ' lines') : '—';
+        var isDb = file && file.name.toLowerCase().endsWith('.db');
+        if (langEl) langEl.textContent = isDb ? 'SQLite' : (file ? getLangLabel(getLang(file.name)) : 'No file');
+        if (linesEl) linesEl.textContent = isDb ? (file.dbBuffer ? formatBytes(file.dbBuffer.byteLength) : '—') : (file ? (file.content.split('\n').length + ' lines') : '—');
     }
 
     // ─── Split view ─────────────────────────────────────────────────────────────
@@ -812,7 +832,16 @@
         });
     }
 
-    function addFileFromPath(relativePath, content, forceParentId) {
+    function readFileAsArrayBuffer(file) {
+        return new Promise(function (resolve) {
+            var reader = new FileReader();
+            reader.onload = function (e) { resolve(e.target.result || null); };
+            reader.onerror = function () { resolve(null); };
+            reader.readAsArrayBuffer(file);
+        });
+    }
+
+    function addFileFromPath(relativePath, content, forceParentId, extra) {
         var parts = relativePath.replace(/\\/g, '/').split('/').filter(Boolean);
         if (!parts.length) return;
 
@@ -837,14 +866,17 @@
         });
         if (existingFile) {
             existingFile.content = content;
-            if (state.monacoReady) {
+            if (extra) Object.assign(existingFile, extra);
+            if (state.monacoReady && !extra) {
                 var model = monaco.editor.getModels().find(function (m) {
                     return m._associatedResource && m._associatedResource.path === '/' + existingFile.id;
                 });
                 if (model) model.setValue(content);
             }
         } else {
-            state.files.push({ id: genId(), type: 'file', name: fileName, parentId: currentParentId, content: content });
+            var newEntry = { id: genId(), type: 'file', name: fileName, parentId: currentParentId, content: content };
+            if (extra) Object.assign(newEntry, extra);
+            state.files.push(newEntry);
         }
     }
 
@@ -884,6 +916,12 @@
             var relativePath = file.webkitRelativePath || file.name;
             if (file.name.toLowerCase().endsWith('.zip')) {
                 promises.push(extractZip(file));
+            } else if (file.name.toLowerCase().endsWith('.db')) {
+                promises.push(
+                    readFileAsArrayBuffer(file).then(function (buffer) {
+                        addFileFromPath(relativePath, '', null, { dbBuffer: buffer });
+                    })
+                );
             } else {
                 promises.push(
                     readFileAsText(file).then(function (content) {
@@ -1338,6 +1376,168 @@
         bindSplitResize();
         bindDragDrop();
     }
+
+    // ─── DB Viewer ───────────────────────────────────────────────────────────────
+    var _sqlJs = null;
+    var _sqlJsPromise = null;
+    var _activeDb = null;
+    var _dbViewerState = { fileId: null, activeTable: null, offset: 0, viewMode: 'data' };
+    var DB_PAGE_SIZE = 200;
+
+    function getSqlJs() {
+        if (_sqlJs) return Promise.resolve(_sqlJs);
+        if (_sqlJsPromise) return _sqlJsPromise;
+        _sqlJsPromise = initSqlJs({
+            locateFile: function (f) {
+                return 'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/' + f;
+            }
+        }).then(function (SQL) { _sqlJs = SQL; return SQL; });
+        return _sqlJsPromise;
+    }
+
+    function closeActiveDb() {
+        if (_activeDb) {
+            try { _activeDb.close(); } catch (e) {}
+            _activeDb = null;
+        }
+    }
+
+    function escHtml(s) {
+        return String(s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    }
+
+    function renderDbViewer(file) {
+        var tableListEl = document.getElementById('db-table-list');
+        var contentEl = document.getElementById('db-table-content');
+        if (!file.dbBuffer) {
+            contentEl.innerHTML = '<div class="db-empty-state">No data in this file.</div>';
+            return;
+        }
+        // Reset state when switching to a different db file
+        if (file.id !== _dbViewerState.fileId) {
+            _dbViewerState.fileId = file.id;
+            _dbViewerState.activeTable = null;
+            _dbViewerState.offset = 0;
+            _dbViewerState.viewMode = 'data';
+        }
+        contentEl.innerHTML = '<div class="db-loading">Loading database…</div>';
+        getSqlJs().then(function (SQL) {
+            // Guard: user may have switched tabs while loading
+            var active = state.activeTabLeft ? getFile(state.activeTabLeft) : null;
+            if (!active || active.id !== file.id) return;
+            closeActiveDb();
+            try {
+                _activeDb = new SQL.Database(new Uint8Array(file.dbBuffer));
+            } catch (e) {
+                contentEl.innerHTML = '<div class="db-error">Could not parse database: ' + escHtml(e.message) + '</div>';
+                return;
+            }
+            var res = _activeDb.exec("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name");
+            var tables = res[0] ? res[0].values.map(function (r) { return r[0]; }) : [];
+            // Render table list sidebar
+            tableListEl.innerHTML = '';
+            if (tables.length === 0) {
+                tableListEl.innerHTML = '<p class="db-loading" style="padding:12px 10px;">No tables</p>';
+            } else {
+                tables.forEach(function (tbl) {
+                    var btn = document.createElement('button');
+                    btn.className = 'db-table-btn';
+                    btn.textContent = tbl;
+                    btn.title = tbl;
+                    btn.onclick = function () {
+                        _dbViewerState.activeTable = tbl;
+                        _dbViewerState.offset = 0;
+                        renderTableData();
+                    };
+                    tableListEl.appendChild(btn);
+                });
+            }
+            // Auto-select first table if none selected or previous no longer exists
+            if (tables.length > 0) {
+                if (!_dbViewerState.activeTable || tables.indexOf(_dbViewerState.activeTable) === -1) {
+                    _dbViewerState.activeTable = tables[0];
+                    _dbViewerState.offset = 0;
+                }
+                renderTableData();
+            } else {
+                contentEl.innerHTML = '<div class="db-empty-state">This database contains no tables.</div>';
+            }
+        }).catch(function (e) {
+            contentEl.innerHTML = '<div class="db-error">sql.js failed to load: ' + escHtml(e.message) + '</div>';
+        });
+    }
+
+    function renderTableData() {
+        if (!_activeDb || !_dbViewerState.activeTable) return;
+        var tableName = _dbViewerState.activeTable;
+        var offset = _dbViewerState.offset;
+        var tableListEl = document.getElementById('db-table-list');
+        var contentEl = document.getElementById('db-table-content');
+        // Update active button
+        tableListEl.querySelectorAll('.db-table-btn').forEach(function (btn) {
+            btn.classList.toggle('active', btn.textContent === tableName);
+        });
+        // Safe table name (double-quote escaping)
+        var safeTable = tableName.replace(/"/g, '""');
+        var countRes = _activeDb.exec('SELECT COUNT(*) FROM "' + safeTable + '"');
+        var total = countRes[0] ? Number(countRes[0].values[0][0]) : 0;
+        var schemaRes = _activeDb.exec("SELECT sql FROM sqlite_master WHERE type='table' AND name=?", [tableName]);
+        var schemaSql = schemaRes[0] ? schemaRes[0].values[0][0] : '';
+        var html = '<div class="db-table-header">';
+        html += '<span class="db-table-name">&#128228; ' + escHtml(tableName) + '</span>';
+        html += '<span class="db-row-count">' + total.toLocaleString() + ' rows</span>';
+        html += '<div class="db-view-toggle">';
+        html += '<button class="db-toggle-btn' + (_dbViewerState.viewMode === 'data' ? ' active' : '') + '" onclick="EditorApp._dbSetView(\'data\')">Data</button>';
+        html += '<button class="db-toggle-btn' + (_dbViewerState.viewMode === 'schema' ? ' active' : '') + '" onclick="EditorApp._dbSetView(\'schema\')">Schema</button>';
+        html += '</div></div>';
+        if (_dbViewerState.viewMode === 'schema') {
+            html += '<div class="db-schema-view"><pre>' + escHtml(schemaSql || '-- schema not available') + '</pre></div>';
+        } else {
+            var dataRes = _activeDb.exec('SELECT * FROM "' + safeTable + '" LIMIT ' + DB_PAGE_SIZE + ' OFFSET ' + offset);
+            var columns = dataRes[0] ? dataRes[0].columns : [];
+            var rows = dataRes[0] ? dataRes[0].values : [];
+            if (columns.length === 0) {
+                html += '<div class="db-empty-state">No columns found.</div>';
+            } else {
+                html += '<div class="db-scroll-wrapper"><table class="db-data-table"><thead><tr>';
+                columns.forEach(function (col) { html += '<th>' + escHtml(String(col)) + '</th>'; });
+                html += '</tr></thead><tbody>';
+                rows.forEach(function (row) {
+                    html += '<tr>';
+                    row.forEach(function (cell) {
+                        html += '<td>' + (cell === null ? '<span class="db-null">NULL</span>' : escHtml(String(cell))) + '</td>';
+                    });
+                    html += '</tr>';
+                });
+                html += '</tbody></table></div>';
+                var start = total > 0 ? offset + 1 : 0;
+                var end = Math.min(offset + DB_PAGE_SIZE, total);
+                html += '<div class="db-pagination">';
+                html += '<button class="db-page-btn" onclick="EditorApp._dbPrev()"' + (offset === 0 ? ' disabled' : '') + '>&#8592; Prev</button>';
+                html += '<span class="db-page-info">' + (total > 0 ? start + '\u2013' + end + ' of ' + total.toLocaleString() : 'empty table') + '</span>';
+                html += '<button class="db-page-btn" onclick="EditorApp._dbNext()"' + (offset + DB_PAGE_SIZE >= total ? ' disabled' : '') + '>Next &#8594;</button>';
+                html += '</div>';
+            }
+        }
+        contentEl.innerHTML = html;
+    }
+
+    EditorApp._dbSetView = function (mode) {
+        _dbViewerState.viewMode = mode;
+        renderTableData();
+    };
+    EditorApp._dbPrev = function () {
+        _dbViewerState.offset = Math.max(0, _dbViewerState.offset - DB_PAGE_SIZE);
+        renderTableData();
+    };
+    EditorApp._dbNext = function () {
+        _dbViewerState.offset += DB_PAGE_SIZE;
+        renderTableData();
+    };
 
     // ─── Helpers ─────────────────────────────────────────────────────────────────
     function getFile(id) {

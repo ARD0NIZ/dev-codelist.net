@@ -27,6 +27,8 @@
 
     <!-- JSZip (ZIP extraction on upload) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- sql.js (SQLite DB viewer) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
     <!-- Monaco Editor (CDN) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
 </head>
@@ -126,6 +128,13 @@
             <!-- Monaco Container (split-able) -->
             <div id="editor-split-container" class="editor-split-container">
                 <div id="monaco-container-left" class="monaco-pane"></div>
+                <!-- DB Viewer (shown in place of Monaco for .db files) -->
+                <div id="db-viewer" class="db-viewer hidden">
+                    <div id="db-table-list" class="db-table-list"></div>
+                    <div class="db-table-view">
+                        <div id="db-table-content" class="db-table-content"></div>
+                    </div>
+                </div>
                 <div id="split-divider" class="split-divider hidden"></div>
                 <div id="monaco-container-right" class="monaco-pane hidden"></div>
             </div>
