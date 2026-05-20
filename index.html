@@ -118,6 +118,100 @@
             </a>
         </section>
 
+        <!-- Code Editor Promo Section -->
+        <section id="editor" class="py-24 animate-enter">
+            <div class="glass-panel overflow-hidden">
+                <!-- Top bar: label + CTA -->
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 md:p-10 border-b border-white/5">
+                    <div>
+                        <div class="flex gap-3 mb-4">
+                            <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Browser-based</span>
+                            <span class="tag bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">No sign-up</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white text-glow mb-2">Code Editor</h2>
+                        <p class="text-gray-400 max-w-xl">A full-featured multi-file editor — powered by Monaco — running entirely in your browser. No account, no server, no data stored.</p>
+                    </div>
+                    <a href="/editor/"
+                       class="flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-[#5024F4] to-[#7B4FFF] text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#5024F4]/40 transition-all">
+                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        Open Editor
+                    </a>
+                </div>
+
+                <!-- Feature grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-y divide-white/5">
+
+                    <!-- Monaco / Syntax -->
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#5024F4] to-[#7B4FFF] flex items-center justify-center flex-shrink-0">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Monaco Engine</p>
+                            <p class="text-gray-500 text-xs leading-relaxed">The same engine that powers VS Code — with full syntax highlighting for JS, TS, HTML, CSS, Python, JSON, YAML, Markdown, Rust, Go and more.</p>
+                        </div>
+                    </div>
+
+                    <!-- Multi-file -->
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#7B4FFF] to-[#9D7FFF] flex items-center justify-center flex-shrink-0">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Multi-file &amp; Folders</p>
+                            <p class="text-gray-500 text-xs leading-relaxed">Create nested folder structures, rename, duplicate, and delete files. Upload entire folders or drag-and-drop a .zip — it extracts automatically.</p>
+                        </div>
+                    </div>
+
+                    <!-- SQLite Viewer -->
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#00c6ff]/60 to-[#5024F4] flex items-center justify-center flex-shrink-0">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">SQLite Viewer</p>
+                            <p class="text-gray-500 text-xs leading-relaxed">Open <span class="font-mono text-[#7B4FFF]">.db</span> files directly — browse tables, inspect rows, and read your database without any extra tool.</p>
+                        </div>
+                    </div>
+
+                    <!-- Download -->
+                    <div class="p-6 flex flex-col gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#5024F4] to-[#00eeff]/60 flex items-center justify-center flex-shrink-0">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-white font-semibold text-sm mb-1">Download &amp; Export</p>
+                            <p class="text-gray-500 text-xs leading-relaxed">Download single files or export the entire workspace as a <span class="font-mono text-[#7B4FFF]">.zip</span> archive in one click. Split-view for side-by-side editing included.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Supported formats bar -->
+                <div class="px-8 md:px-10 py-5 flex flex-wrap items-center gap-2 border-t border-white/5">
+                    <span class="text-xs text-gray-500 mr-2">Reads &amp; edits:</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.js</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.ts</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.jsx</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.tsx</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.html</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.css</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.scss</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.json</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.yaml</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.md</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.py</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.rs</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.go</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.sql</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.sh</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.txt</span>
+                    <span class="font-mono text-xs bg-[#5024F4]/10 text-[#9D7FFF] border border-[#5024F4]/20 px-2 py-0.5 rounded">.db</span>
+                    <span class="text-xs text-gray-600 ml-1">+ any plain-text file</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Features Section -->
         <section id="features" class="py-24">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-white text-glow animate-enter">Features</h2>

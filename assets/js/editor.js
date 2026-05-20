@@ -177,7 +177,16 @@
 
     // ─── Initialise ─────────────────────────────────────────────────────────────
     function init() {
-        state.files = JSON.parse(JSON.stringify(DEFAULT_FILES));
+        var preload = null;
+        try { preload = JSON.parse(sessionStorage.getItem('editor-preload') || 'null'); } catch (e) {}
+        if (preload && Array.isArray(preload) && preload.length) {
+            sessionStorage.removeItem('editor-preload');
+            state.files = preload.map(function (f) {
+                return { id: genId(), type: 'file', name: f.name, parentId: null, content: f.content };
+            });
+        } else {
+            state.files = JSON.parse(JSON.stringify(DEFAULT_FILES));
+        }
         renderTree();
         loadMonaco(function () {
             state.monacoReady = true;

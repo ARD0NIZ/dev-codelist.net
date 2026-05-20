@@ -52,6 +52,12 @@
             <p class="text-xl text-gray-400 leading-relaxed">
                 Advanced eval command for Bot Designer for Discord with comprehensive error handling, syntax debugging, and function information display.
             </p>
+            <div class="mt-8">
+                <button onclick="openInEditor()" class="inline-flex items-center gap-2 bg-gradient-to-r from-[#5024F4] to-[#7B4FFF] text-white px-6 py-3 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#5024F4]/40 transition-all">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    Open in Code Editor
+                </button>
+            </div>
         </header>
 
         <!-- Features Banner -->
@@ -101,7 +107,7 @@
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                             </button>
                         </div>
-                        <pre id="code-1" class="editor-content bdfd-code">
+                        <pre id="code-1" class="editor-content bdfd-code" data-editor-name="eval.bdfd">
 $nomention $c[ disables default mention. (lol) ]
 $reply
 $c[ Whitelisted user ids separated by comma or whatever since I'm using checkContains (because onlyForIDs is lame) ]
@@ -352,6 +358,16 @@ $endif
             
             container.classList.toggle('is-collapsed');
             content.classList.toggle('collapsed');
+        }
+
+        function openInEditor() {
+            var blocks = document.querySelectorAll('pre[data-editor-name]');
+            if (!blocks.length) return;
+            var files = Array.from(blocks).map(function (pre) {
+                return { name: pre.dataset.editorName, content: pre.textContent.replace(/^\n/, '') };
+            });
+            sessionStorage.setItem('editor-preload', JSON.stringify(files));
+            window.location.href = '/editor/';
         }
 
         syntaxHighlight();
