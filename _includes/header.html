@@ -30,9 +30,45 @@
         <div class="hidden md:flex items-center gap-6 text-sm font-medium">
             <a href="/" class="nav-link{% if page.url == '/' or page.url == '/index.html' %} nav-active{% endif %}">Home</a>
             <a href="/codes/" class="nav-link{% if page.url contains '/codes/' %} nav-active{% endif %}">Codes</a>
-            <a href="/changelog/" class="nav-link{% if page.url contains '/changelog/' %} nav-active{% endif %}">Changelog</a>
-            <a href="/helios-updates/" class="nav-link{% if page.url contains '/helios-updates/' %} nav-active{% endif %}">Helios Updates</a>
             <a href="/editor/" class="nav-link{% if page.url contains '/editor/' %} nav-active{% endif %}">Editor</a>
+            <!-- Updates dropdown -->
+            <div class="relative self-center">
+                <button type="button" data-dd="dd-updates" onclick="navDdToggle('dd-updates',this)" class="nav-link flex items-center gap-1{% if page.url contains '/changelog/' or page.url contains '/helios-updates/' %} nav-active{% endif %}" aria-expanded="false" aria-haspopup="true">
+                    Updates
+                    <svg class="dd-arrow w-3.5 h-3.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="dd-updates" class="nav-dd-panel absolute top-full left-0 pt-2 w-52" style="display:none;z-index:200">
+                    <div class="bg-[#0a0a0c] border border-white/10 rounded-xl p-1.5 shadow-2xl shadow-black/70">
+                        <a href="/changelog/" class="nav-dd-item{% if page.url contains '/changelog/' %} active{% endif %}">
+                            <svg class="w-4 h-4 text-[#7B4FFF] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Changelog
+                        </a>
+                        <a href="/helios-updates/" class="nav-dd-item{% if page.url contains '/helios-updates/' %} active{% endif %}">
+                            <svg class="w-4 h-4 text-[#7B4FFF] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Helios Updates
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- More dropdown -->
+            <div class="relative self-center">
+                <button type="button" data-dd="dd-more" onclick="navDdToggle('dd-more',this)" class="nav-link flex items-center gap-1{% if page.url contains '/faq/' or page.url contains '/contributors/' %} nav-active{% endif %}" aria-expanded="false" aria-haspopup="true">
+                    More
+                    <svg class="dd-arrow w-3.5 h-3.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div id="dd-more" class="nav-dd-panel absolute top-full right-0 pt-2 w-48" style="display:none;z-index:200">
+                    <div class="bg-[#0a0a0c] border border-white/10 rounded-xl p-1.5 shadow-2xl shadow-black/70">
+                        <a href="/faq/" class="nav-dd-item{% if page.url contains '/faq/' %} active{% endif %}">
+                            <svg class="w-4 h-4 text-[#7B4FFF] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            FAQ
+                        </a>
+                        <a href="/contributors/" class="nav-dd-item{% if page.url contains '/contributors/' %} active{% endif %}">
+                            <svg class="w-4 h-4 text-[#7B4FFF] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Contributors
+                        </a>
+                    </div>
+                </div>
+            </div>
             <a href="/contact/" class="nav-link{% if page.url contains '/contact/' %} nav-active{% endif %}">Contact</a>
         </div>
 
@@ -54,6 +90,8 @@
         <a href="/changelog/" class="nav-link block py-1{% if page.url contains '/changelog/' %} nav-active{% endif %}">Changelog</a>
         <a href="/helios-updates/" class="nav-link block py-1{% if page.url contains '/helios-updates/' %} nav-active{% endif %}">Helios Updates</a>
         <a href="/editor/" class="nav-link block py-1{% if page.url contains '/editor/' %} nav-active{% endif %}">Editor</a>
+        <a href="/faq/" class="nav-link block py-1{% if page.url contains '/faq/' %} nav-active{% endif %}">FAQ</a>
+        <a href="/contributors/" class="nav-link block py-1{% if page.url contains '/contributors/' %} nav-active{% endif %}">Contributors</a>
         <a href="/contact/" class="nav-link block py-1{% if page.url contains '/contact/' %} nav-active{% endif %}">Contact</a>
     </div>
 </nav>
@@ -74,6 +112,38 @@
                 toggle.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
             });
         }
+
+        // Dropdown toggle — window-scoped so onclick attribute can call it
+        window.navDdToggle = function (id, btn) {
+            var panel = document.getElementById(id);
+            if (!panel) return;
+            var isOpen = panel.style.display === 'block';
+            // Close all panels
+            document.querySelectorAll('.nav-dd-panel').forEach(function (p) { p.style.display = 'none'; });
+            document.querySelectorAll('[data-dd]').forEach(function (b) {
+                b.setAttribute('aria-expanded', 'false');
+                var a = b.querySelector('.dd-arrow');
+                if (a) a.style.transform = '';
+            });
+            // Open this one if it was closed
+            if (!isOpen) {
+                panel.style.display = 'block';
+                btn.setAttribute('aria-expanded', 'true');
+                var arrow = btn.querySelector('.dd-arrow');
+                if (arrow) arrow.style.transform = 'rotate(180deg)';
+            }
+        };
+        // Close all when clicking outside a dropdown button or panel
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('[data-dd]') && !e.target.closest('.nav-dd-panel')) {
+                document.querySelectorAll('.nav-dd-panel').forEach(function (p) { p.style.display = 'none'; });
+                document.querySelectorAll('[data-dd]').forEach(function (b) {
+                    b.setAttribute('aria-expanded', 'false');
+                    var a = b.querySelector('.dd-arrow');
+                    if (a) a.style.transform = '';
+                });
+            }
+        });
     })();
 </script>
 

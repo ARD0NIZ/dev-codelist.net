@@ -1,0 +1,289 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dev-codelist.net | FAQ</title>
+
+    <!-- Open Graph / Discord / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="dev-codelist.net | FAQ">
+    <meta property="og:description" content="Frequently asked questions about dev-codelist.net, its codes, and how to use them.">
+    <meta property="og:image" content="/assets/media/Logo.png">
+    <meta property="og:site_name" content="dev-codelist.net">
+    <meta name="theme-color" content="#5024F4">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="dev-codelist.net | FAQ">
+    <meta name="twitter:description" content="Frequently asked questions about dev-codelist.net, its codes, and how to use them.">
+    <meta name="twitter:image" content="/assets/media/Logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/media/Logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/live-dev.js"></script>
+
+    <style>
+        .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 400px;
+        }
+        .faq-icon {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-icon.open {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="selection:bg-[#5024F4]/30">
+
+    {% include header.html %}
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-24">
+
+        <!-- Page Header -->
+        <header class="mb-12 animate-enter">
+            <div class="flex flex-wrap gap-3 mb-6">
+                <span class="tag bg-[#5024F4]/10 text-[#7B4FFF] border border-[#5024F4]/20">Help</span>
+                <span class="tag bg-[#7B4FFF]/10 text-[#9D7FFF] border border-[#7B4FFF]/20">FAQ</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-white text-glow">
+                Frequently Asked<br>Questions
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                Everything you need to know about the platform, the codes, and how to get started.
+            </p>
+        </header>
+
+        <!-- FAQ Groups -->
+        <div class="space-y-8 animate-enter delay-100">
+
+            <!-- Group: General -->
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#7B4FFF] mb-4 px-1">General</h2>
+                <div class="glass-panel overflow-hidden">
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">What is dev-codelist.net?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                dev-codelist.net is a free, public code showcase platform. It hosts ready-to-use code snippets, templates, and full-featured bot systems — primarily for Bot Designer for Discord (BDFD). Everything is presented with syntax highlighting, copy-paste support, and clear documentation so you can drop it straight into your project.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">What is BDFD?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                BDFD stands for <strong class="text-gray-300">Bot Designer for Discord</strong> — a mobile and desktop app that lets you build Discord bots using a custom scripting language, without needing to write traditional code. Most of the snippets on this site are written for BDFD's scripting environment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">Is this site free to use?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Yes, completely. No account, no paywall, no ads. Browse, copy, and use any code you find here at no cost.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Group: Using the Codes -->
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#7B4FFF] mb-4 px-1">Using the Codes</h2>
+                <div class="glass-panel overflow-hidden">
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">Can I use these codes in my own project?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Yes. All published code snippets are intended for personal use in your own Discord bots and projects. Where individual pages note specific restrictions or credits, please respect those. A mention or credit is always appreciated but not required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">What's the difference between a prefix and a slash command?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                <strong class="text-gray-300">Prefix commands</strong> are triggered by a custom prefix (e.g. <span class="font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded text-gray-300">!eval</span>) typed in a Discord channel. <strong class="text-gray-300">Slash commands</strong> use Discord's built-in <span class="font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded text-gray-300">/command</span> interface and require the bot to have the <em>application commands</em> scope. Both types are labeled on each code card.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">Are the codes kept up to date?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                We aim to keep codes compatible with the current version of BDFD. Updates are tracked in the <a href="/changelog/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Changelog</a>. If you notice something broken or outdated, feel free to reach out via the <a href="/contact/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Contact page</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">Can I request a new code or feature?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Absolutely. Use the <a href="/contact/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Contact page</a> to send a request. Describe what you need and we'll consider adding it to the list.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Group: Platform Features -->
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#7B4FFF] mb-4 px-1">Platform Features</h2>
+                <div class="glass-panel overflow-hidden">
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">What is the Editor?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                The <a href="/editor/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Editor</a> is a browser-based code editor built into this site. You can write, edit, and review BDFD code with syntax highlighting directly in your browser — no installation required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">What is Helios?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Helios is a Discord bot maintained by the dev-codelist.net team. The <a href="/helios-updates/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Helios Updates</a> page tracks its latest changes, fixes, and new features separately from the main site changelog.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">Does the site work on mobile?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Yes. The site is fully responsive and works on all modern browsers and devices. Since BDFD itself is a mobile-first app, we make sure browsing and copying codes on a phone works just as well as on desktop.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Group: Contributing & Contact -->
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-[#7B4FFF] mb-4 px-1">Contributing & Contact</h2>
+                <div class="glass-panel overflow-hidden">
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">Can I contribute a code?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Yes! If you have a well-written BDFD snippet you'd like to share, reach out via the <a href="/contact/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Contact page</a> or open a pull request on the project's GitHub repository. See the <a href="/contributors/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Contributors page</a> for more details on how to get involved.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-toggle w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-white/[0.02] transition-colors">
+                            <span class="text-white font-semibold">I found a bug — how do I report it?</span>
+                            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-[#7B4FFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                        </button>
+                        <div class="faq-answer px-6">
+                            <p class="text-gray-400 leading-relaxed pb-5">
+                                Use the <a href="/contact/" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Contact page</a> and describe what went wrong — ideally with the page URL and what you expected to happen. For security-related issues, please refer to our <a href="/SECURITY.md" class="text-[#7B4FFF] hover:text-[#9D7FFF] transition-colors">Security Policy</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-12 glass-panel p-8 text-center animate-enter delay-200">
+            <p class="text-gray-400 mb-4">Still have a question that's not answered here?</p>
+            <a href="/contact/" class="inline-block bg-gradient-to-r from-[#5024F4] to-[#7B4FFF] text-white px-6 py-3 rounded-full hover:shadow-lg hover:shadow-[#5024F4]/40 transition-all font-semibold">
+                Get in Touch
+            </a>
+        </div>
+
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+        document.querySelectorAll('.faq-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var answer = btn.nextElementSibling;
+                var icon = btn.querySelector('.faq-icon');
+                var isOpen = answer.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-answer.open').forEach(function (el) {
+                    el.classList.remove('open');
+                    el.previousElementSibling.querySelector('.faq-icon').classList.remove('open');
+                });
+
+                // Toggle clicked
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    icon.classList.add('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

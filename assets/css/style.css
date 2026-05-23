@@ -133,6 +133,38 @@ body {
 .nav-active { color: white; }
 .nav-active::after { width: 100%; }
 
+/* Dropdown button reset */
+button.nav-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+}
+/* Dropdown items */
+.nav-dd-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.2s, background-color 0.2s;
+}
+.nav-dd-item:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.nav-dd-item.active {
+    color: white;
+    background-color: rgba(80, 36, 244, 0.1);
+}
+
 .tag {
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
     text-transform: uppercase; padding: 6px 12px; border-radius: 100px;
