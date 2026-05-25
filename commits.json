@@ -1,5 +1,87 @@
 [
   {
+    "sha": "ebeea052d563108bac0d820a8c0cd0c481dfafea",
+    "node_id": "C_kwDOR6gFrdoAKGViZWVhMDUyZDU2MzEwOGJhYzBkODIwYThjMGNkMGM0ODFkZmFmZWE",
+    "commit": {
+      "author": {
+        "name": "ARD0NIZ",
+        "email": "96878771+ARD0NIZ@users.noreply.github.com",
+        "date": "2026-05-25T08:02:15Z"
+      },
+      "committer": {
+        "name": "ARD0NIZ",
+        "email": "96878771+ARD0NIZ@users.noreply.github.com",
+        "date": "2026-05-25T08:02:15Z"
+      },
+      "message": "Füge Profilbefehl für Global Chat hinzu, um Benutzerprofile anzuzeigen #deploy",
+      "tree": {
+        "sha": "ceefb09149cb82714a5fad73ec5d4aad7955cc2d",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/ceefb09149cb82714a5fad73ec5d4aad7955cc2d"
+      },
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/ebeea052d563108bac0d820a8c0cd0c481dfafea",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/ebeea052d563108bac0d820a8c0cd0c481dfafea",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/ebeea052d563108bac0d820a8c0cd0c481dfafea",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/ebeea052d563108bac0d820a8c0cd0c481dfafea/comments",
+    "author": {
+      "login": "ARD0NIZ",
+      "id": 96878771,
+      "node_id": "U_kgDOBcZAsw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ARD0NIZ",
+      "html_url": "https://github.com/ARD0NIZ",
+      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
+      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
+      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
+      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
+      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "ARD0NIZ",
+      "id": 96878771,
+      "node_id": "U_kgDOBcZAsw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ARD0NIZ",
+      "html_url": "https://github.com/ARD0NIZ",
+      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
+      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
+      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
+      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
+      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c7a90ff9a2d2724b7191c130d118c23857413be5",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/c7a90ff9a2d2724b7191c130d118c23857413be5",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/c7a90ff9a2d2724b7191c130d118c23857413be5"
+      }
+    ]
+  },
+  {
     "sha": "c7a90ff9a2d2724b7191c130d118c23857413be5",
     "node_id": "C_kwDOR6gFrdoAKGM3YTkwZmY5YTJkMjcyNGI3MTkxYzEzMGQxMThjMjM4NTc0MTNiZTU",
     "commit": {
@@ -734,88 +816,6 @@
         "sha": "d21382967668871feb6f69f7998784521f2d30c7",
         "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d21382967668871feb6f69f7998784521f2d30c7",
         "html_url": "https://github.com/ARD0NIZ/Helios/commit/d21382967668871feb6f69f7998784521f2d30c7"
-      }
-    ]
-  },
-  {
-    "sha": "d21382967668871feb6f69f7998784521f2d30c7",
-    "node_id": "C_kwDOR6gFrdoAKGQyMTM4Mjk2NzY2ODg3MWZlYjZmNjlmNzk5ODc4NDUyMWYyZDMwYzc",
-    "commit": {
-      "author": {
-        "name": "ARD0NIZ",
-        "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-05-24T10:14:10Z"
-      },
-      "committer": {
-        "name": "ARD0NIZ",
-        "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-05-24T10:14:10Z"
-      },
-      "message": "again changes #deploy",
-      "tree": {
-        "sha": "039aa3d2d3798c0c39365e66f542bd38506b2627",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/039aa3d2d3798c0c39365e66f542bd38506b2627"
-      },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/d21382967668871feb6f69f7998784521f2d30c7",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d21382967668871feb6f69f7998784521f2d30c7",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/d21382967668871feb6f69f7998784521f2d30c7",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d21382967668871feb6f69f7998784521f2d30c7/comments",
-    "author": {
-      "login": "ARD0NIZ",
-      "id": 96878771,
-      "node_id": "U_kgDOBcZAsw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ARD0NIZ",
-      "html_url": "https://github.com/ARD0NIZ",
-      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
-      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
-      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
-      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
-      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "ARD0NIZ",
-      "id": 96878771,
-      "node_id": "U_kgDOBcZAsw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ARD0NIZ",
-      "html_url": "https://github.com/ARD0NIZ",
-      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
-      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
-      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
-      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
-      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "9e0ae20c93fdc64e1ef16c254f562e6813cefe7a",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/9e0ae20c93fdc64e1ef16c254f562e6813cefe7a",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/9e0ae20c93fdc64e1ef16c254f562e6813cefe7a"
       }
     ]
   }
