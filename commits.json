@@ -1,5 +1,87 @@
 [
   {
+    "sha": "649983fd4e6e1f0fed27aad8382668d113133e12",
+    "node_id": "C_kwDOR6gFrdoAKDY0OTk4M2ZkNGU2ZTFmMGZlZDI3YWFkODM4MjY2OGQxMTMxMzNlMTI",
+    "commit": {
+      "author": {
+        "name": "ARD0NIZ",
+        "email": "96878771+ARD0NIZ@users.noreply.github.com",
+        "date": "2026-06-17T16:13:37Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-06-17T16:13:37Z"
+      },
+      "message": "refactor: Optimize attachment handling and content type validation in image scan #deploy",
+      "tree": {
+        "sha": "fdd1ca40df42d01a848005a3766415b1ac50b043",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/fdd1ca40df42d01a848005a3766415b1ac50b043"
+      },
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/649983fd4e6e1f0fed27aad8382668d113133e12",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsexCRC1aQ7uu5UhlAAAZXoQABJxAec3Mu4ufUK+Z061Ajc2\nf09n0aMvUkRTYIT1WS2NK9jZWIQddrL49qEPq904hEn9RPeD8A3tl48mysm0ALjv\nuvngTGfZA5EKpXKpk3f8+1wj4dA/ujL5WesvuGgPhDHhgSKVP0206YsGTC+riSBq\nl62etwyWIFwZHOsiN8mYajGcJ0EzpR2n88crRMeQC3U2c8B+QtIvlJhElNUlDnkf\n+olTzyx52G0bWPvD1sA/9JQewvNHszWgPftkfjekbg1wh5xmk6vkhrgGXsm2e5Lx\ne4fZqArTTDaP1+f1P7cGUH84DBHQkN9ygIQQ2GJp/r9hT1e1sTP7HJxsOf/uCeC4\nxkkwHY+IrhekyZVHJbfZp1UINQF/Y1b+feWHdukrtEx3azds18w6BzixWwhnKEpj\nv/PFGHb8WXewKYebCb7N5lOBbNWnEkuddM1LPLHmRqMnRnpWEfFg2RlW8YGlzHTq\neW8LGCOF4wqOBOgkarYNi15vw8O6M/xkSJ6JC1ys1TSlZVkAlUqe/PIBB5Q3Soog\ns17C3khnRcfKBmyPefrE5r2R6Rb3LX/9UmzaIZU3TY6qJ8Ap/mIAw3SS9s3P4DyN\nl8rYYILO32Kh+wlEnkxnhYS7/73chcV7LNNFggJldHEw13QEZjPje4KivvmVs/dK\n2c2CPoTR3cks8srXiLca\n=cmts\n-----END PGP SIGNATURE-----",
+        "payload": "tree fdd1ca40df42d01a848005a3766415b1ac50b043\nparent 6ebad12a733e480dcac8a34b8e62ee370f7266ae\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781712817 +0000\ncommitter GitHub <noreply@github.com> 1781712817 +0000\n\nrefactor: Optimize attachment handling and content type validation in image scan #deploy\n",
+        "verified_at": "2026-06-17T16:13:43Z"
+      }
+    },
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/649983fd4e6e1f0fed27aad8382668d113133e12",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/649983fd4e6e1f0fed27aad8382668d113133e12",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/649983fd4e6e1f0fed27aad8382668d113133e12/comments",
+    "author": {
+      "login": "ARD0NIZ",
+      "id": 96878771,
+      "node_id": "U_kgDOBcZAsw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ARD0NIZ",
+      "html_url": "https://github.com/ARD0NIZ",
+      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
+      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
+      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
+      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
+      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6ebad12a733e480dcac8a34b8e62ee370f7266ae",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/6ebad12a733e480dcac8a34b8e62ee370f7266ae",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/6ebad12a733e480dcac8a34b8e62ee370f7266ae"
+      }
+    ]
+  },
+  {
     "sha": "6ebad12a733e480dcac8a34b8e62ee370f7266ae",
     "node_id": "C_kwDOR6gFrdoAKDZlYmFkMTJhNzMzZTQ4MGRjYWM4YTM0YjhlNjJlZTM3MGY3MjY2YWU",
     "commit": {
@@ -734,88 +816,6 @@
         "sha": "5e802a4a1402edb4b3a73fbac2e40da0febf0d81",
         "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/5e802a4a1402edb4b3a73fbac2e40da0febf0d81",
         "html_url": "https://github.com/ARD0NIZ/Helios/commit/5e802a4a1402edb4b3a73fbac2e40da0febf0d81"
-      }
-    ]
-  },
-  {
-    "sha": "5e802a4a1402edb4b3a73fbac2e40da0febf0d81",
-    "node_id": "C_kwDOR6gFrdoAKDVlODAyYTRhMTQwMmVkYjRiM2E3M2ZiYWMyZTQwZGEwZmViZjBkODE",
-    "commit": {
-      "author": {
-        "name": "ARD0NIZ",
-        "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-15T19:26:34Z"
-      },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2026-06-15T19:26:34Z"
-      },
-      "message": "Füge Unterstützung für zusätzliche Bildformate im Bildscan hinzu und optimiere den Offline-Alarm-Code #deploy",
-      "tree": {
-        "sha": "ac292c8ff3d727e738ada700edb479b91ed8a27e",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/ac292c8ff3d727e738ada700edb479b91ed8a27e"
-      },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/5e802a4a1402edb4b3a73fbac2e40da0febf0d81",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMFHqCRC1aQ7uu5UhlAAA7FoQAGZMVT81Uw4b20yPAAxMrebg\nC0LbFpg+60bjHi6F3+4BuL6/Uwh3zRH8ifNTbBBmcBWqA8DQZLDfh3qdEEfur0Gs\nD2qjXb/iv3HB6CaPcrec8/qSMsEgf5v87QyCXTejETlSGNApYo1dJDETcNEskPVW\nwNO6Fjdl/hCgVf1QiLpv1kD/VIhSGjhGOqPfuWCSvrSjFxM5cHvapLsVs0s0N43v\noBtwuOM4FtK4XEVxwwirc6xNA/+p1RvRdejD0mTeMsjEonu865qWcGO63eHDBiyw\nDgwuDEC8tuVQD2KCuqlxyoFbaUncFpIy7jLlZssRKDu5I0HVzWV2MmpkfeNCiVdn\n1jyQ9GWIYzEalqxNcO8iKZSsoOgqE6e/RLTTPn7+SXgeV8XHxipDsJmtsbAnO9ar\nqpWjDCSsbvat94jnRTHvjJMvIg/A1ozkp0zAg/mRQ3XzPMtsbLuMU9WMKAHn4lpb\nOZ7qZ/KfyipmHEkjQmXXco48qjQ4It1YYyUWEPVsPBnaiQ7coRQkn+Ndz12JDff/\nrI+hkdWpk0U+HQG/IL85Uq8dQGlCljmFr3uS8YKKU9Pz3KY6jOaQ8ljV304dNb5I\n19DhGuzIRc+bAO/xynogG+0nyMisNS/O5zt9MbC2JcMqNlw4BvWUyNdF8jBOz02j\nqN4fxFOfP1nkrisvcc1F\n=Vigo\n-----END PGP SIGNATURE-----",
-        "payload": "tree ac292c8ff3d727e738ada700edb479b91ed8a27e\nparent 572007216875a7cb1e00e631d93a70bb37eb6e8c\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781551594 +0000\ncommitter GitHub <noreply@github.com> 1781551594 +0000\n\nFüge Unterstützung für zusätzliche Bildformate im Bildscan hinzu und optimiere den Offline-Alarm-Code #deploy\n",
-        "verified_at": "2026-06-15T19:26:40Z"
-      }
-    },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/5e802a4a1402edb4b3a73fbac2e40da0febf0d81",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/5e802a4a1402edb4b3a73fbac2e40da0febf0d81",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/5e802a4a1402edb4b3a73fbac2e40da0febf0d81/comments",
-    "author": {
-      "login": "ARD0NIZ",
-      "id": 96878771,
-      "node_id": "U_kgDOBcZAsw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ARD0NIZ",
-      "html_url": "https://github.com/ARD0NIZ",
-      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
-      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
-      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
-      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
-      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "572007216875a7cb1e00e631d93a70bb37eb6e8c",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/572007216875a7cb1e00e631d93a70bb37eb6e8c",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/572007216875a7cb1e00e631d93a70bb37eb6e8c"
       }
     ]
   }
