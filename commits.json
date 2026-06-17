@@ -1,5 +1,87 @@
 [
   {
+    "sha": "b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
+    "node_id": "C_kwDOR6gFrdoAKGI5MGVjMjVkZDIzYjYyZGZmMmYzOTJkNjJjNzRlZjlmOGYwNGFmMmY",
+    "commit": {
+      "author": {
+        "name": "ARD0NIZ",
+        "email": "96878771+ARD0NIZ@users.noreply.github.com",
+        "date": "2026-06-17T15:46:57Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-06-17T15:46:57Z"
+      },
+      "message": "feat: Implement Image Scan feature with configuration options\n\n- Added interaction handlers for Image Scan settings including enabling/disabling the feature and setting kick thresholds.\n- Integrated image scanning functionality that utilizes OCR to detect scam-related keywords in images.\n- Enhanced security settings to include Image Scan status and kick thresholds in the command responses.\n- Created advanced settings command for bot owners to configure logging channels and roles.\n- Updated existing security commands to reflect new Image Scan feature and its configurations. #deploy",
+      "tree": {
+        "sha": "69569dfbcd9d003535a3e9c7bdbb54ba29155fd6",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/69569dfbcd9d003535a3e9c7bdbb54ba29155fd6"
+      },
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsFxCRC1aQ7uu5UhlAAAy1sQAJ0aSuWa6mzgT9hko6ryBBqX\n1j4V5VsEt7amcU2hCRB9YndQ672BhmKQuREntOeI6oCQNbkmpTC3OCX7MrAEExaG\nPrTFn2z8NodsHhf6LiVLpCI9OfXHXahQkHssNdeNs9v7JtKVpa1l3nCuyXy2arQo\n5jIeIyEu/sZ0CM+Qd6usteLylih1tmSZzGyRGPu8GX7taHrmI6sQSD4DOAYI0eaL\nEPhG4nHqYGjHoC5JGb3xeArIfgwahP/CWXzVRCMRX8hhxaBV076IkYr+Xb+1c4hq\nMg7pytRrcHkKF5EYaBadryzd8nSYYXHL+YYvw/bdt62Fz4C0tVm740hbPUvi8WVm\nwotGgEBwtrt5SpnAJCyRDk8jEyYzVY3EApdzKRnutYBF912vfqpEPdCjmlHvVLJe\n5I/N2g45/GK8ig4hp4bacdpqsuYPglDAmTirn8azKZkVRKmMza8W0bAFwUjBSgjd\nwV1GfOfYxZJu1YhsCHK4qf32orf+/Yqz/uJjgdvTAPNngOTQ3h1whOr+b9qNayYs\nPAoZ9F5uBwGI6qciKHmkBP2Ei3yQVdJbhzb8otFLlWcZ7D/5aP24KBud7DLhAEBc\n6xlMv/B8w+suM71l0lDSHJdsfz1WbE2aenkoJo98r2is/3g62Ecdw5lM/ijFMKXr\nrAiqqh2POtRj2EPGy2On\n=9Q/e\n-----END PGP SIGNATURE-----",
+        "payload": "tree 69569dfbcd9d003535a3e9c7bdbb54ba29155fd6\nparent c2e2bc473d0cfac764ca77465a3f963b9e86761a\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781711217 +0000\ncommitter GitHub <noreply@github.com> 1781711217 +0000\n\nfeat: Implement Image Scan feature with configuration options\n\n- Added interaction handlers for Image Scan settings including enabling/disabling the feature and setting kick thresholds.\n- Integrated image scanning functionality that utilizes OCR to detect scam-related keywords in images.\n- Enhanced security settings to include Image Scan status and kick thresholds in the command responses.\n- Created advanced settings command for bot owners to configure logging channels and roles.\n- Updated existing security commands to reflect new Image Scan feature and its configurations. #deploy\n",
+        "verified_at": "2026-06-17T15:47:02Z"
+      }
+    },
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f/comments",
+    "author": {
+      "login": "ARD0NIZ",
+      "id": 96878771,
+      "node_id": "U_kgDOBcZAsw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ARD0NIZ",
+      "html_url": "https://github.com/ARD0NIZ",
+      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
+      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
+      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
+      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
+      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c2e2bc473d0cfac764ca77465a3f963b9e86761a",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/c2e2bc473d0cfac764ca77465a3f963b9e86761a",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/c2e2bc473d0cfac764ca77465a3f963b9e86761a"
+      }
+    ]
+  },
+  {
     "sha": "c2e2bc473d0cfac764ca77465a3f963b9e86761a",
     "node_id": "C_kwDOR6gFrdoAKGMyZTJiYzQ3M2QwY2ZhYzc2NGNhNzc0NjVhM2Y5NjNiOWU4Njc2MWE",
     "commit": {
@@ -734,88 +816,6 @@
         "sha": "23dfa99e6c793675c7cf69abf3e78f51f0e5524d",
         "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/23dfa99e6c793675c7cf69abf3e78f51f0e5524d",
         "html_url": "https://github.com/ARD0NIZ/Helios/commit/23dfa99e6c793675c7cf69abf3e78f51f0e5524d"
-      }
-    ]
-  },
-  {
-    "sha": "23dfa99e6c793675c7cf69abf3e78f51f0e5524d",
-    "node_id": "C_kwDOR6gFrdoAKDIzZGZhOTllNmM3OTM2NzVjN2NmNjlhYmYzZTc4ZjUxZjBlNTUyNGQ",
-    "commit": {
-      "author": {
-        "name": "ARD0NIZ",
-        "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-15T19:07:55Z"
-      },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2026-06-15T19:07:55Z"
-      },
-      "message": "Verbessere Normalisierung und Vergleich von Text für Keyword-Matching #deploy",
-      "tree": {
-        "sha": "8c9f6289358a86a85aecfc54bba0801c3202263f",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/8c9f6289358a86a85aecfc54bba0801c3202263f"
-      },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/23dfa99e6c793675c7cf69abf3e78f51f0e5524d",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqME2LCRC1aQ7uu5UhlAAA8OgQAJOro46SYhtSZu1pjWprEL/E\nXQ5Z8ikiQbsW5DZQ4BR9ShG2s0b2JjtBQClAmayAsoJj9jtZ0zL7MYv+pk6R0RtA\noQ0tZV006U56KzXXSUJ1+A3wEWkoicr9QYiCvH+KUkLK3gEeAczaK8SCxsHcXmkL\nKhpDlREzTCyE/KSPgvRPyG48WuSSwCzEpGaqH+WLHIlnN0IsOY+QjLOb+90oOfii\n2quajmlDS/XEVQs2CV6pgoUjWN8Sj30f3qetjjqzw7Xgoye8BNWG4m0OhjsdxmRB\nchVKHSdpeSmOe0rNs74K59zc+JvPx9T1ACGN6DpEgKmQu7ctAs+/ncQ9ujFg7Yb3\nyKtvV8SoZF2s+lBZllduFDMM+vbympsTAA+C/TAPK768cmuw5r+ROugAM5jaMUao\n0WwiY62ayDvMW4XKPzTU3m6BxZhecPbaOn8Q4Bh+5IOShK8CsmikgEV///oc+aa/\nabXFQDIBSbmP+0pWz2pKlddJ2KCFU6AtmqLuH+w1cIH9WyG2XW0s02QjoWlAEN9i\nDK0WJGxWM1hQ7WKkmjGJsqBSg5IUfanWX+rOEddKbfUg8Tc+RE7iRl2bU6M4P4Rh\nf/hP/xKQDq40aRm8xILZ1E4okE55+KUuYP1dZzBePloLFYGcH202gGxxnSBnTT8X\nXJCXChNeJSom0x2uLAQ+\n=i5gK\n-----END PGP SIGNATURE-----",
-        "payload": "tree 8c9f6289358a86a85aecfc54bba0801c3202263f\nparent eb1a4444232ff4c5f410b9591afab260ae203e1e\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781550475 +0000\ncommitter GitHub <noreply@github.com> 1781550475 +0000\n\nVerbessere Normalisierung und Vergleich von Text für Keyword-Matching #deploy\n",
-        "verified_at": "2026-06-15T19:08:01Z"
-      }
-    },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/23dfa99e6c793675c7cf69abf3e78f51f0e5524d",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/23dfa99e6c793675c7cf69abf3e78f51f0e5524d",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/23dfa99e6c793675c7cf69abf3e78f51f0e5524d/comments",
-    "author": {
-      "login": "ARD0NIZ",
-      "id": 96878771,
-      "node_id": "U_kgDOBcZAsw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ARD0NIZ",
-      "html_url": "https://github.com/ARD0NIZ",
-      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
-      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
-      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
-      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
-      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "eb1a4444232ff4c5f410b9591afab260ae203e1e",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/eb1a4444232ff4c5f410b9591afab260ae203e1e",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/eb1a4444232ff4c5f410b9591afab260ae203e1e"
       }
     ]
   }
