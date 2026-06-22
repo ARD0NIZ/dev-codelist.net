@@ -1,5 +1,87 @@
 [
   {
+    "sha": "8758305838eb4163f9cf45b975a56aea3361d8ac",
+    "node_id": "C_kwDOR6gFrdoAKDg3NTgzMDU4MzhlYjQxNjNmOWNmNDViOTc1YTU2YWVhMzM2MWQ4YWM",
+    "commit": {
+      "author": {
+        "name": "ARD0NIZ",
+        "email": "96878771+ARD0NIZ@users.noreply.github.com",
+        "date": "2026-06-22T11:43:33Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-06-22T11:43:33Z"
+      },
+      "message": "globalchat -> stats API header #deploy",
+      "tree": {
+        "sha": "6718a18c20b90e0afb9cff25a8c876a905bf8dc7",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/6718a18c20b90e0afb9cff25a8c876a905bf8dc7"
+      },
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/8758305838eb4163f9cf45b975a56aea3361d8ac",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqOR/mCRC1aQ7uu5UhlAAAHagQAI4Y0Y4tSdHP6K8CWnNcNgBC\n0tSoWI0k5PcW717WyrwTYSgYLZ2EMFBUxVGdnCf2FzeVwMlB7XHg+RAxypto2IEb\nSuFnHvqqT1LleKcQoigARu8ZaSxJ6bwpbVUpVnmNAGAdBuG4NqUQ2vTTDyzGVsg9\nzzMnpW/ApiFPPRrV4bqJqwzePFYwBikQldsUIE01+ovIdPVkob8xn+TmNf2gzqBy\nODm9R7rHi+YQQ97s1C51Y/xNYZQ8U6Oaqzip/ZjfKI9DOLHP1l93aThWxnYa6bzF\ntlZZ0DEeLFLCS1tvzsIQH20OREFyvkW7EigSB4j/Bj9Xe7NzzRknecvr2lBiEzYF\nG8y4D7Y+Udbz3i+7rwcRZ68v6W//D4vI+cyV5nf12RSk5MlnrQw0qUM3WZuif8om\nnhXlSweF79E39G83eGpwLZEtvbHyNPary+PO9Bfdlvv/LjjVyiliW2StVY8nmdm+\nfR1ZjUtzH5Ej0R7KJ+oqext601HeyeBUkNW719aTDQVjVCT/q6wz/ArHLbQ2zldp\nL73t6uKv2mvkjQhktyWCJf9F/SKDVdOUdkQWkBD5cM30UbJ5f7BJljlZAk5QJDLu\nLQGWI5IgaBtPffvDxdFlOjGDp+VmoPGR7vYhu4EJc7QK38Pkip2LjY0mIPK8kg1X\nOviPXIC0eCMbsoOSmeFE\n=DvIK\n-----END PGP SIGNATURE-----",
+        "payload": "tree 6718a18c20b90e0afb9cff25a8c876a905bf8dc7\nparent 2d5b1e66de4d6c955e2155cb6666953df3b06b4f\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782128613 +0000\ncommitter GitHub <noreply@github.com> 1782128613 +0000\n\nglobalchat -> stats API header #deploy\n",
+        "verified_at": "2026-06-22T11:43:39Z"
+      }
+    },
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/8758305838eb4163f9cf45b975a56aea3361d8ac",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/8758305838eb4163f9cf45b975a56aea3361d8ac",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/8758305838eb4163f9cf45b975a56aea3361d8ac/comments",
+    "author": {
+      "login": "ARD0NIZ",
+      "id": 96878771,
+      "node_id": "U_kgDOBcZAsw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ARD0NIZ",
+      "html_url": "https://github.com/ARD0NIZ",
+      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
+      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
+      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
+      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
+      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2d5b1e66de4d6c955e2155cb6666953df3b06b4f",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/2d5b1e66de4d6c955e2155cb6666953df3b06b4f",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/2d5b1e66de4d6c955e2155cb6666953df3b06b4f"
+      }
+    ]
+  },
+  {
     "sha": "2d5b1e66de4d6c955e2155cb6666953df3b06b4f",
     "node_id": "C_kwDOR6gFrdoAKDJkNWIxZTY2ZGU0ZDZjOTU1ZTIxNTVjYjY2NjY5NTNkZjNiMDZiNGY",
     "commit": {
@@ -734,88 +816,6 @@
         "sha": "b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
         "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
         "html_url": "https://github.com/ARD0NIZ/Helios/commit/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f"
-      }
-    ]
-  },
-  {
-    "sha": "b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-    "node_id": "C_kwDOR6gFrdoAKGI5MGVjMjVkZDIzYjYyZGZmMmYzOTJkNjJjNzRlZjlmOGYwNGFmMmY",
-    "commit": {
-      "author": {
-        "name": "ARD0NIZ",
-        "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T15:46:57Z"
-      },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2026-06-17T15:46:57Z"
-      },
-      "message": "feat: Implement Image Scan feature with configuration options\n\n- Added interaction handlers for Image Scan settings including enabling/disabling the feature and setting kick thresholds.\n- Integrated image scanning functionality that utilizes OCR to detect scam-related keywords in images.\n- Enhanced security settings to include Image Scan status and kick thresholds in the command responses.\n- Created advanced settings command for bot owners to configure logging channels and roles.\n- Updated existing security commands to reflect new Image Scan feature and its configurations. #deploy",
-      "tree": {
-        "sha": "69569dfbcd9d003535a3e9c7bdbb54ba29155fd6",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/69569dfbcd9d003535a3e9c7bdbb54ba29155fd6"
-      },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsFxCRC1aQ7uu5UhlAAAy1sQAJ0aSuWa6mzgT9hko6ryBBqX\n1j4V5VsEt7amcU2hCRB9YndQ672BhmKQuREntOeI6oCQNbkmpTC3OCX7MrAEExaG\nPrTFn2z8NodsHhf6LiVLpCI9OfXHXahQkHssNdeNs9v7JtKVpa1l3nCuyXy2arQo\n5jIeIyEu/sZ0CM+Qd6usteLylih1tmSZzGyRGPu8GX7taHrmI6sQSD4DOAYI0eaL\nEPhG4nHqYGjHoC5JGb3xeArIfgwahP/CWXzVRCMRX8hhxaBV076IkYr+Xb+1c4hq\nMg7pytRrcHkKF5EYaBadryzd8nSYYXHL+YYvw/bdt62Fz4C0tVm740hbPUvi8WVm\nwotGgEBwtrt5SpnAJCyRDk8jEyYzVY3EApdzKRnutYBF912vfqpEPdCjmlHvVLJe\n5I/N2g45/GK8ig4hp4bacdpqsuYPglDAmTirn8azKZkVRKmMza8W0bAFwUjBSgjd\nwV1GfOfYxZJu1YhsCHK4qf32orf+/Yqz/uJjgdvTAPNngOTQ3h1whOr+b9qNayYs\nPAoZ9F5uBwGI6qciKHmkBP2Ei3yQVdJbhzb8otFLlWcZ7D/5aP24KBud7DLhAEBc\n6xlMv/B8w+suM71l0lDSHJdsfz1WbE2aenkoJo98r2is/3g62Ecdw5lM/ijFMKXr\nrAiqqh2POtRj2EPGy2On\n=9Q/e\n-----END PGP SIGNATURE-----",
-        "payload": "tree 69569dfbcd9d003535a3e9c7bdbb54ba29155fd6\nparent c2e2bc473d0cfac764ca77465a3f963b9e86761a\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781711217 +0000\ncommitter GitHub <noreply@github.com> 1781711217 +0000\n\nfeat: Implement Image Scan feature with configuration options\n\n- Added interaction handlers for Image Scan settings including enabling/disabling the feature and setting kick thresholds.\n- Integrated image scanning functionality that utilizes OCR to detect scam-related keywords in images.\n- Enhanced security settings to include Image Scan status and kick thresholds in the command responses.\n- Created advanced settings command for bot owners to configure logging channels and roles.\n- Updated existing security commands to reflect new Image Scan feature and its configurations. #deploy\n",
-        "verified_at": "2026-06-17T15:47:02Z"
-      }
-    },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f/comments",
-    "author": {
-      "login": "ARD0NIZ",
-      "id": 96878771,
-      "node_id": "U_kgDOBcZAsw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/96878771?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ARD0NIZ",
-      "html_url": "https://github.com/ARD0NIZ",
-      "followers_url": "https://api.github.com/users/ARD0NIZ/followers",
-      "following_url": "https://api.github.com/users/ARD0NIZ/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ARD0NIZ/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ARD0NIZ/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ARD0NIZ/subscriptions",
-      "organizations_url": "https://api.github.com/users/ARD0NIZ/orgs",
-      "repos_url": "https://api.github.com/users/ARD0NIZ/repos",
-      "events_url": "https://api.github.com/users/ARD0NIZ/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ARD0NIZ/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/c2e2bc473d0cfac764ca77465a3f963b9e86761a"
       }
     ]
   }
