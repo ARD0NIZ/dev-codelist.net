@@ -31,6 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/live-dev.js"></script>
+
 </head>
 <body class="selection:bg-[#5024F4]/30">
 
@@ -363,6 +364,14 @@
             details.classList.toggle('collapsed', isOpen);
             this.textContent = isOpen ? 'Show Details' : 'Hide Details';
         });
+
+        var script = document.createElement('script');
+        script.src = 'https://api.dashboard.instatus.com/widget?host=dev-codelist.instatus.com&code=62014b2d&locale=en';
+        script.async = true;
+        script.onerror = function() {
+            console.warn('Status-Widget konnte nicht geladen werden');
+        };
+        document.body.appendChild(script);
     </script>
 
 </body>
