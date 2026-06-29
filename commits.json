@@ -1,36 +1,36 @@
 [
   {
-    "sha": "a2bfa462482be31051ebf983acdc16e0782391bd",
-    "node_id": "C_kwDOR6gFrdoAKGEyYmZhNDYyNDgyYmUzMTA1MWViZjk4M2FjZGMxNmUwNzgyMzkxYmQ",
+    "sha": "3a12dce604a596b2e9dc3e9faf5b9507cb95da15",
+    "node_id": "C_kwDOR6gFrdoAKDNhMTJkY2U2MDRhNTk2YjJlOWRjM2U5ZmFmNWI5NTA3Y2I5NWRhMTU",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T16:17:31Z"
+        "date": "2026-06-26T08:42:21Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-17T16:17:31Z"
+        "date": "2026-06-26T08:42:21Z"
       },
-      "message": "#deploy",
+      "message": "last change please #deploy",
       "tree": {
-        "sha": "b790d26af26c9855743f96c7ed18b89ba3d40ecc",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/b790d26af26c9855743f96c7ed18b89ba3d40ecc"
+        "sha": "715d8bba0be44aa685106b4ab84b753295d8244c",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/715d8bba0be44aa685106b4ab84b753295d8244c"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/a2bfa462482be31051ebf983acdc16e0782391bd",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/3a12dce604a596b2e9dc3e9faf5b9507cb95da15",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsibCRC1aQ7uu5UhlAAACyMQAG1OhslAI9jac/HtlFWxqj7e\n0xsKuhmnOgq6lo6dzKsXkyTgsA5G8FPFoq6GdFzZI2jpOGwxB3G5Itymg7mChIj3\nMAszdPHklKfA0srkZcNF9NTVG4wImmrNvnth8ICWwHMrGGyFI07Oi0hWcYbV/+MK\nYEo7HRqBpr4chlaXT7r2QSKJVYIhJn1a1d8t+7kSl2uBPXh/rJdG+bsWwpuwmjAx\n9Upz7Ofs3TDu1rptRq5XtOj1Ss2MpeSi8zHufEwK+RDYyejhFR76tLcmFJT3ZNAj\nbdc+KlV/oV6/EuqdxpB+ALORxfQzzc2riYkiiFYPOiRmcCAhcek0YDSAcVZaassq\nAEhXPA4Y3iSJrgnSGMJ+scwivHfBZj418ZvBUoYaOtK6Uyd3H+oxq59mWzXjG80V\nW+PA+jrrNgrSV+6ZhRfpKhzwCpvxVbdskmkBxdiXjw3NE4+S6/fE0gKu59/jp9e4\nBXaJqTlGzOVhvNE0tMVEzQ7zQ01DcRK0QO/VY+QeQBxjv+8DJKWZbqw0/aZG03oZ\nLBAw5QJh+lBHI+ovZB0Whbdi+1QTawrv4i7pF7h97IfDnw9wESR6SyMuVsXI76/Z\ns8njVfQ8gdqz1ULGcTmXSEvo5Jj8/rVN/MfYsi8afP+iJGVGRvuq20mRHefzUZRp\nPB6QWlfDCVGOkSZtpU/2\n=o4lu\n-----END PGP SIGNATURE-----",
-        "payload": "tree b790d26af26c9855743f96c7ed18b89ba3d40ecc\nparent 649983fd4e6e1f0fed27aad8382668d113133e12\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781713051 +0000\ncommitter GitHub <noreply@github.com> 1781713051 +0000\n\n#deploy\n",
-        "verified_at": "2026-06-17T16:17:36Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPjttCRC1aQ7uu5UhlAAAJ5sQAKPAKL/9rsXDIIqj3fPRJKSG\noGEDGitbhAlZ+fWdtn0f+S9cJzMa4vDBeKt6ICsPPAJ98Fu9GLl3IMUXia1GiQwf\nxb3KgT9PALYiI5KwAKiW9fVtg8HjcZPn5rwlEK5lXL+Xnr7u/9d0b/1EYmKAxp7E\nwKW+8jBNux8GPjogp9S9zx/bM2GHbV9+qIeNCwCZijGVRc1DfHoa9RMm617AYceV\nURWjl5krDldp4JUpwZsn2KF/0GKzG47KVVCNKGRDU0IodBJJ3fS2r52OT1nHgMBV\npfF6aNAQi7cgKb3WZ/vgM+W2W74KStHhffHoCG7rAQwYZcOhH4B4JYyD7UvUI72N\ncg6u0c6M3NT8E4HmzlBziOmx7pBu6ZwXnJMXQVt3nm4LfiYCwjiFLh7WKSDvyM8k\nKABZllKq6Chhhzxn459Qm6wtTLOmJQpNd4tyxQbo7nsgWQ0AE7qyleTvnl1T2M2i\nJh4YpXEXKE9hXSpi0wbx1kFch8dyNDcYNdIOS6oTMjsemcSwgIk4SFNChzf4ZduW\n0E2lgAv5n+7KTVH5Qrf9HlJSjXD0g1OGbTM+q7NZXs5RVVq71BLgoaPJHnPyeY0B\noT8lsYfb4SQWcdAo3oifu7/gkGxC7TUBWEg0g1B7udFA8hkb7tGIt7ozRu1rX6h4\nVnAt/2mAHgGzS2gANF5a\n=gN6N\n-----END PGP SIGNATURE-----",
+        "payload": "tree 715d8bba0be44aa685106b4ab84b753295d8244c\nparent 4b2e9551fff0e6dbd3b0d2efebdd214b318b083d\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782463341 +0000\ncommitter GitHub <noreply@github.com> 1782463341 +0000\n\nlast change please #deploy\n",
+        "verified_at": "2026-06-26T08:42:26Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/a2bfa462482be31051ebf983acdc16e0782391bd",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/a2bfa462482be31051ebf983acdc16e0782391bd",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/a2bfa462482be31051ebf983acdc16e0782391bd/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/3a12dce604a596b2e9dc3e9faf5b9507cb95da15",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/3a12dce604a596b2e9dc3e9faf5b9507cb95da15",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/3a12dce604a596b2e9dc3e9faf5b9507cb95da15/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -75,44 +75,44 @@
     },
     "parents": [
       {
-        "sha": "649983fd4e6e1f0fed27aad8382668d113133e12",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/649983fd4e6e1f0fed27aad8382668d113133e12",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/649983fd4e6e1f0fed27aad8382668d113133e12"
+        "sha": "4b2e9551fff0e6dbd3b0d2efebdd214b318b083d",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/4b2e9551fff0e6dbd3b0d2efebdd214b318b083d",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/4b2e9551fff0e6dbd3b0d2efebdd214b318b083d"
       }
     ]
   },
   {
-    "sha": "649983fd4e6e1f0fed27aad8382668d113133e12",
-    "node_id": "C_kwDOR6gFrdoAKDY0OTk4M2ZkNGU2ZTFmMGZlZDI3YWFkODM4MjY2OGQxMTMxMzNlMTI",
+    "sha": "4b2e9551fff0e6dbd3b0d2efebdd214b318b083d",
+    "node_id": "C_kwDOR6gFrdoAKDRiMmU5NTUxZmZmMGU2ZGJkM2IwZDJlZmViZGQyMTRiMzE4YjA4M2Q",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T16:13:37Z"
+        "date": "2026-06-26T08:37:52Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-17T16:13:37Z"
+        "date": "2026-06-26T08:37:52Z"
       },
-      "message": "refactor: Optimize attachment handling and content type validation in image scan #deploy",
+      "message": "git stash #deploy",
       "tree": {
-        "sha": "fdd1ca40df42d01a848005a3766415b1ac50b043",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/fdd1ca40df42d01a848005a3766415b1ac50b043"
+        "sha": "8eab2493f65af27b55eee3186ffa4e563eafb198",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/8eab2493f65af27b55eee3186ffa4e563eafb198"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/649983fd4e6e1f0fed27aad8382668d113133e12",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/4b2e9551fff0e6dbd3b0d2efebdd214b318b083d",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsexCRC1aQ7uu5UhlAAAZXoQABJxAec3Mu4ufUK+Z061Ajc2\nf09n0aMvUkRTYIT1WS2NK9jZWIQddrL49qEPq904hEn9RPeD8A3tl48mysm0ALjv\nuvngTGfZA5EKpXKpk3f8+1wj4dA/ujL5WesvuGgPhDHhgSKVP0206YsGTC+riSBq\nl62etwyWIFwZHOsiN8mYajGcJ0EzpR2n88crRMeQC3U2c8B+QtIvlJhElNUlDnkf\n+olTzyx52G0bWPvD1sA/9JQewvNHszWgPftkfjekbg1wh5xmk6vkhrgGXsm2e5Lx\ne4fZqArTTDaP1+f1P7cGUH84DBHQkN9ygIQQ2GJp/r9hT1e1sTP7HJxsOf/uCeC4\nxkkwHY+IrhekyZVHJbfZp1UINQF/Y1b+feWHdukrtEx3azds18w6BzixWwhnKEpj\nv/PFGHb8WXewKYebCb7N5lOBbNWnEkuddM1LPLHmRqMnRnpWEfFg2RlW8YGlzHTq\neW8LGCOF4wqOBOgkarYNi15vw8O6M/xkSJ6JC1ys1TSlZVkAlUqe/PIBB5Q3Soog\ns17C3khnRcfKBmyPefrE5r2R6Rb3LX/9UmzaIZU3TY6qJ8Ap/mIAw3SS9s3P4DyN\nl8rYYILO32Kh+wlEnkxnhYS7/73chcV7LNNFggJldHEw13QEZjPje4KivvmVs/dK\n2c2CPoTR3cks8srXiLca\n=cmts\n-----END PGP SIGNATURE-----",
-        "payload": "tree fdd1ca40df42d01a848005a3766415b1ac50b043\nparent 6ebad12a733e480dcac8a34b8e62ee370f7266ae\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781712817 +0000\ncommitter GitHub <noreply@github.com> 1781712817 +0000\n\nrefactor: Optimize attachment handling and content type validation in image scan #deploy\n",
-        "verified_at": "2026-06-17T16:13:43Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPjpgCRC1aQ7uu5UhlAAAxmkQAF4aRqpAZ3MqiEp1hwJx6Yi7\nNs07t7RlKO939JpIRy7uHz5fdWSw5dHoYqOXqjTEjq2XzgZtStUL/yfi1BdWmhfy\nvaBxwQazem+eWI7hF95ZcVxhWjJ3aGUXBV7NhyaYKIW9PjNuB3R3BtmEPcDjLH33\nifEmtYLF53IWmS8c0wefYT+aPYrfq4+kvND5etQRu7ghHIxmJUqEIzZ3Vg5e/3DM\nngWY3JQ4CsigdE/Mw9/Rp7+XS9L2tzIxX6OgnobepOOqvxWzFe658yePpOfqblCF\nTUWM2qIm1VwzvVt64jLMT8Ei5DPI7w/aR74Gss5knmnXNbL1ZDna2qN7+TLYSsjs\nX2G5tpWQnrbvz48YdqFWsvMz79ayh4aPmO1oqYctAci9XwajvdjzWaXZKSAGj0So\nNFPhRQy8/nI7BW10KRip32cTnN+BXIhsdl/8w1w4ZsiccWxQgyDoIc7d5w7h5XQL\ntC60CwFlT8o/sYygCdEa3b/5OngiDCORXKaWJLng1CCRc+RaxRi/8YYMk77fKBRj\nvjO4X+63CehY47JfcJhtEqwOM2tUyMhwAiYY55d1hW8iUJnWKf27sx8w2+iljbof\nd4LpydXTDx1vS6vZM7HaOhFMw13iKvLRbyYHvK9s3oUW0Q3ml49r3lvTuWnI7DVV\nHuIw9N0HBzVRgyDOX1Vk\n=SoOm\n-----END PGP SIGNATURE-----",
+        "payload": "tree 8eab2493f65af27b55eee3186ffa4e563eafb198\nparent d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782463072 +0000\ncommitter GitHub <noreply@github.com> 1782463072 +0000\n\ngit stash #deploy\n",
+        "verified_at": "2026-06-26T08:37:57Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/649983fd4e6e1f0fed27aad8382668d113133e12",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/649983fd4e6e1f0fed27aad8382668d113133e12",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/649983fd4e6e1f0fed27aad8382668d113133e12/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/4b2e9551fff0e6dbd3b0d2efebdd214b318b083d",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/4b2e9551fff0e6dbd3b0d2efebdd214b318b083d",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/4b2e9551fff0e6dbd3b0d2efebdd214b318b083d/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -157,44 +157,44 @@
     },
     "parents": [
       {
-        "sha": "6ebad12a733e480dcac8a34b8e62ee370f7266ae",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/6ebad12a733e480dcac8a34b8e62ee370f7266ae",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/6ebad12a733e480dcac8a34b8e62ee370f7266ae"
+        "sha": "d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8"
       }
     ]
   },
   {
-    "sha": "6ebad12a733e480dcac8a34b8e62ee370f7266ae",
-    "node_id": "C_kwDOR6gFrdoAKDZlYmFkMTJhNzMzZTQ4MGRjYWM4YTM0YjhlNjJlZTM3MGY3MjY2YWU",
+    "sha": "d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8",
+    "node_id": "C_kwDOR6gFrdoAKGQxZGRlZmY4YmMwYjdlYzU5ZjY1MGVjZGJjZmFjYjU4ZjY3MWVlZjg",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T16:05:24Z"
+        "date": "2026-06-26T08:36:22Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-17T16:05:24Z"
+        "date": "2026-06-26T08:36:22Z"
       },
-      "message": "feat: Enhance image scan functionality with premium user management and moderation logging #deploy",
+      "message": "test again #deploy",
       "tree": {
-        "sha": "3e07c30a3c9b42c431f8910bbbe27636607432de",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/3e07c30a3c9b42c431f8910bbbe27636607432de"
+        "sha": "384d195507b2b5a7d04ee002b630d29c93fed25e",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/384d195507b2b5a7d04ee002b630d29c93fed25e"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/6ebad12a733e480dcac8a34b8e62ee370f7266ae",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsXECRC1aQ7uu5UhlAAAIP8QACwsUrM9IGBJ42chvqIfOT1c\n6ecQJ7upLHA+CdfSw8LbwzOgdryMkBajkLuQ0ybIiqV8Efgpl5b0sNiDH5epAYt9\ncUmMNJ7j9HZ5MKHiLKxF9uPQj1t4TOHFisUBS8TO9zPbobQ8lZ9bjvZ3JToVC/jx\nhpxx5S6dj0z0TLPno3gjYlYmdSxtpJEmkRoFBx8xKP63R7oa/j3geGC7n5mMPopb\nQpB5DQGkJRzYcVf/6a+llK7tCYY+Ry82KJVVWt9wFzXt3/aYhsYNsgUT99H8clFM\nRnIhEjly/EYmlrTN5iyLnRzh86gdY3VYDJ7jSJXrKWwxa/6k39b5D9rF+p9+Y8nN\nYWCM9A8or2wqzNwLRHjVhDBlKIfCPlVErQR6tOzVHDI5DvOyGiOP8lE+cp/XaHSh\nEM2cqkAn7nePTfEWAu0KIXfIiWfq/xQqD+IthbZQQD2458sgiPeyIhJebDRMET6D\n4dYMZ5O/HA2j3p+GT2fpog1yKg857RIeyw7WmEThla5LI3su54E4sS73obUOzznh\nv4TFo/Td1bvhESyzAgU/vXkTa9IDcX4kpTaQWJYjTChYyGQEVRWSn9JUqoIwDQ7W\nC+NMkKNmFibWsIZWhNkNSUOohXiEUDF2v952a7FTPb8ER4qu40CL9j8QRUVd5eXi\nd+7vW9JigtEYrlenTZ3D\n=RVP6\n-----END PGP SIGNATURE-----",
-        "payload": "tree 3e07c30a3c9b42c431f8910bbbe27636607432de\nparent b90ec25dd23b62dff2f392d62c74ef9f8f04af2f\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781712324 +0000\ncommitter GitHub <noreply@github.com> 1781712324 +0000\n\nfeat: Enhance image scan functionality with premium user management and moderation logging #deploy\n",
-        "verified_at": "2026-06-17T16:05:29Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPjoGCRC1aQ7uu5UhlAAAIrUQAIdZvRU3TIUQgORWlfJrpAwL\nCVIUAxOeSVAE/KKhULLJIofpRIWbyH6hc0IHNKzLwSsJnvLLrTo6vn1/Bpl/EecU\nWe9HaXB/uBsLJflloML1sGW4lio/0HjeAmRV0a40jCwiS9gHti6H7TatY7At1VZ5\ne13t9hm9vIrmA//p7SoP0FsvImXiIXP6H4aR2492OK1/wQBuIEhBhKp1XWY2b/Oh\n5mmJo34MWAq/BjKKz0I235bM+db5O1eEEcS/wOlopP2lqEfjG1Ws72hpyMwNr68F\npPMIHAPpMBVWBw19J7tLjQZ7o3JMJCpmf2lVlh7AvC9RXf+Pdun3FDa296DRGVZk\nKWza/hM9O9gzbtQMTOjbTbZEBACTnbqA3ATI3Z4orNxOy1FJKYch72qO/wESYnaO\n1LNxM81Urt06sLCifkUO3kYJ7BWJd+Oypds0BzPJFc2DYnZoBy23G480pO3gX03z\nadgo4TczN68nhQPRDBjEKtsefnvH+N11RDEOfAFnTj24hkPBlrwiDGcrxmEBK+wy\n+QjsUkZo+e5J5qd9TVqMpkB3AqVOpNcBUrMwMn7q8V2v//essrtxyK0gfp26M9eb\nk7HyNc7ALRaZKamP+e1PPcxPuPRw1f1VgeJiPUl3a3bhRJTFdXfzvdKYWI4f9qX8\nctoeVYl7AWGbf0c2rbQc\n=duUN\n-----END PGP SIGNATURE-----",
+        "payload": "tree 384d195507b2b5a7d04ee002b630d29c93fed25e\nparent 780a9c42d6197cd42bb97cbe46b2af54f54cf90b\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782462982 +0000\ncommitter GitHub <noreply@github.com> 1782462982 +0000\n\ntest again #deploy\n",
+        "verified_at": "2026-06-26T08:36:27Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/6ebad12a733e480dcac8a34b8e62ee370f7266ae",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/6ebad12a733e480dcac8a34b8e62ee370f7266ae",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/6ebad12a733e480dcac8a34b8e62ee370f7266ae/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d1ddeff8bc0b7ec59f650ecdbcfacb58f671eef8/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -239,44 +239,44 @@
     },
     "parents": [
       {
-        "sha": "b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f"
+        "sha": "780a9c42d6197cd42bb97cbe46b2af54f54cf90b",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/780a9c42d6197cd42bb97cbe46b2af54f54cf90b",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/780a9c42d6197cd42bb97cbe46b2af54f54cf90b"
       }
     ]
   },
   {
-    "sha": "b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-    "node_id": "C_kwDOR6gFrdoAKGI5MGVjMjVkZDIzYjYyZGZmMmYzOTJkNjJjNzRlZjlmOGYwNGFmMmY",
+    "sha": "780a9c42d6197cd42bb97cbe46b2af54f54cf90b",
+    "node_id": "C_kwDOR6gFrdoAKDc4MGE5YzQyZDYxOTdjZDQyYmI5N2NiZTQ2YjJhZjU0ZjU0Y2Y5MGI",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T15:46:57Z"
+        "date": "2026-06-26T08:34:52Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-17T15:46:57Z"
+        "date": "2026-06-26T08:34:52Z"
       },
-      "message": "feat: Implement Image Scan feature with configuration options\n\n- Added interaction handlers for Image Scan settings including enabling/disabling the feature and setting kick thresholds.\n- Integrated image scanning functionality that utilizes OCR to detect scam-related keywords in images.\n- Enhanced security settings to include Image Scan status and kick thresholds in the command responses.\n- Created advanced settings command for bot owners to configure logging channels and roles.\n- Updated existing security commands to reflect new Image Scan feature and its configurations. #deploy",
+      "message": "works now #deploy",
       "tree": {
-        "sha": "69569dfbcd9d003535a3e9c7bdbb54ba29155fd6",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/69569dfbcd9d003535a3e9c7bdbb54ba29155fd6"
+        "sha": "62c86a85147dfd9adc6ddef306aa6e65d527c454",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/62c86a85147dfd9adc6ddef306aa6e65d527c454"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/780a9c42d6197cd42bb97cbe46b2af54f54cf90b",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMsFxCRC1aQ7uu5UhlAAAy1sQAJ0aSuWa6mzgT9hko6ryBBqX\n1j4V5VsEt7amcU2hCRB9YndQ672BhmKQuREntOeI6oCQNbkmpTC3OCX7MrAEExaG\nPrTFn2z8NodsHhf6LiVLpCI9OfXHXahQkHssNdeNs9v7JtKVpa1l3nCuyXy2arQo\n5jIeIyEu/sZ0CM+Qd6usteLylih1tmSZzGyRGPu8GX7taHrmI6sQSD4DOAYI0eaL\nEPhG4nHqYGjHoC5JGb3xeArIfgwahP/CWXzVRCMRX8hhxaBV076IkYr+Xb+1c4hq\nMg7pytRrcHkKF5EYaBadryzd8nSYYXHL+YYvw/bdt62Fz4C0tVm740hbPUvi8WVm\nwotGgEBwtrt5SpnAJCyRDk8jEyYzVY3EApdzKRnutYBF912vfqpEPdCjmlHvVLJe\n5I/N2g45/GK8ig4hp4bacdpqsuYPglDAmTirn8azKZkVRKmMza8W0bAFwUjBSgjd\nwV1GfOfYxZJu1YhsCHK4qf32orf+/Yqz/uJjgdvTAPNngOTQ3h1whOr+b9qNayYs\nPAoZ9F5uBwGI6qciKHmkBP2Ei3yQVdJbhzb8otFLlWcZ7D/5aP24KBud7DLhAEBc\n6xlMv/B8w+suM71l0lDSHJdsfz1WbE2aenkoJo98r2is/3g62Ecdw5lM/ijFMKXr\nrAiqqh2POtRj2EPGy2On\n=9Q/e\n-----END PGP SIGNATURE-----",
-        "payload": "tree 69569dfbcd9d003535a3e9c7bdbb54ba29155fd6\nparent c2e2bc473d0cfac764ca77465a3f963b9e86761a\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781711217 +0000\ncommitter GitHub <noreply@github.com> 1781711217 +0000\n\nfeat: Implement Image Scan feature with configuration options\n\n- Added interaction handlers for Image Scan settings including enabling/disabling the feature and setting kick thresholds.\n- Integrated image scanning functionality that utilizes OCR to detect scam-related keywords in images.\n- Enhanced security settings to include Image Scan status and kick thresholds in the command responses.\n- Created advanced settings command for bot owners to configure logging channels and roles.\n- Updated existing security commands to reflect new Image Scan feature and its configurations. #deploy\n",
-        "verified_at": "2026-06-17T15:47:02Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPjmtCRC1aQ7uu5UhlAAAHJkQADikNvWa9+gIWLSF72WwEfhN\nU6CwayQ3zCCYtZnYycrPL8u/GtJwrI54cnv4yi0Dyjs1L3NZ0y/IgB47aISGWFsV\n24nq3iAcuSxlzRUeBnUsDA7KdmHHcMUxLuB1WbfzuKGUuaP8eVoB3su6PlHffrZB\naLYmV52zp6qurY4rwU6Snti/px+NzGns+5M0gzvgXtptIg2fSzmXbFEDW+HjgfzV\nDXPdsUTurgWhADs629/EOQMQ2/VT90kmcS2G5BHs3kam+m8LSzlpS55PtNpcowwy\nJAaYk/Gby8+5xrdH+oOihzf4tKqUMTWwHzGUANlCAYZHOZDhoHjIZjK7Hxihd3zg\nBiUyhlGmvw5i30E/DTWkAwwIJXRXPkeXNGdoOYrFHuRGVz5Ret46E+rAYsU10EYy\nGVzYfFCfIU1YvkLlctHoU3CcibqUPFkPK/VEoC0y1NmidEGaysNfCvU4LyTRRpZf\nwAm2DVTicvwYBY3P4kVuCKKkBCo/CrTvRBBspoMjaQXUgb4v7Se8sIeGHQkZVIfL\nXFhjpcYGaufOvk0G7+VZX+mMghOrXn4lfR6A7Vx2Srpa2w8xEZDlFt6nS1SS9GPC\nCa/TG6HNlwy6FMQ+A9QVmI6GfX5hTbjPFT2pp2db1v5kJRwuoqoS9J3O1evy2/Mp\n9NyWvhgtnCfmRWw9k7GL\n=hy5F\n-----END PGP SIGNATURE-----",
+        "payload": "tree 62c86a85147dfd9adc6ddef306aa6e65d527c454\nparent d4cce76d317711e7d323a04a49878d3abbf27b41\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782462892 +0000\ncommitter GitHub <noreply@github.com> 1782462892 +0000\n\nworks now #deploy\n",
+        "verified_at": "2026-06-26T08:34:59Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/b90ec25dd23b62dff2f392d62c74ef9f8f04af2f/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/780a9c42d6197cd42bb97cbe46b2af54f54cf90b",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/780a9c42d6197cd42bb97cbe46b2af54f54cf90b",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/780a9c42d6197cd42bb97cbe46b2af54f54cf90b/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -321,44 +321,44 @@
     },
     "parents": [
       {
-        "sha": "c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/c2e2bc473d0cfac764ca77465a3f963b9e86761a"
+        "sha": "d4cce76d317711e7d323a04a49878d3abbf27b41",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d4cce76d317711e7d323a04a49878d3abbf27b41",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/d4cce76d317711e7d323a04a49878d3abbf27b41"
       }
     ]
   },
   {
-    "sha": "c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-    "node_id": "C_kwDOR6gFrdoAKGMyZTJiYzQ3M2QwY2ZhYzc2NGNhNzc0NjVhM2Y5NjNiOWU4Njc2MWE",
+    "sha": "d4cce76d317711e7d323a04a49878d3abbf27b41",
+    "node_id": "C_kwDOR6gFrdoAKGQ0Y2NlNzZkMzE3NzExZTdkMzIzYTA0YTQ5ODc4ZDNhYmJmMjdiNDE",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T15:01:55Z"
+        "date": "2026-06-26T08:32:31Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-17T15:01:55Z"
+        "date": "2026-06-26T08:32:31Z"
       },
-      "message": "Entferne nicht unterstützte Bildtypen und verbessere die Betrugsbewertung im Bildscan #deploy",
+      "message": "runner test #deploy",
       "tree": {
-        "sha": "46ddc69df1ce61a0cada76ce71f4d116c61b7734",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/46ddc69df1ce61a0cada76ce71f4d116c61b7734"
+        "sha": "384d195507b2b5a7d04ee002b630d29c93fed25e",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/384d195507b2b5a7d04ee002b630d29c93fed25e"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/c2e2bc473d0cfac764ca77465a3f963b9e86761a",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/d4cce76d317711e7d323a04a49878d3abbf27b41",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMrbkCRC1aQ7uu5UhlAAAytAQAJorY28XUGJu8NvYogPvlK6X\ngvNjpAEAbmsqkln/ouUhYq87EF2byG5N+3eKRw5MSBTftsneB87v88YSWqKBVOKL\n0uMUKLWOpnwRlvJoJIYpkZfrtrC8GATJBnE4dhlQy9LHATERNcPtDKTF6GUaIDdi\nUUn6hllV2eDfHq7q1InXCW1NMcihn8WahytimBjfibJqE7jV+tFIjA2TNkzgUJl1\nrHbcAp4vSWmTWmWtNFNRqiKTSHAYRg3bPpd3blmOhH9obs0r0nQZ2pA2Jv+gXeTU\noS7Qq8BGxVAOCGcDwzioTD1mnZqKdarjVX9i4c0//85qHXcsy/ZDtz9oZn3y5mbx\n2nXas+np3eejOYf0ETzadHB6+Zm6+cKU94fvQ5zlQ5YqERg0cX9W+QXRYl787Hv+\ngNYSkq20crXKpXxymAaVuLsxhoomOwnWKlfhrXDdmnbQKOntt53TQtyAqPWZ12FN\ncpuVMqX9d5MRC7VVoDTL4bFNzegw14N/CSgdyL1RFtI07KbuWJObR8tk1kMAidfm\nW6CJOhboJOf+Pmz8klSTkYH4V+Qw3v0zFDzgZIPPpk4A0B1sui7mMZ3eMvKCpi54\njSkGnh+GVo2sOX9gNnFclHhXF3rzhnoVVBNEwvPqio6nmTWFny0sRvMdW2H916eG\n0oVZZgcaYzM/2kjiI3RR\n=t7JB\n-----END PGP SIGNATURE-----",
-        "payload": "tree 46ddc69df1ce61a0cada76ce71f4d116c61b7734\nparent ab15fa3b0e147e59dd4667b92da2861d25c7a604\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781708515 +0000\ncommitter GitHub <noreply@github.com> 1781708515 +0000\n\nEntferne nicht unterstützte Bildtypen und verbessere die Betrugsbewertung im Bildscan #deploy\n",
-        "verified_at": "2026-06-17T15:02:02Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPjkfCRC1aQ7uu5UhlAAAu1gQAH32WzUq86noQntP/obBdWZg\npBKNFmtSHTX9R8ygotQtId4zmwloFFjmLTAQJcvHMqhCyr8UwVspY2WmrajNSMlw\nV7WStbKHHTr/HwV1LkhOdJ9JnckFHvZK43/Ca6sE7rCQBSh0vFie2NOQxd/sElNP\nyEItoUNhjXN6xiUtO7xkpw4wmB97XYg2xuQ77G0wNM9WLEGtYkxQceUDnNHwTUpT\nDr06vUbtUvQsYFGDfPFU8dUx+quetL27BFSyjFuXS3yxWacMN0HbvtB6Qfn2Z0Yk\n0EoGB4ztEQnZmpNzhus48VtL5vWBOLcFkW6ikLy0P/sQxLLRtvnSAwO9V7tkkUyd\nhln1NQbEU61By+LkA6RFMbp1xeyZuuLtwK6DpB193M6Idfy7D/KwZxr6/Pt1LRxR\nQzTOkFJeSooP7+jsguAY6dLv2YF7UmEyPk7A6cxaXIenBCSoUadwNZlFgZ9hY2j5\nDEdxcnCizD3nw0vJhdW+0jLJgOh57RhK4heMU5WK4M9M20dnQ+TPSCk8jzt9MsJq\nJUHqPrzKLmOB6+xX7ZSuX3AjbqCFi/wtvAQUgw3zFKEZNGF+X3GvGkVm2YyIt80v\nMBBNwn2gqFVydlgiQR5yIgwQbczXqz1xmw7iEHA7ZNcY3vUmaS5tAhKQddnCvz8h\nZIZk57+KaUG5K0HsOTp5\n=epTr\n-----END PGP SIGNATURE-----",
+        "payload": "tree 384d195507b2b5a7d04ee002b630d29c93fed25e\nparent f6b1ad1683b3cfee03a4318b0f2224141fc77d58\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782462751 +0000\ncommitter GitHub <noreply@github.com> 1782462751 +0000\n\nrunner test #deploy\n",
+        "verified_at": "2026-06-26T08:32:36Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/c2e2bc473d0cfac764ca77465a3f963b9e86761a",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/c2e2bc473d0cfac764ca77465a3f963b9e86761a/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d4cce76d317711e7d323a04a49878d3abbf27b41",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/d4cce76d317711e7d323a04a49878d3abbf27b41",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/d4cce76d317711e7d323a04a49878d3abbf27b41/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -403,44 +403,44 @@
     },
     "parents": [
       {
-        "sha": "ab15fa3b0e147e59dd4667b92da2861d25c7a604",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/ab15fa3b0e147e59dd4667b92da2861d25c7a604",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/ab15fa3b0e147e59dd4667b92da2861d25c7a604"
+        "sha": "f6b1ad1683b3cfee03a4318b0f2224141fc77d58",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/f6b1ad1683b3cfee03a4318b0f2224141fc77d58",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/f6b1ad1683b3cfee03a4318b0f2224141fc77d58"
       }
     ]
   },
   {
-    "sha": "ab15fa3b0e147e59dd4667b92da2861d25c7a604",
-    "node_id": "C_kwDOR6gFrdoAKGFiMTVmYTNiMGUxNDdlNTlkZDQ2NjdiOTJkYTI4NjFkMjVjN2E2MDQ",
+    "sha": "f6b1ad1683b3cfee03a4318b0f2224141fc77d58",
+    "node_id": "C_kwDOR6gFrdoAKGY2YjFhZDE2ODNiM2NmZWUwM2E0MzE4YjBmMjIyNDE0MWZjNzdkNTg",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-17T10:40:10Z"
+        "date": "2026-06-26T08:30:49Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-17T10:40:10Z"
+        "date": "2026-06-26T08:30:49Z"
       },
-      "message": "Add giphy.com to whitelisted links in isBypassLink\n\nhttps://giphy.com/gifs/ work now",
+      "message": "runner test #deploy",
       "tree": {
-        "sha": "bc3e93e7baefeb042667dae708ef883ee2dd419f",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/bc3e93e7baefeb042667dae708ef883ee2dd419f"
+        "sha": "0cebf4e9ef2b7c0d1b0ee08ad0960010a4dd7fa9",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/0cebf4e9ef2b7c0d1b0ee08ad0960010a4dd7fa9"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/ab15fa3b0e147e59dd4667b92da2861d25c7a604",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/f6b1ad1683b3cfee03a4318b0f2224141fc77d58",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMnmKCRC1aQ7uu5UhlAAAQfsQACrU5dx/9nbU7Fmy8bkSTkT4\nvuMevftj0omLY2/fS7x8vdzcAU5kkoG84nvk7sgdQ+diEc9k4PQtMJ3HB6ePsBzl\n9rpDxaMGfydkBiwXBVTrVwiypGjy80CMgrWs33EomWb0gAqwwBIS9BhT2ab9i3mo\nhJ5e8rM7/BsQ++fuF8YP1ZuDicacuyhfFW4vgA+Kg5Ju0qvUO6UPsfS3JC/50IYE\nvWWqcLTbX73IoTA4RiHOJsgjzxEjrmdEfcU9QMmFSSTb/ACQO+5rx0AefacUOfrd\nkrUhPDur9voRj9zfzV3ZVxXszYt7Fo3gxkOJalGU+XM89+lpINbuQmIZeeyIO5c4\n170buwwSYDp0gzQG+IK9YaakpO+pV1M1mEy6Sutazbz6BRUaPzk6CPSvQ1IZlKyw\nQb2ixQDVsTs6AskjcLHOoVnKlxfu1UBaKSI4RFi0mid5x9qxoLYs2chVNyBtbl0d\nzyJhOZ3yMJ4VEt2N1d5BSjVZX5xShFyg27oYx+iMV/Fb/iEIwjh6X0e6g9hZj1SG\nq1B21A6lU2J2YcGYzayAQvn1UV54fu0xEDZx/DCzL0juNKgOW9RA+56VlIr/0rT1\nxwB4h2teoicp4nUErILzMGjWxVAOy3/A83exQw1giCrPif0em8tOgHbK7rBDyUXG\nXwPfcnJSxliXAPhkGP1v\n=PgjG\n-----END PGP SIGNATURE-----\n",
-        "payload": "tree bc3e93e7baefeb042667dae708ef883ee2dd419f\nparent 7c4ab5557791fd307a878dffffad60b05cb4135d\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781692810 +0200\ncommitter GitHub <noreply@github.com> 1781692810 +0200\n\nAdd giphy.com to whitelisted links in isBypassLink\n\nhttps://giphy.com/gifs/ work now",
-        "verified_at": "2026-06-17T10:40:11Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPji5CRC1aQ7uu5UhlAAAItwQAGDFx6ocK8m+bkk9r681D3LQ\nHmLqOUIlbg5UucNVr+7hQwJUgTKIUoCW5CB76xDD6vAj3XvL7eIyBYmBLsBA++IU\nG/nbRHQj8ssivHhxRSjx84zaRJscL4UsLo4HA1fv/dP560BoFWr9KJJyeOm4E9w0\nbZ+ryV6RIeGM0ozmlMdUV8dUgdeTxEGXJdpR7wiAvHPLbB/3oTqUABR5jDX1jLhW\nhKcg7qkKaI0HyuXbBu5s6XhQNvHrXdnpIcs5WAYqSn1nc3jKze5a7ynjSofRadWk\nCu2NSalkles49XsBCGCR/9Qk+ewaJ53G1Y8evzjQj5z2qGZPm/bGMcV+yqnJkr6x\n2puS4mP4N3IiNBaNSSt3kl2xNTXDcenbtO1pgFp+h3L0rHrxq2Dd2oW0SLJPmL6z\ndfmLexsoRNdIPGzjbBWfjAc2k122zc0NEgJSqsymeGL93Du2NUN4XzzopO4SKQz0\ndFAgh1OPeQxy+hHrtsEXb867OdNfQQXYaicrpsCG0x4U5E2AdeG4SG5oqSVNdjYc\nOsSLmshlTW/YNKY7SVvXW41v1ac6LSlgPjhOjb2fDWkEFGPENz3xoT4Z526u12Ks\nR91I+0tEfKiU8grwoLyDEZNloBc4jmzlmef+jrrePkCYUOHf/mOvCkkvpwaFoKp0\nd0PJuVU65NXRCnhzzOln\n=7zhk\n-----END PGP SIGNATURE-----",
+        "payload": "tree 0cebf4e9ef2b7c0d1b0ee08ad0960010a4dd7fa9\nparent 35a4de32705e79deaa66212e01c96622440d3a10\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782462649 +0000\ncommitter GitHub <noreply@github.com> 1782462649 +0000\n\nrunner test #deploy\n",
+        "verified_at": "2026-06-26T08:30:59Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/ab15fa3b0e147e59dd4667b92da2861d25c7a604",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/ab15fa3b0e147e59dd4667b92da2861d25c7a604",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/ab15fa3b0e147e59dd4667b92da2861d25c7a604/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/f6b1ad1683b3cfee03a4318b0f2224141fc77d58",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/f6b1ad1683b3cfee03a4318b0f2224141fc77d58",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/f6b1ad1683b3cfee03a4318b0f2224141fc77d58/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -485,44 +485,44 @@
     },
     "parents": [
       {
-        "sha": "7c4ab5557791fd307a878dffffad60b05cb4135d",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/7c4ab5557791fd307a878dffffad60b05cb4135d",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/7c4ab5557791fd307a878dffffad60b05cb4135d"
+        "sha": "35a4de32705e79deaa66212e01c96622440d3a10",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/35a4de32705e79deaa66212e01c96622440d3a10",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/35a4de32705e79deaa66212e01c96622440d3a10"
       }
     ]
   },
   {
-    "sha": "7c4ab5557791fd307a878dffffad60b05cb4135d",
-    "node_id": "C_kwDOR6gFrdoAKDdjNGFiNTU1Nzc5MWZkMzA3YTg3OGRmZmZmYWQ2MGIwNWNiNDEzNWQ",
+    "sha": "35a4de32705e79deaa66212e01c96622440d3a10",
+    "node_id": "C_kwDOR6gFrdoAKDM1YTRkZTMyNzA1ZTc5ZGVhYTY2MjEyZTAxYzk2NjIyNDQwZDNhMTA",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-16T17:17:57Z"
+        "date": "2026-06-26T08:25:22Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-16T17:17:57Z"
+        "date": "2026-06-26T08:25:22Z"
       },
-      "message": "Ändere die Logik zur Betrugsbewertung im Bildscan für genauere Ergebnisse",
+      "message": "test runner again #deploy",
       "tree": {
-        "sha": "7a2d2df194a17b88ef35da6ff55e4a7638e056bb",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/7a2d2df194a17b88ef35da6ff55e4a7638e056bb"
+        "sha": "384d195507b2b5a7d04ee002b630d29c93fed25e",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/384d195507b2b5a7d04ee002b630d29c93fed25e"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/7c4ab5557791fd307a878dffffad60b05cb4135d",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/35a4de32705e79deaa66212e01c96622440d3a10",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMYVFCRC1aQ7uu5UhlAAA5uoQAAtVrNt5pAqKOpceatgX1KHA\nJhbiObYf3h5frnEXx3tY624yHoz4lWjrgHLPvVYWPBzR6nYzn2BvJBTrFxamBr4b\njsIVvZVW1hHonn3loWTL6sw2S8XTwvH3dzG84CtWb00nuS0RYJJGfhCMjkfSMNVy\nffqYUqc6pnGU/Pxw2gnL49uE5j8OXkVxsO0IDBHacgRnzzj4zNU+4ZBwd7ooImCr\nQ7/POuqqNIKQPcCV7VIHRnzCMqA+okoPIDUBmqs5ilUVTr9N8XTB5dVwV/nDEZjd\nJcmufQTaeFcDVlWLXMu+A9fJBA63MEfsxzDMJbf/g9JcxPhVGdSyM+PMtQhzsmD/\n5QJEvqSTzcPc7e+MeLOzlKe0ZTY7E3oQtB0NpR+YlGNspxPdIbxGGtFdw0CoMzz3\naOouTBFh21W4p9ICGLObMb7/briMn27THqS0kJQjC6EoVhyA2bS1+wLZ7XMp7RAy\n4ffngsQ+MfKV+q3wNdHta5g8FNF+sl6KMihJ3likMfgcRGvHL0YabcNfEBBWJ3aP\nhjBi1M5t4Os4O4U8sZInnfsDwfZuN5e5FFDjFu19IGEb6L182YZionkM9xgd1Bqs\nMmBcbthuM5yYaMujgHrsoFMsVcxcfFkcEsFRQ8poFo2hklmcfsyAP2EF8SijqQEM\nal6Xy80kKOJrQHaBr9EZ\n=dKy3\n-----END PGP SIGNATURE-----",
-        "payload": "tree 7a2d2df194a17b88ef35da6ff55e4a7638e056bb\nparent 57bbd8fda6ddb7c4a70ef9c835cc905784c07242\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781630277 +0000\ncommitter GitHub <noreply@github.com> 1781630277 +0000\n\nÄndere die Logik zur Betrugsbewertung im Bildscan für genauere Ergebnisse\n",
-        "verified_at": "2026-06-16T17:18:03Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPjdyCRC1aQ7uu5UhlAAA8msQAFJ+VQUwkhFe7qEU8xbGg77Z\ndLtymfE3XoHM9OVNqEvh0fm8tXraFCPk0Co+er04/qdJCqA02j8e1S8PgKrWm5tK\ndyIaq3FHR2evEm3MZCZdsaD1bZ2KvDaVIJhIuUpUlpTcVAjA2jNb+nNy3UUDkjkl\nF2Qfa1ZMDBEJwVFBmE9+u/DkAF2lKb2RqhGwFybrTVM4HZGi2KoMWYB+YLhtBKSh\ndVhOhgDT+M2a0xbYJ0mzwCacjcbQUJBiDfnyY4iluoj1scVOhipyTcQ8cYb1dzGm\nyBVGbSyvbyVBmOmnrP6A9LkadVbN0wq1y/D2a/2uL3VNQF8ufOXQ5fXLA+sEGIYR\nYCzwmhGXqRObC9xJwdDTcWw8IXILnVh0BfpZM2EhomH3kF4Mf6lA1t7VNTC/BZVN\n0YMJcLlRvsRKyiO2LXJtuq+wn5iYYjjp+vHyI+DDJWYMPiBtxZ3/exzmdCV/eNgq\n0LwChIQFxsE1xAyUIu/xt+WOpPzuoRE+cGHmKar5oRcHtIdLjUDnmhcOLZ9gpUA3\nZ57EHZ7+WfUWF7w+bSPclDLhJmrh7qcwtEoUgib08sP6xx+uBXLK7m27vpXf1kyo\niY8uIuqBi8wqr3+VyXzDn//cb+XKm/93HExnBPY7DQoE3IKfRYaVpKNsy0PTgPd3\n2n5WiH7s6m3afpEF+ZSd\n=H0as\n-----END PGP SIGNATURE-----",
+        "payload": "tree 384d195507b2b5a7d04ee002b630d29c93fed25e\nparent f2038113ee0d59fbf8e358a306c3953ebe1e517c\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782462322 +0000\ncommitter GitHub <noreply@github.com> 1782462322 +0000\n\ntest runner again #deploy\n",
+        "verified_at": "2026-06-26T08:25:55Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/7c4ab5557791fd307a878dffffad60b05cb4135d",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/7c4ab5557791fd307a878dffffad60b05cb4135d",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/7c4ab5557791fd307a878dffffad60b05cb4135d/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/35a4de32705e79deaa66212e01c96622440d3a10",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/35a4de32705e79deaa66212e01c96622440d3a10",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/35a4de32705e79deaa66212e01c96622440d3a10/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -567,44 +567,44 @@
     },
     "parents": [
       {
-        "sha": "57bbd8fda6ddb7c4a70ef9c835cc905784c07242",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/57bbd8fda6ddb7c4a70ef9c835cc905784c07242",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/57bbd8fda6ddb7c4a70ef9c835cc905784c07242"
+        "sha": "f2038113ee0d59fbf8e358a306c3953ebe1e517c",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/f2038113ee0d59fbf8e358a306c3953ebe1e517c",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/f2038113ee0d59fbf8e358a306c3953ebe1e517c"
       }
     ]
   },
   {
-    "sha": "57bbd8fda6ddb7c4a70ef9c835cc905784c07242",
-    "node_id": "C_kwDOR6gFrdoAKDU3YmJkOGZkYTZkZGI3YzRhNzBlZjljODM1Y2M5MDU3ODRjMDcyNDI",
+    "sha": "f2038113ee0d59fbf8e358a306c3953ebe1e517c",
+    "node_id": "C_kwDOR6gFrdoAKGYyMDM4MTEzZWUwZDU5ZmJmOGUzNThhMzA2YzM5NTNlYmUxZTUxN2M",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-16T17:13:46Z"
+        "date": "2026-06-26T07:17:31Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-16T17:13:46Z"
+        "date": "2026-06-26T07:17:31Z"
       },
-      "message": "Aktualisiere Schlüsselwörter für Betrugsbilder, um Konsistenz zu gewährleisten",
+      "message": "updating api log level #deploy",
       "tree": {
-        "sha": "114a8065de13de613777bf61ef75560803aea665",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/114a8065de13de613777bf61ef75560803aea665"
+        "sha": "d489bdfe6a64a07f06f80402d6a6ed8683918a93",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/d489bdfe6a64a07f06f80402d6a6ed8683918a93"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/57bbd8fda6ddb7c4a70ef9c835cc905784c07242",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/f2038113ee0d59fbf8e358a306c3953ebe1e517c",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMYRKCRC1aQ7uu5UhlAAAtHwQAG4B28PqbhfBk7hfL4rLcx+H\nsv3cqSH28KV800/c4HX7H43KXIwGkQsxF45OVDAF6+9qbNpswvdG6RtxX/IA2sG+\nBwaKEdxs8LgLT9c/ib9Pbs5fsulIbO3X/e3J31QAT649uWAz8tWQtysdhm+Sjto4\nOIWH2sZ6v/sW7as7JjavFRUrqy+2V7kBuZ5Ai+vC0x+rJ82sQJQ5yi1HqbkUFY1H\npnY8eMvH9D6INP2MuXgGn/6IlDqPoIlGJrCEOogQ7iCFbi1J2d/EBC+zbKV5iejv\nSahcbOKO0V5LDqMgeEU7R1UDJ5ihrgpn6fcOruB/h0uwBsOlUtl9EwxCJttIt77L\nLpf9No/PKXmTaX8LvrM2Jtkbs8bf/eDd34UvYw73zZQJFDSByFfRDUBE6+hQ+drv\nDB4nidGGBSw8iVTBwa4y+ZDotcuq3FhqCjfGhIZE0pQDwONEA39HoQKjLQgAVcxl\no8hiIjlW5GD19VsL0Vd6NP9WYUcPD9m2RBVjlu2sESe81stjt5Gfi9azcGmKlSd6\nlP3ecenFlx+lJ5PGUVRUu95BpfpxBQRMn54khbYbaqAjz9M0GdA+yCHmyV1aCBnG\nCmSATy2ncHuRkS/Qusfm4Y/cqbmtbamytDqATxBYarglfyjtarKbzAWQalW3htlj\n02alIkJI94oHSe7zVg4a\n=I94C\n-----END PGP SIGNATURE-----",
-        "payload": "tree 114a8065de13de613777bf61ef75560803aea665\nparent aacd446dc550a69ca6dac2e2229927aee3f3e1ce\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781630026 +0000\ncommitter GitHub <noreply@github.com> 1781630026 +0000\n\nAktualisiere Schlüsselwörter für Betrugsbilder, um Konsistenz zu gewährleisten\n",
-        "verified_at": "2026-06-16T17:13:52Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPieLCRC1aQ7uu5UhlAAAC58QAIP+X59/jkD1dJ9mPKMpSqKW\nB2pun6oeKvKRxMk6M8p4hPah2oqaOk7E1H6k83f+9we8XbFufxleWnrODRN7GO7v\n0lmhO7ay1AogCAH6Gfsj31MlY/IsYjdChAGghgKWlZvGFnQ6KLvu6nWukVc26ioI\nGdNktJ1cGoSDHEbazHA1CDsu3KEGPnR7nkDbTe3VIJMQP0vNUqJ1Q50MGUdKw/dz\nSEvEqPdxiIyw/HJlb6JhTb0LKoivjSRxiV4Xx/ot2l4r7gDqQxjVZlf3M3mPltHe\n2PZPlVURlc3AGlE8aPKSbBc+vnLGKt9DFHHw1fRxW9Ck1/lm2FpczpmwuB92Lpfc\nVtKBoebRZdIsJ+xPJCcFM79SR5Iu/5pp20WwGSEnlyaJmDj/I+7tuVvO3KmUCoOn\n2MBUlX8LWKTJPvMPfk8ilN6aCwyl8vVR+70KHzJ9uvJj6Mf6qTADzDPae+xZzDw2\ni4qfYM8iex7icVHsNHFpfra/VYkaDf/zo4fNQiYBKFttRvcmsCQvA+mPANxgLlPg\nwijXukS4iKI9EKK5NAWwoRoxt80nLNrR6BrxYntFgoQ+vmCn9vDFxskJ/pYGcTOu\nHTlywcq5K9dAIlobaQ/SE+elwl7msnl+qbwISUqUbfkTwrV07OlL9FmLb9LW4TzY\nX5c925oFKZhSjIAr2fPi\n=TrXR\n-----END PGP SIGNATURE-----",
+        "payload": "tree d489bdfe6a64a07f06f80402d6a6ed8683918a93\nparent 24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782458251 +0000\ncommitter GitHub <noreply@github.com> 1782458251 +0000\n\nupdating api log level #deploy\n",
+        "verified_at": "2026-06-26T07:17:38Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/57bbd8fda6ddb7c4a70ef9c835cc905784c07242",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/57bbd8fda6ddb7c4a70ef9c835cc905784c07242",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/57bbd8fda6ddb7c4a70ef9c835cc905784c07242/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/f2038113ee0d59fbf8e358a306c3953ebe1e517c",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/f2038113ee0d59fbf8e358a306c3953ebe1e517c",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/f2038113ee0d59fbf8e358a306c3953ebe1e517c/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -649,44 +649,44 @@
     },
     "parents": [
       {
-        "sha": "aacd446dc550a69ca6dac2e2229927aee3f3e1ce",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/aacd446dc550a69ca6dac2e2229927aee3f3e1ce",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/aacd446dc550a69ca6dac2e2229927aee3f3e1ce"
+        "sha": "24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24"
       }
     ]
   },
   {
-    "sha": "aacd446dc550a69ca6dac2e2229927aee3f3e1ce",
-    "node_id": "C_kwDOR6gFrdoAKGFhY2Q0NDZkYzU1MGE2OWNhNmRhYzJlMjIyOTkyN2FlZTNmM2UxY2U",
+    "sha": "24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24",
+    "node_id": "C_kwDOR6gFrdoAKDI0ZGZmMzNkODRkMGM2NWViZDZmNmE3NWE2YTRkMzFiYTdkMGNlMjQ",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-15T19:34:49Z"
+        "date": "2026-06-24T17:06:35Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-15T19:34:49Z"
+        "date": "2026-06-24T17:06:35Z"
       },
-      "message": "Ändere das Protokollformat im Bildscan für konsistentere Ausgaben #deploy",
+      "message": "new status update #deploy",
       "tree": {
-        "sha": "c50bf8fdc2495d0b1999cbc5c7925624b541bd72",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/c50bf8fdc2495d0b1999cbc5c7925624b541bd72"
+        "sha": "8dd1bdbcc0aada8af5b903e09a6c452f19b6e495",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/8dd1bdbcc0aada8af5b903e09a6c452f19b6e495"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/aacd446dc550a69ca6dac2e2229927aee3f3e1ce",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMFPZCRC1aQ7uu5UhlAAAKh0QAEG65fKCm+GKoeoEykMYlihO\nT+VQjbzMwY1S2OD4wuSfLRyDQvEeZOrHyMV0IuMkVSq0dItCD7st5/iRsoUvHAiR\nC/zdLoWI3E7DN2PtWEdSVayTPy+BzW6nRIw34w4SV456kSpxRXiQh9Ml6LlyLAyo\nJJt5omlko9BKM1nwJvHWuLU+VlRaaohGxxpdRhHPAYyx/rwjgjDm/K1gedUOiNly\nowjbFqGvClvxByA8eHx1e1qk5k3RDgJhz4uCNAemhwatWKCRS6ZSHK0hHSfZB1SU\n1bfODV4nDAVPbehSVCvClUfQhjTRv3nQZ44ZCmHpM6ltlSSfZjaD6DytaU+dq7l0\n2ifbKiJyGoq7H+H+Y/lEI9xmAnBGJPEs+y6pYEFULrKOsaoBZSOLWr07Tz2zXIeR\nXYcrJk98/rK+G2lQpS70CGimuywiMZIk1D7BeTQq/X/WVwnaew6kTan1Wgfb6xlV\nB3+RKAtRn2QX4kArSoOTwfsoAfIQq2U0BgdufwpIknD+JdnLqG0JKKcE6WCCTXCp\nWhCl1OMrCmN6vQz4pRB74yjNWGHa7QQERL8CzoiqFLlj4DLqPLwWjvkldecIBjqw\nNxIgkh/5AYviFkS/Zt0GFGmUDqenq7o4biLdqf6HQ4LtzcB7Elm01x9cowOUdKy9\nSW55ECCpRwNggzUjuHcQ\n=6XRY\n-----END PGP SIGNATURE-----",
-        "payload": "tree c50bf8fdc2495d0b1999cbc5c7925624b541bd72\nparent 1897783671cc2d69511d0403f58b42b4fc78f768\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781552089 +0000\ncommitter GitHub <noreply@github.com> 1781552089 +0000\n\nÄndere das Protokollformat im Bildscan für konsistentere Ausgaben #deploy\n",
-        "verified_at": "2026-06-15T19:34:54Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPA6cCRC1aQ7uu5UhlAAAbxkQAF3LrhF8pvAYKQit5nF+KNOf\n036Zns9Bek0oWCLVHSrS6+l9SUOyP3mH2EpjrpBpNa0t38L+KyMoUnY+lJAGrBOl\n1iCcseqlO5Yu9yFMcOvcTMzyIVuyw1WxSzv1RCJTjABT+xKdIZK763PtYiluNyFn\necSC1Jz87fkwPaRTmj6wrnKARntz/+OGvp4qoGVCwQFSOWlBN1JGVLyi2KnwPTOe\n8IUci/JN3NEQquMRd+Lh8L8JTdLdLNwyuPxxuE8UWFV8HpIx5cFSoJ7YlO18yJVQ\nFQYKLjsipczVqem8QQtYnJrycoDRl2FTOvATdg9QIe4vQtN2t2N6EkRc6X8lKlkf\nMbaMWTgn5ajdbbPiLUwOYNXoQsjsJHSwl5ujJrP7Mux9DVqGXju+GfiMI6mSTc6l\ngciz1ni3/M9OJR8z6f2OOpBkqzwCbR8BvoF4jpRzHWaKbPJmWF8QtufM6XRPljM/\ns8gj3zx1fFt4gH27SsUGkOTKRxKSlpb/uhuOrj9awZxqEVBLSzr1nihBE/hfXkIC\n3takMhQOxr8nOAM5Lg4reckliMy0AW5VV8XDhJ89g9oXRA2slvEBWzyYI91yXGP4\nn9+GtBhc+UhjKX2nWYUwer9cV8hAnbNU+Xlbxl628Y3VzL5I1hsZ2quv/GSvrYmM\n1JsP5I6knLXim5hO0Pqh\n=v3U0\n-----END PGP SIGNATURE-----",
+        "payload": "tree 8dd1bdbcc0aada8af5b903e09a6c452f19b6e495\nparent 997d5d11519ca95c51be9d7c31d03dda53e1719c\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782320795 +0000\ncommitter GitHub <noreply@github.com> 1782320795 +0000\n\nnew status update #deploy\n",
+        "verified_at": "2026-06-24T17:06:43Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/aacd446dc550a69ca6dac2e2229927aee3f3e1ce",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/aacd446dc550a69ca6dac2e2229927aee3f3e1ce",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/aacd446dc550a69ca6dac2e2229927aee3f3e1ce/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/24dff33d84d0c65ebd6f6a75a6a4d31ba7d0ce24/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -731,44 +731,44 @@
     },
     "parents": [
       {
-        "sha": "1897783671cc2d69511d0403f58b42b4fc78f768",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/1897783671cc2d69511d0403f58b42b4fc78f768",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/1897783671cc2d69511d0403f58b42b4fc78f768"
+        "sha": "997d5d11519ca95c51be9d7c31d03dda53e1719c",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/997d5d11519ca95c51be9d7c31d03dda53e1719c",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/997d5d11519ca95c51be9d7c31d03dda53e1719c"
       }
     ]
   },
   {
-    "sha": "1897783671cc2d69511d0403f58b42b4fc78f768",
-    "node_id": "C_kwDOR6gFrdoAKDE4OTc3ODM2NzFjYzJkNjk1MTFkMDQwM2Y1OGI0MmI0ZmM3OGY3Njg",
+    "sha": "997d5d11519ca95c51be9d7c31d03dda53e1719c",
+    "node_id": "C_kwDOR6gFrdoAKDk5N2Q1ZDExNTE5Y2E5NWM1MWJlOWQ3YzMxZDAzZGRhNTNlMTcxOWM",
     "commit": {
       "author": {
         "name": "ARD0NIZ",
         "email": "96878771+ARD0NIZ@users.noreply.github.com",
-        "date": "2026-06-15T19:33:14Z"
+        "date": "2026-06-24T16:37:25Z"
       },
       "committer": {
         "name": "GitHub",
         "email": "noreply@github.com",
-        "date": "2026-06-15T19:33:14Z"
+        "date": "2026-06-24T16:37:25Z"
       },
-      "message": "better console #deploy",
+      "message": "More stats in the API",
       "tree": {
-        "sha": "6aaa1094d9c5abd1d0a888e5c671b87e7989d372",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/6aaa1094d9c5abd1d0a888e5c671b87e7989d372"
+        "sha": "e465186e9e5f3fa52e307fc9fb488ea01b570ecb",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/trees/e465186e9e5f3fa52e307fc9fb488ea01b570ecb"
       },
-      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/1897783671cc2d69511d0403f58b42b4fc78f768",
+      "url": "https://api.github.com/repos/ARD0NIZ/Helios/git/commits/997d5d11519ca95c51be9d7c31d03dda53e1719c",
       "comment_count": 0,
       "verification": {
         "verified": true,
         "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqMFN6CRC1aQ7uu5UhlAAAd6EQAAI1z1xngl8+VdtDYw18FB2L\nOGaeYCUjk7rMVfJzS+d9kNzy3zFnIfQYCF9urj00BBvf5hc+ntS8ZKsQ4XPtRL11\nhiqsSYBvi9c7kudfDm3WVTK34GdA+iXk0+rXnDmEHh7hovLOBL1b4xSEdjZXHBAJ\nYvJu1OWXi5DveaWf7id8vYslfIo2tNXKN1jxZ5eG6V82UwJLQMzCsluHWrr6ZH49\nEq6xtly9YZZAA0aBjeObCPU4QOAk7kwb1MV+ZVfkVPv5qpqPJuA5LVERY5ntGUFN\n5fDY1WGlkFCf8RxgD3oONBPIhRRc/2IAw4KA2Tt2DyL6YyLwYO3StkMmeDZxbZhK\nYYUaY4gyMjlbSupvwdGai/nekn6a/XozVtoCYwzMAAhuThUiWjE5VUtndNWYpDqF\npO/6b+uszZLntpkHiWWVyk3KHYQMl8J/tFRTTVcx/+HNcvFlokt+LQpHKKOmiarY\npf0xhvNjIWqNIVVtW/D0CvgbIdTfIyOaoG9uWzbJNYfv0B7IPHPIB5kR+frVrO4o\n7Dd5/RQGXWJOM6FmBQXgiW4PAW2bHcRkMlDHE7bQ1hEGwMiUEwp5Tqn0Kb3Nuixf\nHdZ0d+lBzQPO5lUshVAmh5CHTsvz2htCQjVHWb2i42LI4oJK2XFCeIus1reUqWU0\nf+KZSJ3JG7gtpc0qi+Q8\n=bkyU\n-----END PGP SIGNATURE-----",
-        "payload": "tree 6aaa1094d9c5abd1d0a888e5c671b87e7989d372\nparent 7dc0c1882ce8f53518f8ad58db17180728d0f99d\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1781551994 +0000\ncommitter GitHub <noreply@github.com> 1781551994 +0000\n\nbetter console #deploy\n",
-        "verified_at": "2026-06-15T19:33:20Z"
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqPAfGCRC1aQ7uu5UhlAAAtHAQAJIyY+W5XGz0AwzCHELnfh3A\nxvVN0Hxe53Gn+afzI3L/CQKWa9BjKU9NQrtLvA0uMUU7fAHax6xK49x/B804SSdE\n2H95/ghg43FuV/aafuMK5+GO4Qqp0HqYC8nzZtJ9lRRbwOqxZic86z7qtu8E3or7\nlR/BPg/wHA2sHERtAUIFtEi2E7XofDi16Nfbv+mPfaZWDOjgJwCBK6iHEyxYu5iN\nQu9MxN0Fnj7Z4sF8nFu+9Bq+V6PRUr7HDSZhOw3QYQNuT3Oo2xSqIDLzWhralxxE\n7afuMujpwqP5cwcL/qupUE1kr/N4TayWlGqH6rH604GsJT2/wnIEvL2NXmMdU2RU\n+2cizD1LxqdeMqiXMukEJtqesXLPELSl9sBFxaZvPTMmXap3Tjp4wmmpFQcLOBiG\nJE522Ti5dN0Rqxjh7AsM/UFoh/4rNw5/Pmzmm0OfJb+h+DhUqynxS/wkSmI8un9q\nrFYNrkFDawmNtqRbAR34QwUZ2QOY0VRUkGbFd51e9xOolnrXZK8BYm/MMK5KvDeg\nWdmcgCu8mjgGpVQRCSHKyJxjHgyZnZX3g/HljVjh1ywYZcKGj+GlfkR2HUvnN46V\nOohgp0ip/M+R+DvsUAAMGz1gxTbl1tnPFy1rSJ29kN5sCntQky0ByqVIVLRWL3O8\nePqQAaP1mmnKPJHLwxAK\n=+ils\n-----END PGP SIGNATURE-----",
+        "payload": "tree e465186e9e5f3fa52e307fc9fb488ea01b570ecb\nparent cf11ef8e3c6e3803fa4cf87bb43147b947692453\nauthor ARD0NIZ <96878771+ARD0NIZ@users.noreply.github.com> 1782319045 +0000\ncommitter GitHub <noreply@github.com> 1782319045 +0000\n\nMore stats in the API\n",
+        "verified_at": "2026-06-24T16:37:32Z"
       }
     },
-    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/1897783671cc2d69511d0403f58b42b4fc78f768",
-    "html_url": "https://github.com/ARD0NIZ/Helios/commit/1897783671cc2d69511d0403f58b42b4fc78f768",
-    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/1897783671cc2d69511d0403f58b42b4fc78f768/comments",
+    "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/997d5d11519ca95c51be9d7c31d03dda53e1719c",
+    "html_url": "https://github.com/ARD0NIZ/Helios/commit/997d5d11519ca95c51be9d7c31d03dda53e1719c",
+    "comments_url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/997d5d11519ca95c51be9d7c31d03dda53e1719c/comments",
     "author": {
       "login": "ARD0NIZ",
       "id": 96878771,
@@ -813,9 +813,9 @@
     },
     "parents": [
       {
-        "sha": "7dc0c1882ce8f53518f8ad58db17180728d0f99d",
-        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/7dc0c1882ce8f53518f8ad58db17180728d0f99d",
-        "html_url": "https://github.com/ARD0NIZ/Helios/commit/7dc0c1882ce8f53518f8ad58db17180728d0f99d"
+        "sha": "cf11ef8e3c6e3803fa4cf87bb43147b947692453",
+        "url": "https://api.github.com/repos/ARD0NIZ/Helios/commits/cf11ef8e3c6e3803fa4cf87bb43147b947692453",
+        "html_url": "https://github.com/ARD0NIZ/Helios/commit/cf11ef8e3c6e3803fa4cf87bb43147b947692453"
       }
     ]
   }
