@@ -404,11 +404,23 @@
                 return div;
             }
 
-            fetch('https://raw.githubusercontent.com/ARD0NIZ/dev-codelist.net/main/commits.json')
-                .then(function (res) {
-                    if (!res.ok) throw new Error('fetch failed');
-                    return res.json();
-                })
+            function fetchCommits() {
+                // Prefer same-origin file to avoid external fetch outages/rate limits.
+                return fetch('/commits.json')
+                    .then(function (res) {
+                        if (!res.ok) throw new Error('local fetch failed');
+                        return res.json();
+                    })
+                    .catch(function () {
+                        return fetch('https://raw.githubusercontent.com/ARD0NIZ/dev-codelist.net/main/commits.json')
+                            .then(function (res) {
+                                if (!res.ok) throw new Error('remote fetch failed');
+                                return res.json();
+                            });
+                    });
+            }
+
+            fetchCommits()
                 .then(function (commits) {
                     if (!Array.isArray(commits) || commits.length === 0) {
                         document.getElementById('commits').innerHTML = '';
