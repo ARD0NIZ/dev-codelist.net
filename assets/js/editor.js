@@ -190,7 +190,8 @@
         renderTree();
         loadMonaco(function () {
             state.monacoReady = true;
-            openFile(state.files.find(function (f) { return f.type === 'file'; }).id);
+            var firstFile = state.files.find(function (f) { return f.type === 'file'; });
+            if (firstFile) openFile(firstFile.id);
         });
         bindGlobalEvents();
     }
@@ -529,6 +530,8 @@
     }
 
     // ─── Monaco model sync ──────────────────────────────────────────────────────
+    var _modelChangeDisposers = new WeakMap();
+
     function syncEditor() {
         if (!state.monacoReady) return;
         var fileL = state.activeTabLeft ? getFile(state.activeTabLeft) : null;
@@ -558,18 +561,25 @@
         }
         var lang = getLang(file.name);
         var existing = monaco.editor.getModels().find(function (m) {
-            return m._associatedResource && m._associatedResource.path === '/' + file.id;
+            return m.uri && m.uri.path === '/' + file.id;
         });
         if (!existing) {
             existing = monaco.editor.createModel(file.content, lang, monaco.Uri.parse('file:///' + file.id));
         }
         editor.setModel(existing);
 
-        // Keep model in sync with state
-        existing.onDidChangeContent(function () {
-            var f = getFile(file.id);
-            if (f) f.content = existing.getValue();
-        });
+        // Keep model in sync with state — only add listener once per model
+        if (!_modelChangeDisposers.has(existing)) {
+            var disposable = existing.onDidChangeContent(function () {
+                var f = getFile(file.id);
+                if (f) f.content = existing.getValue();
+            });
+            _modelChangeDisposers.set(existing, disposable);
+            existing.onDidDispose(function () {
+                var d = _modelChangeDisposers.get(existing);
+                if (d) { d.dispose(); _modelChangeDisposers.delete(existing); }
+            });
+        }
     }
 
     // ─── Status bar ─────────────────────────────────────────────────────────────
@@ -659,11 +669,12 @@
             setTimeout(function () { triggerBtn.style.color = origColor; }, 1800);
         }
 
-        // Build path
+        // Build path (walks up the full parent chain)
         function getPath(f) {
             if (!f.parentId) return f.name;
             var parent = getFile(f.parentId);
-            return parent ? parent.name + '/' + f.name : f.name;
+            if (!parent) return f.name;
+            return getPath(parent) + '/' + f.name;
         }
 
         var parts = [];
@@ -716,6 +727,21 @@
         var crc = 0xFFFFFFFF;
         for (var i = 0; i < data.length; i++) crc = table[(crc ^ data[i]) & 0xFF] ^ (crc >>> 8);
         return (crc ^ 0xFFFFFFFF) >>> 0;
+    }
+
+    function encodeUtf8Bytes(str) {
+        var encoded = encodeURIComponent(str);
+        var bytes = [];
+        for (var i = 0; i < encoded.length; i++) {
+            var c = encoded.charAt(i);
+            if (c === '%') {
+                bytes.push(parseInt(encoded.charAt(i + 1) + encoded.charAt(i + 2), 16));
+                i += 2;
+            } else {
+                bytes.push(c.charCodeAt(0));
+            }
+        }
+        return new Uint8Array(bytes);
     }
 
     function u16le(v) { return [v & 0xFF, (v >> 8) & 0xFF]; }
@@ -878,7 +904,7 @@
             if (extra) Object.assign(existingFile, extra);
             if (state.monacoReady && !extra) {
                 var model = monaco.editor.getModels().find(function (m) {
-                    return m._associatedResource && m._associatedResource.path === '/' + existingFile.id;
+                    return m.uri && m.uri.path === '/' + existingFile.id;
                 });
                 if (model) model.setValue(content);
             }
@@ -1055,14 +1081,12 @@
         document.getElementById('modal-title').textContent = title;
         document.getElementById('modal-input').value = '';
         document.getElementById('modal-input').placeholder = placeholder;
-        el.style.display = 'flex';
         el.classList.remove('hidden');
         setTimeout(function () { document.getElementById('modal-input').focus(); }, 50);
     }
 
     EditorApp.closeModal = function () {
         var el = document.getElementById('new-item-modal');
-        el.style.display = 'none';
         el.classList.add('hidden');
     };
 
@@ -1240,7 +1264,7 @@
                 // Update monaco model language if open
                 if (state.monacoReady) {
                     var model = monaco.editor.getModels().find(function (m) {
-                        return m._associatedResource && m._associatedResource.path === '/' + id;
+                        return m.uri && m.uri.path === '/' + id;
                     });
                     if (model) monaco.editor.setModelLanguage(model, getLang(newName));
                 }
