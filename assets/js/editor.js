@@ -129,6 +129,7 @@
         go: 'go',
         rs: 'rust',
         sql: 'sql',
+        bdfd: 'bdfd',
         txt: 'plaintext',
     };
 
@@ -144,7 +145,7 @@
             markdown: 'Markdown', xml: 'XML', yaml: 'YAML', shell: 'Shell',
             python: 'Python', ruby: 'Ruby', php: 'PHP', java: 'Java',
             c: 'C', cpp: 'C++', csharp: 'C#', go: 'Go', rust: 'Rust',
-            sql: 'SQL', plaintext: 'Plain Text',
+            sql: 'SQL', bdfd: 'BDFD', plaintext: 'Plain Text',
         };
         return labels[lang] || lang;
     }
@@ -170,6 +171,7 @@
             rs: '🦀',
             sql: '🗃️',
             db: '🗄️',
+            bdfd: '🤖',
             txt: '📃',
         };
         return icons[ext] || '📄';
@@ -211,6 +213,7 @@
                     { token: 'number', foreground: '7B4FFF' },
                     { token: 'keyword', foreground: '5024F4', fontStyle: 'bold' },
                     { token: 'tag', foreground: '7B4FFF' },
+                    { token: 'variable', foreground: 'a78bfa' },
                     { token: 'attribute.name', foreground: '9D7FFF' },
                     { token: 'attribute.value', foreground: 'a78bfa' },
                 ],
@@ -241,6 +244,61 @@
                 }
             });
             monaco.editor.setTheme('dev-codelist');
+
+            // ─── BDFD Language ────────────────────────────────────────────────
+            monaco.languages.register({ id: 'bdfd' });
+            monaco.languages.setMonarchTokensProvider('bdfd', {
+                defaultToken: '',
+                brackets: [
+                    { open: '{', close: '}', token: 'delimiter.curly' },
+                    { open: '[', close: ']', token: 'delimiter.square' },
+                    { open: '(', close: ')', token: 'delimiter.parenthesis' },
+                ],
+                tokenizer: {
+                    root: [
+                        [/#.*$/, 'comment'],
+                        [/\$[a-zA-Z_]\w*(?=\[)/, { token: 'tag', next: '@funcargs' }],
+                        [/\$[a-zA-Z_]\w*/, 'tag'],
+                        [/\{[a-zA-Z]+:(?:[^}]*)\}/, 'keyword'],
+                        [/\{[a-zA-Z]+\}/, 'keyword'],
+                        [/\{[a-zA-Z_]\w*\}/, 'variable'],
+                        [/"/, { token: 'string.quote', next: '@string_double' }],
+                        [/'/, { token: 'string.quote', next: '@string_single' }],
+                        [/\d+/, 'number'],
+                        [/[=!<>]=/, 'operator.keyword'],
+                        [/[&]{2}|[|]{2}/, 'operator.keyword'],
+                        [/[+\-*/%^]/, 'operator'],
+                        [/[;]/, 'delimiter'],
+                        [/[,.]/, 'delimiter'],
+                    ],
+                    funcargs: [
+                        [/#.*$/, 'comment'],
+                        [/\$[a-zA-Z_]\w*(?=\[)/, { token: 'tag', next: '@funcargs' }],
+                        [/\$[a-zA-Z_]\w*/, 'tag'],
+                        [/\]/, { token: 'delimiter.square', next: '@pop' }],
+                        [/;/, 'delimiter'],
+                        [/"/, { token: 'string.quote', next: '@string_double' }],
+                        [/'/, { token: 'string.quote', next: '@string_single' }],
+                        [/\d+/, 'number'],
+                        [/\{[a-zA-Z_]\w*\}/, 'variable'],
+                        [/[=!<>]=/, 'operator.keyword'],
+                        [/[&]{2}|[|]{2}/, 'operator.keyword'],
+                        [/[+\-*/%^]/, 'operator'],
+                        [/[ \t\r\n]+/, 'white'],
+                        [/[^\]\[$; \t\r\n]+/, ''],
+                    ],
+                    string_double: [
+                        [/[^\\"]+/, 'string'],
+                        [/\\./, 'string.escape'],
+                        [/"/, { token: 'string.quote', next: '@pop' }],
+                    ],
+                    string_single: [
+                        [/[^\\']+/, 'string'],
+                        [/\\./, 'string.escape'],
+                        [/'/, { token: 'string.quote', next: '@pop' }],
+                    ],
+                }
+            });
 
             var commonOpts = {
                 theme: 'dev-codelist',
