@@ -374,7 +374,7 @@ button.nav-link {
     overflow: hidden;
     position: relative;
     animation: logoFloat 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 20px rgba(80, 36, 244, 0.4));
+    filter: drop-shadow(0 0 12px rgba(80, 36, 244, 0.25));
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 .hero-logo-icon img {
@@ -385,24 +385,18 @@ button.nav-link {
 .hero-logo-icon::after {
     content: '';
     position: absolute;
-    inset: -2px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #5024F4, #7B4FFF, #5024F4);
-    z-index: -1;
-    opacity: 0.6;
-    animation: logoBorderGlow 3s ease-in-out infinite alternate;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(80, 36, 244, 0.2);
+    pointer-events: none;
 }
 .hero-logo-icon:hover {
-    filter: drop-shadow(0 0 30px rgba(80, 36, 244, 0.7));
+    filter: drop-shadow(0 0 20px rgba(80, 36, 244, 0.5));
     transform: scale(1.1) rotate(5deg);
 }
 @keyframes logoFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-6px); }
-}
-@keyframes logoBorderGlow {
-    0% { opacity: 0.4; }
-    100% { opacity: 0.8; }
 }
 @media (prefers-reduced-motion: reduce) {
     .hero-logo-icon {
