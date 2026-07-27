@@ -365,6 +365,96 @@ button.nav-link {
 }
 /* ─────────────────────────────────────────────────────────────── */
 
+/* ─── Skip-to-Content Link (Accessibility) ─────────────────────── */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 10000;
+    padding: 12px 24px;
+    background: var(--accent-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    transition: top 0.2s ease;
+    box-shadow: 0 4px 20px rgba(80, 36, 244, 0.5);
+}
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* ─── Focus-Visible Indicator (Accessibility) ──────────────────── */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+button.nav-link:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 4px;
+}
+
+.nav-dd-item:focus-visible {
+    outline: 2px solid var(--accent-secondary);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* Remove default outline only when :focus-visible is supported */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* ─── Touch-Target Minimum 44x44px (Accessibility) ─────────────── */
+@media (pointer: coarse) {
+    .nav-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .nav-dd-item {
+        min-height: 44px;
+        padding: 10px 12px;
+    }
+    #nav-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .discord-details-toggle {
+        min-height: 44px;
+    }
+    .discord-join-btn {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ─── WCAG AA Kontrast-Overrides ────────────────────────────────── */
+/* Ersetzt #6b7280 (gray-500, 3.6:1) → #94a3b8 (6.2:1 auf #0a0a0c) */
+.text-gray-500 {
+    color: #94a3b8 !important;
+}
+/* Ersetzt #4b5563 (gray-600, 2.4:1) → #94a3b8 */
+.text-gray-600 {
+    color: #94a3b8 !important;
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
